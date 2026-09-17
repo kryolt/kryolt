@@ -1,0 +1,304 @@
+/* =========================================
+   KRYOLT PREMIUM FOOTER
+========================================= */
+
+.footer {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    color: #0f172a;
+    padding: 80px 6% 28px;
+    overflow: hidden;
+    border-top: 1px solid #e5e7eb;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   BACKGROUND MARK
+========================================= */
+
+.footer-bg-mark {
+    position: absolute;
+    top: 20px;
+    right: 5%;
+    font-size: 220px;
+    font-weight: 900;
+    line-height: 1;
+    color: #2563eb;
+    opacity: 0.035;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.footer-container {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1250px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+
+    padding-bottom: 55px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* =========================================
+   BRAND
+========================================= */
+
+.footer-brand {
+    max-width: 360px;
+}
+
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+
+    color: #2563eb;
+
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.footer-logo img {
+    width: 36px;
+    height: 36px;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+}
+
+.footer-description {
+    margin: 20px 0 25px;
+
+    max-width: 340px;
+
+    color: #64748b;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   SOCIAL
+========================================= */
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.footer-social a {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #f1f5ff;
+    border: 1px solid #dbe7ff;
+
+    color: #2563eb;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.footer-social a svg {
+    width: 17px;
+    height: 17px;
+
+    stroke-width: 1.7;
+}
+
+.footer-social a:hover {
+    background: #2563eb;
+    color: #ffffff;
+
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   FOOTER COLUMNS
+========================================= */
+
+.footer-column h3 {
+    margin: 0 0 20px;
+
+    color: #0f172a;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.footer-column ul {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 13px;
+}
+
+.footer-column a {
+    color: #64748b;
+
+    font-size: 14px;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: #2563eb;
+}
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.footer-bottom {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1250px;
+
+    margin: 28px auto 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 22px;
+}
+
+.footer-bottom-links a {
+    color: #64748b;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: #2563eb;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .footer-container {
+        grid-template-columns: 1.5fr 1fr 1fr;
+
+        gap: 45px;
+    }
+
+    .footer-brand {
+        grid-column: span 3;
+        max-width: 550px;
+    }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .footer {
+        padding: 60px 6% 25px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-description {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .footer-bottom-links {
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .footer-bg-mark {
+        font-size: 150px;
+
+        right: -20px;
+    }
+
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}

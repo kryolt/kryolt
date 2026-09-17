@@ -1,0 +1,476 @@
+.customer-cards {
+    --card-radius: 10px;
+    --card-border: #E8ECF3;
+    --card-shadow: 0 1px 2px rgba(15, 23, 42, .04),
+        0 4px 12px rgba(15, 23, 42, .04);
+    --card-shadow-hover: 0 3px 8px rgba(15, 23, 42, .06),
+        0 10px 22px rgba(15, 23, 42, .08);
+
+    --text-primary: #0F172A;
+    --text-secondary: #64748B;
+    --text-muted: #94A3B8;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+
+    width: 100%;
+    margin: 0 0 14px;
+
+    box-sizing: border-box;
+}
+
+.customer-cards *,
+.customer-card * {
+    box-sizing: border-box;
+}
+
+.customer-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-width: 0;
+    min-height: 80px;
+
+    padding: 12px;
+
+    background: #fff;
+    border: 1px solid var(--card-border);
+    border-radius: var(--card-radius);
+
+    box-shadow: var(--card-shadow);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+.customer-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    border-radius: 10px 10px 0 0;
+
+    background: #0D46F5;
+
+    opacity: 0;
+
+    transition: opacity .2s ease;
+}
+
+.customer-card:hover {
+    transform: translateY(-3px);
+
+    border-color: transparent;
+
+    box-shadow: var(--card-shadow-hover);
+}
+
+.customer-card:hover::before {
+    opacity: 1;
+}
+
+.customer-card-icon {
+    width: 26px;
+    height: 26px;
+
+    border-radius: 7px;
+
+    background: #0D46F5;
+    color: #fff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 10px;
+
+    flex-shrink: 0;
+
+    box-shadow: 0 6px 14px rgba(13, 70, 245, .25);
+
+    transition: transform .2s ease;
+}
+
+.customer-card:hover .customer-card-icon {
+    transform: scale(1.06);
+}
+
+.customer-card-icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+.customer-card span {
+    display: block;
+
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+
+    margin-bottom: 2px;
+}
+
+.customer-card h2 {
+    margin: 0;
+
+    font-size: clamp(15px, 1.1vw, 19px);
+    font-weight: 800;
+    color: var(--text-primary);
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.customer-card p {
+    margin-top: 4px;
+
+    font-size: 10px;
+    color: var(--text-muted);
+}
+
+/* ===================== RESPONSIVE (stays 1 row, just shrinks) ===================== */
+/* =========================================================
+   RESPONSIVE — MOBILE FIRST EXPERIENCE
+   Desktop layout remains unchanged
+========================================================= */
+
+/* =========================
+   TABLET: 601px — 900px
+========================= */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .customer-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+        width: 100%;
+    }
+
+    .customer-card {
+        width: 100%;
+        min-width: 0;
+        min-height: 82px;
+        padding: 11px;
+    }
+
+    .customer-card-icon {
+        width: 25px;
+        height: 25px;
+        margin-bottom: 8px;
+    }
+
+    .customer-card-icon svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    .customer-card span {
+        font-size: 10.5px;
+        line-height: 1.25;
+    }
+
+    .customer-card h2 {
+        font-size: 15px;
+        line-height: 1.2;
+        max-width: 100%;
+    }
+
+    .customer-card p {
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+}
+
+
+/* =========================
+   MOBILE: 0 — 600px
+   EXACT 2 × 2 GRID
+========================= */
+
+@media (max-width: 600px) {
+
+    .customer-cards {
+
+        /* IMPORTANT:
+           Do NOT use auto-fit / auto-fill here.
+           Always keep exactly 2 columns. */
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        margin: 0 0 14px;
+
+        box-sizing: border-box;
+
+    }
+
+
+    /* =========================
+       CARD
+    ========================= */
+
+    .customer-card {
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        min-height: 86px;
+
+        padding: 10px;
+
+        border-radius: 10px;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+
+    }
+
+
+    /* =========================
+       ICON
+    ========================= */
+
+    .customer-card-icon {
+
+        width: 25px;
+        height: 25px;
+
+        min-width: 25px;
+        min-height: 25px;
+
+        margin-bottom: 7px;
+
+        border-radius: 7px;
+
+    }
+
+    .customer-card-icon svg {
+
+        width: 13px;
+        height: 13px;
+
+    }
+
+
+    /* =========================
+       LABEL
+    ========================= */
+
+    .customer-card span {
+
+        display: block;
+
+        width: 100%;
+        min-width: 0;
+
+        margin-bottom: 3px;
+
+        font-size: 10px;
+        line-height: 1.25;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+    }
+
+
+    /* =========================
+       VALUE
+    ========================= */
+
+    .customer-card h2 {
+
+        display: block;
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        margin: 0;
+
+        font-size: 15px;
+        line-height: 1.2;
+
+        font-weight: 800;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+    }
+
+
+    /* =========================
+       DESCRIPTION
+       Hide only on mobile
+    ========================= */
+
+    .customer-card p {
+
+        display: none;
+
+    }
+
+
+    /* =========================
+       MOBILE HOVER
+       Avoid desktop lift effect
+    ========================= */
+
+    .customer-card:hover {
+
+        transform: none;
+
+        border-color: var(--card-border);
+
+        box-shadow: var(--card-shadow);
+
+    }
+
+    .customer-card:hover::before {
+
+        opacity: 0;
+
+    }
+
+    .customer-card:hover .customer-card-icon {
+
+        transform: none;
+
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE: ≤ 380px
+========================= */
+
+@media (max-width: 380px) {
+
+    .customer-cards {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+
+    }
+
+    .customer-card {
+
+        min-height: 82px;
+
+        padding: 9px;
+
+    }
+
+    .customer-card-icon {
+
+        width: 23px;
+        height: 23px;
+
+        min-width: 23px;
+        min-height: 23px;
+
+        margin-bottom: 6px;
+
+    }
+
+    .customer-card-icon svg {
+
+        width: 12px;
+        height: 12px;
+
+    }
+
+    .customer-card span {
+
+        font-size: 9px;
+
+    }
+
+    .customer-card h2 {
+
+        font-size: 14px;
+
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL DEVICES: ≤ 340px
+========================= */
+
+@media (max-width: 340px) {
+
+    .customer-cards {
+
+        gap: 7px;
+
+    }
+
+    .customer-card {
+
+        min-height: 78px;
+
+        padding: 8px;
+
+    }
+
+    .customer-card span {
+
+        font-size: 8.5px;
+
+    }
+
+    .customer-card h2 {
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .customer-card,
+    .customer-card-icon {
+
+        transition: none;
+
+    }
+
+}

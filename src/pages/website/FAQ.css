@@ -1,0 +1,25 @@
+/* =========================
+   FAQ PAGE
+========================= */
+
+.faq-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #ffffff;
+}
+
+/* Make sure FAQ section fits full website page */
+
+.faq-page>* {
+    width: 100%;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+    .faq-page {
+        overflow-x: hidden;
+    }
+}

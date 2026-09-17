@@ -1,0 +1,487 @@
+/* =========================================
+   KRYOLT DOCUMENTATION
+========================================= */
+
+.documentation-page {
+    min-height: 100vh;
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+.documentation-main {
+    padding-top: 70px;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.documentation-hero {
+    position: relative;
+
+    padding: 85px 24px 70px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 50% 0%,
+            rgba(37, 99, 235, 0.10),
+            transparent 48%),
+        #ffffff;
+
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.documentation-eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    margin-bottom: 18px;
+    padding: 7px 14px;
+
+    border-radius: 999px;
+
+    background: #eff6ff;
+    border: 1px solid #dbeafe;
+
+    color: #2563eb;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 0.02em;
+}
+
+.documentation-hero h1 {
+    max-width: 800px;
+
+    margin: 0 auto 18px;
+
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.08;
+
+    font-weight: 800;
+
+    letter-spacing: -0.045em;
+
+    color: #0f172a;
+}
+
+.documentation-hero p {
+    max-width: 680px;
+
+    margin: 0 auto;
+
+    font-size: 16px;
+    line-height: 1.75;
+
+    color: #64748b;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.documentation-container {
+    width: min(1120px, calc(100% - 40px));
+
+    margin: 0 auto;
+
+    padding: 70px 0 100px;
+
+    display: grid;
+
+    grid-template-columns: 230px minmax(0, 1fr);
+
+    gap: 42px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.documentation-sidebar {
+    position: sticky;
+
+    top: 92px;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.04);
+}
+
+.documentation-sidebar h3 {
+    margin: 0 0 16px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    color: #0f172a;
+}
+
+.documentation-sidebar nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.documentation-sidebar a {
+    display: block;
+
+    padding: 9px 11px;
+
+    border-radius: 8px;
+
+    color: #64748b;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 550;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.documentation-sidebar a:hover {
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    transform: translateX(2px);
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.documentation-content {
+    min-width: 0;
+
+    padding: 48px 52px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.04);
+}
+
+.documentation-content section {
+    scroll-margin-top: 100px;
+
+    margin-bottom: 58px;
+
+    padding-bottom: 50px;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.documentation-content section:last-child {
+    margin-bottom: 0;
+
+    padding-bottom: 0;
+
+    border-bottom: none;
+}
+
+
+/* =========================================
+   LABEL
+========================================= */
+
+.documentation-label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: #2563eb;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 0.10em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   HEADINGS
+========================================= */
+
+.documentation-content h2 {
+    margin: 0 0 16px;
+
+    font-size: 27px;
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    letter-spacing: -0.025em;
+
+    color: #0f172a;
+}
+
+.documentation-content h3 {
+    margin: 28px 0 10px;
+
+    font-size: 17px;
+    line-height: 1.4;
+
+    font-weight: 750;
+
+    color: #1e293b;
+}
+
+
+/* =========================================
+   TEXT
+========================================= */
+
+.documentation-content p {
+    max-width: 760px;
+
+    margin: 0 0 17px;
+
+    color: #475569;
+
+    font-size: 15px;
+
+    line-height: 1.85;
+}
+
+.documentation-content ul {
+    margin: 0 0 20px;
+
+    padding-left: 21px;
+
+    color: #475569;
+}
+
+.documentation-content li {
+    margin-bottom: 9px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   INFO CARD
+========================================= */
+
+.documentation-info {
+    margin: 25px 0;
+
+    padding: 20px 22px;
+
+    background: #eff6ff;
+
+    border: 1px solid #bfdbfe;
+
+    border-radius: 12px;
+
+    border-left: 4px solid #2563eb;
+}
+
+.documentation-info strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #1e40af;
+
+    font-size: 14px;
+}
+
+.documentation-info p {
+    margin: 0;
+
+    color: #1e40af;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   WARNING
+========================================= */
+
+.documentation-warning {
+    margin-top: 25px;
+
+    padding: 20px 22px;
+
+    background: #fff7ed;
+
+    border: 1px solid #fed7aa;
+
+    border-radius: 12px;
+
+    border-left: 4px solid #f97316;
+}
+
+.documentation-warning strong {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #c2410c;
+
+    font-size: 14px;
+}
+
+.documentation-warning p {
+    margin: 0;
+
+    color: #9a3412;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   CODE BLOCK
+========================================= */
+
+.documentation-code {
+    margin: 22px 0;
+
+    padding: 22px;
+
+    overflow-x: auto;
+
+    border-radius: 12px;
+
+    background: #0f172a;
+
+    color: #e2e8f0;
+
+    border: 1px solid #1e293b;
+
+    font-family:
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        monospace;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+    white-space: pre;
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.10);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .documentation-container {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+    .documentation-sidebar {
+        position: static;
+    }
+
+    .documentation-sidebar nav {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 5px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .documentation-main {
+        padding-top: 65px;
+    }
+
+    .documentation-hero {
+        padding: 65px 20px 55px;
+    }
+
+    .documentation-hero h1 {
+        font-size: 38px;
+    }
+
+    .documentation-hero p {
+        font-size: 15px;
+    }
+
+    .documentation-container {
+        width: calc(100% - 32px);
+
+        padding: 50px 0 70px;
+    }
+
+    .documentation-content {
+        padding: 34px 24px;
+
+        border-radius: 16px;
+    }
+
+    .documentation-content h2 {
+        font-size: 24px;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .documentation-sidebar nav {
+        grid-template-columns: 1fr;
+    }
+
+    .documentation-content {
+        padding: 28px 20px;
+    }
+
+    .documentation-content p,
+    .documentation-content li {
+        font-size: 14px;
+    }
+
+    .documentation-code {
+        padding: 16px;
+
+        font-size: 11px;
+    }
+
+}

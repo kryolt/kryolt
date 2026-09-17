@@ -1,0 +1,23 @@
+.customers-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.customer-chart-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.customer-section {
+    width: 100%;
+}
+
+@media(max-width:900px) {
+
+    .customer-chart-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

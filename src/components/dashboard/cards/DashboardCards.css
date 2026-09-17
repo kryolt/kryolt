@@ -1,0 +1,273 @@
+.dashboard-cards {
+    --card-radius: 12px;
+    --card-border: #E8ECF3;
+    --card-shadow: 0 1px 2px rgba(15, 23, 42, .04),
+        0 4px 12px rgba(15, 23, 42, .04);
+    --card-shadow-hover: 0 3px 8px rgba(15, 23, 42, .06),
+        0 10px 22px rgba(15, 23, 42, .08);
+
+    --text-primary: #0F172A;
+    --text-secondary: #64748B;
+    --text-muted: #94A3B8;
+
+    --up-bg: #ECFDF5;
+    --up-text: #059669;
+
+    --down-bg: #FEF2F2;
+    --down-text: #DC2626;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    width: 100%;
+    margin: 0 0 14px;
+
+    box-sizing: border-box;
+}
+
+.dashboard-cards *,
+.dashboard-card * {
+    box-sizing: border-box;
+}
+
+.dashboard-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    flex: 1 1 180px;
+    min-width: 0;
+    min-height: 92px;
+
+    padding: 14px;
+
+    background: #fff;
+    border: 1px solid var(--card-border);
+    border-radius: var(--card-radius);
+
+    box-shadow: var(--card-shadow);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+.dashboard-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    border-radius: 12px 12px 0 0;
+
+    background: #0D46F5;
+
+    opacity: 0;
+
+    transition: opacity .2s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-3px);
+
+    border-color: transparent;
+
+    box-shadow: var(--card-shadow-hover);
+}
+
+.dashboard-card:hover::before {
+    opacity: 1;
+}
+
+/* ===================== TOP ===================== */
+
+.card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.card-icon {
+    width: 30px;
+    height: 30px;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0D46F5;
+    color: #fff;
+
+    flex-shrink: 0;
+
+    box-shadow: 0 6px 14px rgba(13, 70, 245, .25);
+
+    transition: transform .2s ease;
+}
+
+.dashboard-card:hover .card-icon {
+    transform: scale(1.06);
+}
+
+.card-icon svg {
+    width: 15px;
+    height: 15px;
+}
+
+.trend-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+
+    padding: 3px 6px;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1;
+}
+
+.trend-up {
+    background: var(--up-bg);
+    color: var(--up-text);
+}
+
+.trend-down {
+    background: var(--down-bg);
+    color: var(--down-text);
+}
+
+/* ===================== CONTENT ===================== */
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+
+    min-width: 0;
+}
+
+.card-title {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.card-content h2 {
+    margin: 0;
+
+    font-size: clamp(16px, 1.3vw, 22px);
+
+    font-weight: 800;
+
+    color: var(--text-primary);
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-subtitle {
+    font-size: 10px;
+    color: var(--text-muted);
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 1200px) {
+    .dashboard-card {
+        flex: 1 1 200px;
+    }
+}
+
+@media (max-width: 900px) {
+    .dashboard-cards {
+        gap: 10px;
+    }
+
+    .dashboard-card {
+        flex: 1 1 calc(50% - 5px);
+        min-height: 88px;
+        padding: 12px;
+    }
+}
+
+/* 2 Cards per row on mobile screens */
+@media (max-width: 600px) {
+    .dashboard-cards {
+        gap: 8px;
+    }
+
+    .dashboard-card {
+        flex: 1 1 calc(50% - 4px);
+        min-width: calc(50% - 4px);
+        padding: 10px;
+        min-height: 82px;
+        border-radius: 10px;
+    }
+
+    .card-top {
+        margin-bottom: 8px;
+    }
+
+    .card-icon {
+        width: 26px;
+        height: 26px;
+        border-radius: 6px;
+    }
+
+    .card-icon svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    .trend-pill {
+        padding: 2px 5px;
+        font-size: 9px;
+    }
+
+    .trend-pill svg {
+        width: 10px;
+        height: 10px;
+    }
+
+    .card-title {
+        font-size: 10px;
+    }
+
+    .card-content h2 {
+        font-size: 15px;
+    }
+
+    .card-subtitle {
+        font-size: 9px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .dashboard-card,
+    .card-icon {
+        transition: none;
+    }
+}

@@ -1,0 +1,270 @@
+/* Core Variables & Base Styles */
+.insights-hero {
+    --ih-primary: #0b5fff;
+    --ih-primary-deep: #0639a6;
+    --ih-primary-soft: rgba(255, 255, 255, 0.16);
+    --ih-primary-soft-border: rgba(255, 255, 255, 0.28);
+
+    /* Desktop Dimensions (Slightly Reduced) */
+    --ih-padding-y: 16px;
+    --ih-padding-x: 20px;
+    --ih-gap: 18px;
+    --ih-radius: 16px;
+    --ih-min-height: 130px;
+
+    /* Desktop Typography (Slightly Reduced) */
+    --ih-heading-size: 21px;
+    --ih-desc-size: 12.5px;
+
+    /* Circle Badge Variables (Slightly Reduced) */
+    --ih-badge-size: 90px;
+    --ih-badge-border: 2.5px;
+    --ih-badge-icon: 18px;
+    --ih-badge-number: 18px;
+    --ih-badge-label: 9px;
+
+    /* Background Mark Position */
+    --ih-mark-size: 140px;
+    --ih-mark-offset: 140px;
+
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--ih-gap);
+    min-height: var(--ih-min-height);
+    padding: var(--ih-padding-y) var(--ih-padding-x);
+    border-radius: var(--ih-radius);
+    background: linear-gradient(135deg, var(--ih-primary) 0%, var(--ih-primary-deep) 100%);
+    box-shadow: 0 10px 22px rgba(11, 95, 255, 0.2);
+    overflow: hidden;
+}
+
+.insights-hero * {
+    box-sizing: border-box;
+}
+
+/* Background Mark */
+.insights-mark {
+    position: absolute;
+    top: -10px;
+    right: var(--ih-mark-offset);
+    width: var(--ih-mark-size);
+    height: var(--ih-mark-size);
+    color: rgba(255, 255, 255, 0.07);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.insights-mark svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Left Content Area */
+.insights-left {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 auto;
+    min-width: 0;
+    text-align: left;
+}
+
+.insights-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--ih-primary-soft);
+    border: 1px solid var(--ih-primary-soft-border);
+    backdrop-filter: blur(4px);
+    color: #ffffff;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    letter-spacing: 0.2px;
+}
+
+.insights-chip-icon {
+    width: 11px;
+    height: 11px;
+    flex-shrink: 0;
+}
+
+.insights-left h1 {
+    margin: 0 0 5px 0;
+    font-size: var(--ih-heading-size);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.3px;
+    color: #ffffff;
+}
+
+.insights-left p {
+    margin: 0 0 8px 0;
+    max-width: 460px;
+    font-size: var(--ih-desc-size);
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.86);
+    font-weight: 400;
+}
+
+/* Chips Row */
+.insights-chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.insights-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    padding: 2.5px 7.5px;
+    border-radius: 5px;
+    font-size: 9.5px;
+    font-weight: 500;
+}
+
+/* Right Badge Container */
+.insights-k-badge {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    width: var(--ih-badge-size);
+    height: var(--ih-badge-size);
+}
+
+.insights-k-ring {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 2px;
+    background: conic-gradient(from 180deg,
+            #818cf8 0%,
+            #ffffff 30%,
+            #6366f1 60%,
+            #ffffff 100%);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.insights-k-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: var(--ih-primary-deep);
+    border: var(--ih-badge-border) solid #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.insights-k-icon {
+    width: var(--ih-badge-icon);
+    height: var(--ih-badge-icon);
+}
+
+.insights-k-number {
+    font-size: var(--ih-badge-number);
+    font-weight: 800;
+    line-height: 1;
+    color: #ffffff;
+}
+
+.insights-k-label {
+    font-size: var(--ih-badge-label);
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+/* Tablet / Pad Screens (max-width: 900px) */
+@media (max-width: 900px) {
+    .insights-hero {
+        --ih-padding-y: 13px;
+        --ih-padding-x: 15px;
+        --ih-gap: 12px;
+        --ih-heading-size: 17px;
+        --ih-desc-size: 11px;
+        --ih-badge-size: 75px;
+        --ih-badge-icon: 14px;
+        --ih-badge-number: 15px;
+        --ih-badge-label: 7.5px;
+    }
+}
+
+/* Mobile View Scaling (max-width: 640px) */
+@media (max-width: 640px) {
+    .insights-hero {
+        --ih-padding-y: 10px;
+        --ih-padding-x: 10px;
+        --ih-gap: 8px;
+        --ih-radius: 12px;
+        --ih-min-height: auto;
+
+        /* Compact Mobile Typography */
+        --ih-heading-size: 13.5px;
+        --ih-desc-size: 9px;
+
+        /* Compact Circle for Mobile */
+        --ih-badge-size: 58px;
+        --ih-badge-border: 1.5px;
+        --ih-badge-icon: 11px;
+        --ih-badge-number: 12px;
+        --ih-badge-label: 6.5px;
+
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .insights-mark {
+        display: none;
+    }
+
+    .insights-badge {
+        font-size: 7.5px;
+        padding: 1.5px 5px;
+        margin-bottom: 3px;
+    }
+
+    .insights-left h1 {
+        margin-bottom: 2px;
+        line-height: 1.1;
+    }
+
+    .insights-left p {
+        margin-bottom: 4px;
+        line-height: 1.25;
+        display: block;
+        overflow: visible;
+        white-space: normal;
+    }
+
+    .insights-chip-row {
+        gap: 3px;
+    }
+
+    .insights-chip {
+        padding: 1.5px 5px;
+        font-size: 7.5px;
+        border-radius: 3px;
+    }
+
+    .insights-chip-icon {
+        width: 8.5px;
+        height: 8.5px;
+    }
+}

@@ -1,0 +1,1112 @@
+/* =========================================
+   PRICING SECTION
+========================================= */
+
+.pricing {
+    width: 100%;
+    padding: clamp(70px, 8vw, 100px) 7%;
+    background: var(--surface, #ffffff);
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.pricing-heading {
+    text-align: center;
+    margin: 0 auto 60px;
+    max-width: 700px;
+}
+
+.pricing-heading span {
+    display: inline-block;
+
+    color: var(--primary, #2E5CE8);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.pricing-heading h2 {
+    margin: 14px 0;
+
+    color: var(--text-primary, #111827);
+
+    font-size: clamp(28px, 3.5vw, 40px);
+    line-height: 1.2;
+    font-weight: 800;
+
+    letter-spacing: -0.8px;
+}
+
+.pricing-heading p {
+    margin: 0;
+
+    color: var(--text-muted, #64748B);
+
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   NEW USER PROMO CARD
+========================================= */
+
+.pricing-promo-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 36px;
+
+    padding: 32px 34px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(135deg,
+            #f5f8ff 0%,
+            #ffffff 55%,
+            #f8fbff 100%);
+
+    border: 1px solid #d9e3fb;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(46, 92, 232, 0.08);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.pricing-promo-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 5px;
+    height: 100%;
+
+    background: #2E5CE8;
+}
+
+
+.pricing-promo-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #b9c9f5;
+
+    box-shadow:
+        0 16px 38px rgba(46, 92, 232, 0.13);
+}
+
+
+/* =========================================
+   PROMO CONTENT
+========================================= */
+
+.pricing-promo-content {
+    position: relative;
+    z-index: 2;
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+
+.pricing-promo-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    margin-bottom: 10px;
+
+    padding: 6px 11px;
+
+    background: #e9efff;
+
+    color: #2E5CE8;
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    white-space: nowrap;
+}
+
+
+.pricing-promo-content h3 {
+    margin: 0 0 7px;
+
+    color: #111827;
+
+    font-size: clamp(21px, 2.4vw, 28px);
+
+    line-height: 1.25;
+
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+
+.pricing-promo-content>p {
+    margin: 0 0 15px;
+
+    max-width: 620px;
+
+    color: #64748B;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   PROMO PRICE
+========================================= */
+
+.pricing-promo-price {
+    display: flex;
+
+    align-items: baseline;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 13px;
+}
+
+
+.pricing-promo-old-price {
+    color: #94A3B8;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    text-decoration: line-through;
+}
+
+
+.pricing-promo-price strong {
+    color: #111827;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    font-weight: 850;
+
+    letter-spacing: -0.8px;
+}
+
+
+.pricing-promo-price>span:last-child {
+    color: #64748B;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   PROMO CODE
+========================================= */
+
+.pricing-promo-code {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    width: fit-content;
+    margin: 0 0 14px;
+    color: #64748B;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+
+.pricing-promo-code svg {
+    color: #2E5CE8;
+}
+
+
+.pricing-promo-code strong {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 5px 9px;
+
+    background: #ffffff;
+
+    color: #2E5CE8;
+
+    border: 1px dashed #9db3ed;
+
+    border-radius: 7px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   PROMO BUTTON
+========================================= */
+
+.pricing-promo-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: fit-content;
+    min-height: 44px;
+    padding: 11px 20px;
+    margin-top: 0;
+    border: none;
+    border-radius: 10px;
+    background: #2E5CE8;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 18px rgba(46, 92, 232, 0.22);
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.pricing-promo-button:hover {
+    background: #244BC4;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 24px rgba(46, 92, 232, 0.30);
+}
+
+
+.pricing-promo-button:focus-visible {
+    outline: 2px solid #2E5CE8;
+
+    outline-offset: 3px;
+}
+
+
+.pricing-promo-button svg {
+    transition:
+        transform 0.25s ease;
+}
+
+
+.pricing-promo-button:hover svg {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   SAVE BADGE
+========================================= */
+
+.pricing-promo-save {
+    position: relative;
+
+    z-index: 2;
+
+    flex-shrink: 0;
+
+    width: 112px;
+    height: 112px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #2E5CE8;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 14px 30px rgba(46, 92, 232, 0.22);
+
+    transform: rotate(5deg);
+}
+
+
+.pricing-promo-save span {
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+
+    opacity: 0.85;
+}
+
+
+.pricing-promo-save strong {
+    margin-top: 2px;
+
+    font-size: 32px;
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: -1px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .pricing-promo-card {
+        padding: 26px 28px;
+
+        gap: 22px;
+    }
+
+
+    .pricing-promo-save {
+        width: 92px;
+        height: 92px;
+    }
+
+
+    .pricing-promo-save strong {
+        font-size: 28px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .pricing-promo-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        margin-bottom: 36px;
+
+        padding: 25px 22px 24px;
+
+        border-radius: 18px;
+    }
+
+
+    .pricing-promo-card::before {
+        width: 100%;
+        height: 4px;
+
+        top: 0;
+        left: 0;
+    }
+
+
+    .pricing-promo-content {
+        width: 100%;
+    }
+
+
+    .pricing-promo-content h3 {
+        font-size: 23px;
+
+        line-height: 1.3;
+    }
+
+
+    .pricing-promo-content>p {
+        font-size: 14px;
+
+        margin-bottom: 15px;
+    }
+
+
+    .pricing-promo-price strong {
+        font-size: 29px;
+    }
+
+
+    .pricing-promo-code {
+        width: 100%;
+        margin-bottom: 14px;
+    }
+
+
+    .pricing-promo-button {
+        width: 100%;
+
+        min-height: 50px;
+
+        font-size: 15px;
+    }
+
+
+    .pricing-promo-save {
+        position: absolute;
+
+        top: 18px;
+        right: 18px;
+
+        width: 72px;
+        height: 72px;
+
+        transform: rotate(5deg);
+    }
+
+
+    .pricing-promo-save span {
+        font-size: 8px;
+    }
+
+
+    .pricing-promo-save strong {
+        font-size: 23px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .pricing-promo-card {
+        padding: 24px 18px 20px;
+    }
+
+
+    .pricing-promo-content h3 {
+        padding-right: 65px;
+
+        font-size: 20px;
+    }
+
+
+    .pricing-promo-content>p {
+        font-size: 13px;
+
+        line-height: 1.55;
+    }
+
+
+    .pricing-promo-price {
+        gap: 6px;
+    }
+
+
+    .pricing-promo-old-price {
+        font-size: 14px;
+    }
+
+
+    .pricing-promo-price strong {
+        font-size: 27px;
+    }
+
+
+    .pricing-promo-code {
+        font-size: 12px;
+    }
+
+
+    .pricing-promo-save {
+        top: 15px;
+        right: 15px;
+
+        width: 64px;
+        height: 64px;
+    }
+
+
+    .pricing-promo-save strong {
+        font-size: 21px;
+    }
+
+
+    .pricing-promo-button {
+        min-height: 48px;
+
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================
+   PROMO / GRID SEPARATION
+========================================= */
+
+@media (min-width: 769px) {
+    .pricing-promo-card+.pricing-grid {
+        margin-top: 8px;
+    }
+}
+
+/* =========================================
+   PRICING GRID
+========================================= */
+
+.pricing-grid {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================
+   PRICING CARD
+========================================= */
+
+.pricing-card {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 32px 28px;
+
+    background: var(--card-bg, #ffffff);
+
+    border: 1px solid var(--border-color, #E5E7EB);
+    border-radius: 20px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 6px 20px rgba(15, 23, 42, 0.05);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.pricing-card:hover,
+.pricing-card:focus-within {
+    transform: translateY(-6px);
+
+    border-color: #2E5CE8;
+
+    box-shadow:
+        0 18px 40px rgba(46, 92, 232, 0.13);
+}
+
+
+/* =========================================
+   POPULAR CARD
+========================================= */
+
+.pricing-card.popular {
+    background:
+        linear-gradient(180deg,
+            #f7faff 0%,
+            #ffffff 180px);
+
+    border: 2px solid #2E5CE8;
+
+    box-shadow:
+        0 14px 35px rgba(46, 92, 232, 0.15);
+
+    transform: scale(1.025);
+
+    z-index: 2;
+}
+
+.pricing-card.popular:hover,
+.pricing-card.popular:focus-within {
+    transform: scale(1.025) translateY(-6px);
+}
+
+
+/* =========================================
+   MOST POPULAR TAG
+========================================= */
+
+.popular-tag {
+    position: absolute;
+
+    top: -15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    padding: 8px 17px;
+
+    background: #2E5CE8;
+
+    color: #ffffff;
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 8px 20px rgba(46, 92, 232, 0.28);
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   PLAN TITLE
+========================================= */
+
+.pricing-card h3 {
+    margin: 0 0 18px;
+
+    text-align: center;
+
+    color: var(--text-secondary, #374151);
+
+    font-size: 21px;
+    line-height: 1.3;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   PRICE
+========================================= */
+
+.plan-price-row {
+    display: flex;
+
+    align-items: baseline;
+    justify-content: center;
+
+    gap: 5px;
+
+    min-height: 48px;
+}
+
+.pricing-card .plan-price {
+    margin: 0;
+
+    color: var(--text-primary, #111827);
+
+    font-size: clamp(36px, 4vw, 44px);
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+}
+
+.plan-period {
+    color: var(--text-muted, #94A3B8);
+
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.pricing-card .plan-desc {
+    margin: 10px 0 28px;
+
+    text-align: center;
+
+    color: var(--text-muted, #6B7280);
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   FEATURES
+========================================= */
+
+.pricing-card ul {
+    flex: 1;
+
+    list-style: none;
+
+    margin: 0 0 30px;
+    padding: 0;
+}
+
+.pricing-card li {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 9px 0;
+
+    color: var(--text-secondary, #374151);
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.check-icon {
+    width: 21px;
+    height: 21px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #DCE6F8;
+
+    color: #2E5CE8;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.pricing-card button {
+    width: 100%;
+
+    min-height: 50px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 13px 18px;
+
+    border: none;
+    border-radius: 12px;
+
+    font-family: inherit;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.pricing-card button svg {
+    transition: transform 0.25s ease;
+}
+
+.pricing-card button:hover svg {
+    transform: translateX(4px);
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+.btn-primary {
+    background: #2E5CE8;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 8px 20px rgba(46, 92, 232, 0.2);
+}
+
+.btn-primary:hover,
+.btn-primary:focus-visible {
+    background: #244BC4;
+
+    box-shadow:
+        0 12px 25px rgba(46, 92, 232, 0.3);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   SECONDARY BUTTON
+========================================= */
+
+.btn-secondary {
+    background: #F1F5FB;
+
+    color: #2E5CE8;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+    background: #DCE6F8;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   FOCUS
+========================================= */
+
+.pricing-card button:focus-visible {
+    outline: 2px solid #2E5CE8;
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+
+    .pricing {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .pricing-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+    }
+
+    .pricing-card {
+        padding: 22px 16px;
+    }
+
+    .pricing-card h3 {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .pricing-card .plan-price {
+        font-size: 28px;
+    }
+
+    .pricing-card .plan-desc {
+        font-size: 12.5px;
+        margin: 8px 0 18px;
+    }
+
+    .pricing-card li {
+        font-size: 12.5px;
+        padding: 6px 0;
+    }
+
+    .pricing-card button {
+        min-height: 42px;
+        font-size: 12.5px;
+    }
+
+    .pricing-card.popular {
+        transform: scale(1.02);
+    }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .pricing {
+        padding: 55px 20px 70px;
+    }
+
+    .pricing-heading {
+        margin-bottom: 42px;
+    }
+
+    .pricing-heading span {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .pricing-heading h2 {
+        font-size: 31px;
+        line-height: 1.2;
+        margin: 12px 0;
+    }
+
+    .pricing-heading p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 26px;
+        max-width: 500px;
+    }
+
+    .pricing-card {
+        padding: 30px 24px;
+        border-radius: 18px;
+    }
+
+    .pricing-card.popular {
+        grid-column: span 1;
+        width: 100%;
+        max-width: none;
+        transform: none;
+        margin: 0;
+        border-width: 2px;
+    }
+
+    .pricing-card.popular:hover,
+    .pricing-card.popular:focus-within {
+        transform: translateY(-5px);
+    }
+
+    .popular-tag {
+        top: -14px;
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+
+    .pricing-card h3 {
+        font-size: 21px;
+        margin-bottom: 16px;
+    }
+
+    .pricing-card .plan-price {
+        font-size: 42px;
+    }
+
+    .pricing-card .plan-desc {
+        margin-bottom: 24px;
+    }
+
+    .pricing-card li {
+        font-size: 15px;
+        padding: 9px 0;
+    }
+
+    .pricing-card button {
+        min-height: 52px;
+        font-size: 16px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .pricing {
+        padding: 80px 20px 60px;
+    }
+
+    .pricing-heading {
+        margin-bottom: 38px;
+    }
+
+    .pricing-heading h2 {
+        font-size: 28px;
+    }
+
+    .pricing-heading p {
+        font-size: 14px;
+    }
+
+    .pricing-grid {
+        gap: 24px;
+    }
+
+    .pricing-card {
+        padding: 28px 20px;
+    }
+
+    .pricing-card .plan-price {
+        font-size: 40px;
+    }
+
+    .pricing-card li {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+
+}

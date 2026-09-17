@@ -1,0 +1,130 @@
+.top-customers-card {
+    width: 100%;
+    background: #fff;
+    border-radius: 16px;
+    padding: 20px;
+    border: 1px solid #E7EAF0;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, .04);
+}
+
+.tc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.tc-header h2 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0;
+}
+
+.tc-view-all {
+    background: none;
+    border: none;
+    color: #0D46F5;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 6px;
+    transition: background .2s ease;
+}
+
+.tc-view-all:hover {
+    background: #F0F4FF;
+}
+
+.tc-table-wrapper {
+    overflow-x: auto;
+}
+
+.top-customers-card table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.top-customers-card thead th {
+    text-align: left;
+    padding: 10px 14px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #94A3B8;
+    border-bottom: 1px solid #F1F5F9;
+    white-space: nowrap;
+}
+
+.top-customers-card tbody td {
+    padding: 13px 14px;
+    font-size: 13.5px;
+    color: #334155;
+    border-bottom: 1px solid #F8FAFC;
+    white-space: nowrap;
+}
+
+.top-customers-card tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.top-customers-card tbody tr:hover td {
+    background: #FAFBFF;
+}
+
+.tc-name {
+    font-weight: 600;
+    color: #0F172A;
+}
+
+.tc-rank {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.rank-1 {
+    background: #F0B429;
+}
+
+.rank-2 {
+    background: #94A3B8;
+}
+
+.rank-3 {
+    background: #D97706;
+}
+
+.rank-4 {
+    background: #CBD5E1;
+    color: #475569;
+}
+
+.rank-5 {
+    background: #CBD5E1;
+    color: #475569;
+}
+
+.tc-empty {
+    text-align: center;
+    padding: 40px;
+    border: 1px dashed #E7EAF0;
+    border-radius: 14px;
+    background: #F8FAFF;
+    color: #64748B;
+    font-weight: 600;
+    font-size: 13.5px;
+}
+
+@media (max-width: 600px) {
+    .top-customers-card {
+        padding: 14px;
+    }
+}

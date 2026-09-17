@@ -1,0 +1,507 @@
+/* =========================================================
+   KRYOLT — CUSTOMER DATA TABLE (OPTIMIZED & COMPACT)
+   Desktop + Tablet + Mobile
+   ========================================================= */
+
+.table-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0;
+    padding: 18px;
+    background: #ffffff;
+    border: 1px solid #E7EAF0;
+    border-radius: 14px;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.table-card *,
+.table-card *::before,
+.table-card *::after {
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   HEADER & CONTROLS
+   ========================================================= */
+
+.table-top {
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.table-top>div {
+    min-width: 0;
+}
+
+.table-top h2 {
+    margin: 0 0 2px;
+    color: #0F172A;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.table-top p {
+    margin: 0;
+    color: #64748B;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.table-tools {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* =========================================================
+   SEARCH & CONTROLS
+   ========================================================= */
+
+.table-card .search-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 210px;
+    height: 36px;
+    padding: 0 10px;
+    background: #F8FAFF;
+    border: 1px solid #E7EAF0;
+    border-radius: 8px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.table-card .search-box:focus-within {
+    border-color: #0D46F5;
+    box-shadow: 0 0 0 3px rgba(13, 70, 245, 0.08);
+}
+
+.table-card .search-box svg {
+    flex-shrink: 0;
+    color: #64748B;
+}
+
+.table-card .search-box input {
+    width: 100%;
+    min-width: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #0F172A;
+    font-size: 12.5px;
+}
+
+.table-card .search-box input::placeholder {
+    color: #94A3B8;
+}
+
+.table-card .table-tools select {
+    height: 36px;
+    padding: 0 8px;
+    background: #ffffff;
+    border: 1px solid #E7EAF0;
+    border-radius: 8px;
+    color: #334155;
+    font-size: 12.5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.table-card .table-tools select:focus {
+    border-color: #0D46F5;
+}
+
+.table-card .export-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 36px;
+    padding: 0 12px;
+    background: #0D46F5 !important;
+    border: 1px solid #0D46F5 !important;
+    border-radius: 8px;
+    color: #FFFFFF !important;
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.table-card .export-btn svg {
+    flex-shrink: 0;
+    color: #FFFFFF !important;
+    stroke: #FFFFFF !important;
+}
+
+.table-card .export-btn:hover:not(:disabled) {
+    background: #061E8C !important;
+    border-color: #061E8C !important;
+}
+
+.table-card .export-btn:active:not(:disabled) {
+    transform: scale(0.98);
+}
+
+.table-card .export-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* =========================================================
+   TABLE CONTAINER
+   ========================================================= */
+
+.table-card .table-wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    max-height: 480px;
+    overflow-x: auto;
+    overflow-y: auto;
+    border: 1px solid #E7EAF0;
+    border-radius: 10px;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: thin;
+}
+
+.table-card .table-wrapper table {
+    width: 100%;
+    min-width: 750px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: auto;
+}
+
+/* Force real table layout — prevents any global responsive-table
+   reset (e.g. Tailwind preflight or App.css) from stacking cells
+   into blocks on small screens */
+.table-card .table-wrapper table,
+.table-card .table-wrapper thead,
+.table-card .table-wrapper tbody,
+.table-card .table-wrapper tr,
+.table-card .table-wrapper th,
+.table-card .table-wrapper td {
+    width: auto !important;
+}
+
+.table-card .table-wrapper table {
+    display: table !important;
+}
+
+.table-card .table-wrapper thead {
+    display: table-header-group !important;
+}
+
+.table-card .table-wrapper tbody {
+    display: table-row-group !important;
+}
+
+.table-card .table-wrapper tr {
+    display: table-row !important;
+}
+
+.table-card .table-wrapper th,
+.table-card .table-wrapper td {
+    display: table-cell !important;
+}
+
+/* Header Sticky */
+.table-card .table-wrapper thead {
+    background: #F8FAFF;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+.table-card .table-wrapper thead th {
+    padding: 10px 12px;
+    text-align: left;
+    color: #475569;
+    font-size: 11.5px;
+    font-weight: 600;
+    white-space: nowrap;
+    border-bottom: 1px solid #E7EAF0;
+    cursor: pointer;
+    user-select: none;
+}
+
+.table-card .table-head {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+}
+
+.table-card .table-wrapper tbody td {
+    padding: 9px 12px;
+    color: #334155;
+    font-size: 12.5px;
+    line-height: 1.35;
+    white-space: nowrap;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+.table-card .table-wrapper tbody tr:nth-child(even) {
+    background: #FAFBFC;
+}
+
+.table-card .table-wrapper tbody tr:hover {
+    background: #F0F5FF;
+}
+
+.table-card .table-wrapper tbody tr:hover td {
+    color: #0D46F5;
+}
+
+/* =========================================================
+   PAGINATION / FOOTER
+   ========================================================= */
+
+.table-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.table-bottom>span {
+    color: #64748B;
+    font-size: 12px;
+}
+
+.table-bottom strong {
+    color: #0F172A;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pagination button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    padding: 0;
+    border: none;
+    border-radius: 7px;
+    background: #F1F5F9;
+    color: #334155;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+    background: #0D46F5;
+    color: #FFFFFF;
+}
+
+.pagination button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    color: #0F172A;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* =========================================================
+   EMPTY STATE & SCROLLBAR
+   ========================================================= */
+
+.table-empty {
+    padding: 36px 16px;
+    text-align: center;
+}
+
+.table-empty h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.table-empty p {
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.table-card .table-wrapper::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+.table-card .table-wrapper::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 999px;
+}
+
+/* =========================================================
+   TABLET & MOBILE BREAKPOINTS (HEIGHT REDUCTION FOCUS)
+   ========================================================= */
+
+@media (max-width: 768px) {
+    .table-card {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .table-top {
+        margin-bottom: 10px;
+        gap: 8px;
+    }
+
+    .table-top h2 {
+        font-size: 14.5px;
+    }
+
+    .table-top p {
+        font-size: 11px;
+    }
+
+    /* Controls rearranged compact grid */
+    .table-tools {
+        display: flex;
+        width: 100%;
+        gap: 6px;
+    }
+
+    .table-card .search-box {
+        flex: 1;
+        width: auto;
+        min-width: 0;
+        height: 32px;
+        padding: 0 8px;
+    }
+
+    .table-card .search-box input {
+        font-size: 11.5px;
+    }
+
+    .table-card .table-tools select {
+        height: 32px;
+        padding: 0 6px;
+        font-size: 11.5px;
+    }
+
+    .table-card .export-btn {
+        height: 32px;
+        padding: 0 10px;
+        font-size: 11.5px;
+        white-space: nowrap;
+    }
+
+    /* Compact Table Body */
+    .table-card .table-wrapper {
+        max-height: 360px;
+        border-radius: 8px;
+    }
+
+    .table-card .table-wrapper table {
+        min-width: 620px;
+    }
+
+    .table-card .table-wrapper thead th {
+        padding: 8px 10px;
+        font-size: 10.5px;
+    }
+
+    .table-card .table-wrapper tbody td {
+        padding: 7px 10px;
+        font-size: 11px;
+    }
+
+    /* Compact Footer */
+    .table-bottom {
+        margin-top: 8px;
+        gap: 6px;
+    }
+
+    .table-bottom>span {
+        font-size: 10.5px;
+    }
+
+    .pagination button {
+        width: 28px;
+        height: 28px;
+        min-width: 28px;
+    }
+
+    .pagination span {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .table-card {
+        padding: 8px;
+    }
+
+    .table-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .table-tools {
+        display: grid;
+        grid-template-columns: 1fr auto auto;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .table-card .search-box {
+        height: 30px;
+    }
+
+    .table-card .table-tools select,
+    .table-card .export-btn {
+        height: 30px;
+        font-size: 11px;
+    }
+
+    .table-card .table-wrapper {
+        max-height: 320px;
+    }
+
+    .table-card .table-wrapper thead th {
+        padding: 7px 8px;
+        font-size: 10px;
+    }
+
+    .table-card .table-wrapper tbody td {
+        padding: 6px 8px;
+        font-size: 10.5px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .table-card *,
+    .table-card *::before,
+    .table-card *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}

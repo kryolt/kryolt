@@ -1,0 +1,229 @@
+.cta-section {
+    padding: 70px 7%;
+    background: #F8FBFF;
+}
+
+/* ===========================
+   CTA BOX
+=========================== */
+
+.cta-box {
+    position: relative;
+    max-width: 780px;
+    margin: auto;
+    text-align: center;
+    padding: 52px 44px;
+    border-radius: 28px;
+    background: linear-gradient(135deg, #1A3FB0 0%, #2E5CE8 55%, #3E68E8 100%);
+    color: #ffffff;
+    box-shadow: 0 20px 50px rgba(46, 92, 232, 0.25);
+    overflow: hidden;
+    isolation: isolate;
+}
+
+/* decorative ambient glow blobs */
+.cta-glow {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.cta-glow::before,
+.cta-glow::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+}
+
+.cta-glow::before {
+    width: 260px;
+    height: 260px;
+    background: rgba(255, 255, 255, 0.10);
+    top: -110px;
+    left: -60px;
+}
+
+.cta-glow::after {
+    width: 220px;
+    height: 220px;
+    background: rgba(220, 230, 248, 0.16);
+    bottom: -100px;
+    right: -50px;
+}
+
+/* faint dot-grid texture */
+.cta-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+    background-size: 22px 22px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 30%, transparent 100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ===========================
+   BADGE
+=========================== */
+
+.cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.14);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    color: #ffffff;
+    font-size: 12.5px;
+    font-weight: 700;
+    backdrop-filter: blur(15px);
+    margin-bottom: 22px;
+}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.cta-box h2 {
+    font-size: 34px;
+    line-height: 1.22;
+    margin-bottom: 14px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.8px;
+}
+
+.cta-box p {
+    max-width: 560px;
+    margin: auto;
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.cta-note {
+    margin-top: 18px !important;
+    font-size: 12.5px !important;
+    color: rgba(255, 255, 255, 0.62) !important;
+    line-height: 1.5 !important;
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 26px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    border-radius: 12px;
+    padding: 13px 26px;
+    font-size: 14.5px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .3s cubic-bezier(.22, 1, .36, 1),
+        box-shadow .3s cubic-bezier(.22, 1, .36, 1),
+        background .3s ease;
+}
+
+.primary-btn svg,
+.secondary-btn svg {
+    transition: transform .3s ease;
+}
+
+.primary-btn {
+    background: #ffffff;
+    color: #2E5CE8;
+    border: none;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+}
+
+.primary-btn:hover svg {
+    transform: translateX(3px);
+}
+
+.secondary-btn {
+    background: #2E5CE8;
+    color: #ffffff;
+    border: 1px solid #F8FBFF;
+}
+
+.secondary-btn:hover {
+    background: rgba(255, 251, 251, 0.14);
+    transform: translateY(-3px);
+}
+
+.primary-btn:focus-visible,
+.secondary-btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 56px 20px;
+    }
+
+    .cta-box {
+        padding: 38px 22px;
+        border-radius: 20px;
+    }
+
+    .cta-box h2 {
+        font-size: 26px;
+    }
+
+    .cta-box p {
+        font-size: 14px;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ===========================
+   REDUCED MOTION
+=========================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .primary-btn,
+    .secondary-btn,
+    .primary-btn svg,
+    .secondary-btn svg {
+        transition: none;
+    }
+
+    .primary-btn:hover,
+    .secondary-btn:hover {
+        transform: none;
+    }
+}

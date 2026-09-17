@@ -1,0 +1,109 @@
+:root {
+    --dashboard-sidebar-width: 240px;
+    --dashboard-sidebar-collapsed-width: 80px;
+    --dashboard-navbar-height: 70px;
+
+    --dashboard-bg: #f4f6f9;
+    --dashboard-content-bg: #f5f7fb;
+}
+
+/* =========================================================
+   ROOT LAYOUT
+========================================================= */
+
+.dashboard-layout {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    background: var(--dashboard-bg);
+    overflow-x: hidden;
+}
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
+.dashboard-main {
+    min-width: 0;
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh;
+    flex: 1 1 auto;
+    margin-left: var(--dashboard-sidebar-width);
+    display: flex;
+    flex-direction: column;
+    background: var(--dashboard-bg);
+    transition: margin-left 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dashboard-layout.sidebar-is-collapsed .dashboard-main {
+    margin-left: var(--dashboard-sidebar-collapsed-width);
+}
+
+/* =========================================================
+   NAVBAR WRAPPER
+========================================================= */
+
+.dashboard-navbar-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    min-width: 0;
+    padding: 12px 16px 0;
+    background: var(--dashboard-bg);
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   CONTENT AREA & MAIN OUTER CONTAINER
+========================================================= */
+
+.dashboard-content {
+    width: 100%;
+    min-width: 0;
+    flex: 1 1 auto;
+    padding: 16px 20px 24px;
+    background: var(--dashboard-bg);
+    box-sizing: border-box;
+}
+
+/* Target every page root component inside <Outlet /> */
+.dashboard-content>* {
+    width: 100%;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 640px) {
+
+    .dashboard-main,
+    .dashboard-layout.sidebar-is-collapsed .dashboard-main {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .dashboard-navbar-wrap {
+        padding: 10px 12px 0;
+    }
+
+    .dashboard-content {
+        padding: 12px;
+    }
+
+    .dashboard-content>* {
+        padding: 16px;
+        border-radius: 16px;
+    }
+}

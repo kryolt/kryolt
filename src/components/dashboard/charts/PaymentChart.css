@@ -1,0 +1,404 @@
+/* =========================================================
+   PAYMENT / PIE CHART CARD STYLES
+   ========================================================= */
+
+.chart-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 14px;
+    border: 1px solid #E7EAF0;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 4px 12px rgba(15, 23, 42, .04);
+    transition: transform .2s ease, box-shadow .2s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(13, 70, 245, .08);
+}
+
+/* ==========================================
+   HEADER SECTION
+   ========================================== */
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.chart-title-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.chart-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    background: #0D46F5;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.chart-header h2 {
+    margin: 0;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0F172A;
+}
+
+.chart-header p {
+    margin-top: 1px;
+    color: #64748B;
+    font-size: 11px;
+}
+
+.chart-badge {
+    background: #EEF3FF;
+    color: #0D46F5;
+    padding: 3px 8px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* ==========================================
+   FILTER CONTROLS
+   ========================================== */
+
+.chart-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.chart-filter-group {
+    display: inline-flex;
+    padding: 2px;
+    background: #F1F5F9;
+    border-radius: 7px;
+    gap: 2px;
+    width: 100%;
+}
+
+.chart-filter-btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 5px 8px;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #64748B;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease;
+    text-align: center;
+}
+
+.chart-filter-btn:hover {
+    color: #1E293B;
+}
+
+.chart-filter-btn:focus-visible {
+    outline: 2px solid #0D46F5;
+    outline-offset: 2px;
+}
+
+.chart-filter-btn.active {
+    background: #fff;
+    color: #0D46F5;
+    box-shadow: 0 1px 4px rgba(15, 23, 42, .08);
+}
+
+/* ==========================================
+   SUMMARY STATS GRID
+   ========================================== */
+
+.payment-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.payment-summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 10px;
+    background: #F8FAFC;
+    border: 1px solid #EEF1F6;
+    border-radius: 8px;
+    min-width: 0;
+}
+
+.payment-summary-label {
+    font-size: 9px;
+    font-weight: 600;
+    color: #94A3B8;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.payment-summary-value {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0F172A;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ==========================================
+   CONTENT LAYOUT (CHART + RANKING)
+   ========================================== */
+
+.payment-content {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1;
+}
+
+.payment-content .pie-wrapper {
+    flex: 1 1 55%;
+    min-width: 0;
+}
+
+.payment-ranking {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+/* ==========================================
+   PIE CHART & CENTER OVERLAY
+   ========================================== */
+
+.pie-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-total {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none;
+}
+
+.pie-total h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 800;
+    color: #0F172A;
+    line-height: 1.1;
+}
+
+.pie-total p {
+    margin: 2px 0 0;
+    font-size: 9.5px;
+    color: #94A3B8;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+}
+
+/* ==========================================
+   RANKING LIST
+   ========================================== */
+
+.payment-rank-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    background: #F8FAFC;
+    border: 1px solid #EEF1F6;
+    border-radius: 8px;
+    transition: border-color .15s ease;
+}
+
+.payment-rank-item:hover {
+    border-color: #E2E8F0;
+}
+
+.payment-rank-badge {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    background: #94A3B8;
+}
+
+.payment-rank-badge.rank-gold {
+    background: linear-gradient(135deg, #F5B833, #D68F0E);
+    box-shadow: 0 2px 6px rgba(214, 143, 14, .25);
+}
+
+.payment-rank-badge.rank-silver {
+    background: linear-gradient(135deg, #B8C2D1, #8A96A6);
+}
+
+.payment-rank-badge.rank-bronze {
+    background: linear-gradient(135deg, #D08A5C, #A85E33);
+}
+
+.payment-rank-badge.rank-default {
+    background: #0D46F5;
+}
+
+.payment-rank-name {
+    flex: 1;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #0F172A;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.payment-rank-orders {
+    font-size: 10.5px;
+    color: #64748B;
+    white-space: nowrap;
+}
+
+.payment-rank-percent {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0D46F5;
+    min-width: 32px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* ==========================================
+   EMPTY STATE
+   ========================================== */
+
+.chart-empty {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    color: #94A3B8;
+    font-size: 11.5px;
+    font-weight: 500;
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE BREAKPOINT (MAX 600PX)
+   ========================================== */
+
+@media (max-width: 600px) {
+    .chart-card {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .chart-header {
+        margin-bottom: 8px;
+    }
+
+    .chart-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+    }
+
+    .chart-header h2 {
+        font-size: 12.5px;
+    }
+
+    .chart-header p {
+        font-size: 9.5px;
+    }
+
+    .chart-badge {
+        font-size: 8.5px;
+        padding: 2px 6px;
+    }
+
+    .payment-summary {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+    .payment-summary-item {
+        padding: 6px 8px;
+        border-radius: 6px;
+    }
+
+    .payment-summary-label {
+        font-size: 8.5px;
+    }
+
+    .payment-summary-value {
+        font-size: 11px;
+    }
+
+    .chart-filter-btn {
+        padding: 4px 6px;
+        font-size: 9.5px;
+    }
+
+    .payment-content {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .payment-content .pie-wrapper,
+    .payment-ranking {
+        flex: 1 1 100%;
+        width: 100%;
+    }
+
+    .pie-total h3 {
+        font-size: 14px;
+    }
+
+    .payment-rank-item {
+        padding: 6px 8px;
+    }
+
+    .payment-rank-name {
+        font-size: 11px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .chart-card {
+        transition: none;
+    }
+}

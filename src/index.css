@@ -1,0 +1,107 @@
+/* ==========================
+   GLOBAL RESET
+========================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+  background: #ffffff;
+
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  color: #111827;
+
+  -webkit-font-smoothing: antialiased;
+
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+#root {
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  overflow-x: hidden;
+
+}
+
+/* ==========================
+   COMMON
+========================== */
+
+img {
+
+  max-width: 100%;
+
+  display: block;
+
+}
+
+a {
+
+  text-decoration: none;
+
+  color: inherit;
+
+}
+
+button {
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+}
+
+input,
+textarea,
+select {
+
+  font-family: inherit;
+
+}
+
+ul,
+ol {
+
+  list-style: none;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+  font-weight: 700;
+
+  color: #111827;
+
+}
+
+p {
+
+  color: #64748B;
+
+  line-height: 1.7;
+
+}

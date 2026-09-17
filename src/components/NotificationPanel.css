@@ -1,0 +1,129 @@
+.notification-panel {
+
+    position: absolute;
+
+    top: 70px;
+
+    right: 20px;
+
+    width: 340px;
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
+
+    padding: 20px;
+
+    z-index: 1000;
+
+    border: 1px solid #edf2f7;
+
+}
+
+.notification-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+
+}
+
+.notification-header h3 {
+
+    margin: 0;
+
+    font-size: 18px;
+
+}
+
+.notification-header span {
+
+    background: #2563EB;
+
+    color: #fff;
+
+    padding: 4px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+}
+
+.notification-item {
+
+    display: flex;
+
+    gap: 15px;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    margin-bottom: 10px;
+
+    transition: .3s;
+
+    cursor: pointer;
+
+}
+
+.notification-item:hover {
+
+    background: #F8FAFC;
+
+}
+
+.notification-icon {
+
+    font-size: 24px;
+
+}
+
+.notification-item h4 {
+
+    margin: 0;
+
+    font-size: 15px;
+
+}
+
+.notification-item p {
+
+    margin-top: 5px;
+
+    font-size: 13px;
+
+    color: #64748b;
+
+}
+
+.success {
+
+    border-left: 4px solid #22C55E;
+
+}
+
+.info {
+
+    border-left: 4px solid #3B82F6;
+
+}
+
+.ai {
+
+    border-left: 4px solid #8B5CF6;
+
+}
+
+.warning {
+
+    border-left: 4px solid #F59E0B;
+
+}

@@ -1,0 +1,491 @@
+/* =========================================================
+   PRODUCT COLUMN / DISTRIBUTION CHART STYLES
+   ========================================================= */
+
+.product-column-chart {
+    background: #fff;
+    border-radius: 12px;
+    padding: 14px;
+    border: 1px solid #E7EAF0;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 4px 12px rgba(15, 23, 42, .04);
+    transition: transform .2s ease, box-shadow .2s ease;
+    animation: slideInUp .4s ease-out;
+}
+
+.product-column-chart:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(13, 70, 245, .08);
+}
+
+/* ==========================================
+   HEADER SECTION
+   ========================================== */
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #E7EAF0;
+    flex-wrap: wrap;
+}
+
+.chart-title-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+}
+
+.chart-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #0D46F5;
+    color: #fff;
+    border-radius: 7px;
+    flex-shrink: 0;
+}
+
+.chart-title-group h3 {
+    margin: 0;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0F172A;
+}
+
+.chart-title-group p {
+    margin: 1px 0 0 0;
+    font-size: 11px;
+    color: #64748B;
+}
+
+.chart-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    background: #EEF3FF;
+    color: #0D46F5;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* ==========================================
+   FILTER & SORT CONTROLS
+   ========================================== */
+
+.chart-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.chart-filter-group {
+    display: inline-flex;
+    padding: 2px;
+    background: #F1F5F9;
+    border-radius: 7px;
+    gap: 2px;
+    flex: 1;
+}
+
+.chart-filter-btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 5px 8px;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #64748B;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease;
+    text-align: center;
+}
+
+.chart-filter-btn:hover {
+    color: #1E293B;
+}
+
+.chart-filter-btn.active {
+    background: #fff;
+    color: #0D46F5;
+    box-shadow: 0 1px 4px rgba(15, 23, 42, .08);
+}
+
+.chart-sort-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border: 1px solid #E7EAF0;
+    background: #fff;
+    padding: 5px 10px;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #475569;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: border-color .2s ease, color .2s ease, background .2s ease;
+}
+
+.chart-sort-btn:hover {
+    border-color: #0D46F5;
+    color: #0D46F5;
+    background: #F8FAFC;
+}
+
+/* ==========================================
+   STATS CARDS GRID
+   ========================================== */
+
+.chart-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.stat-box {
+    background: #F8FAFC;
+    border: 1px solid #EEF1F6;
+    border-radius: 8px;
+    padding: 8px 10px;
+    transition: border-color .2s ease, box-shadow .2s ease;
+    min-width: 0;
+}
+
+.stat-box:hover {
+    border-color: #C7D6FF;
+    box-shadow: 0 2px 8px rgba(13, 70, 245, .06);
+}
+
+.stat-box-highlight {
+    background: #F5F8FF;
+    border-color: #C7D6FF;
+}
+
+.stat-label {
+    display: block;
+    font-size: 9px;
+    color: #94A3B8;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    margin-bottom: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.growth-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 2px 6px;
+    margin-top: 4px;
+    background: #ECFDF5;
+    color: #059669;
+    border-radius: 999px;
+    font-size: 9px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.growth-badge svg {
+    width: 9px;
+    height: 9px;
+}
+
+.stat-value {
+    font-size: 13.5px;
+    font-weight: 800;
+    color: #0F172A;
+    line-height: 1.2;
+}
+
+.stat-value-text {
+    font-size: 11.5px;
+    font-weight: 700;
+    color: #0D46F5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+/* ==========================================
+   TOOLTIP
+   ========================================== */
+
+.product-tooltip {
+    background: #fff;
+    border: 1px solid #E7EAF0;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, .08);
+    padding: 6px 8px;
+    font-size: 10.5px;
+}
+
+.product-tooltip-name {
+    margin: 0;
+    font-weight: 700;
+    color: #0F172A;
+    font-size: 10px;
+}
+
+.product-tooltip-orders {
+    margin: 2px 0 0;
+    font-weight: 600;
+    color: #0D46F5;
+    font-size: 10.5px;
+}
+
+.product-tooltip-contribution {
+    margin: 1px 0 0;
+    color: #64748B;
+    font-size: 9px;
+}
+
+/* ==========================================
+   PRODUCT RANKING LIST
+   ========================================== */
+
+.product-ranking {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #E7EAF0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.product-rank-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    background: #F8FAFC;
+    border: 1px solid #EEF1F6;
+    border-radius: 8px;
+    min-width: 0;
+    transition: border-color .15s ease;
+}
+
+.product-rank-item:hover {
+    border-color: #E2E8F0;
+}
+
+.product-rank-badge {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    background: #94A3B8;
+}
+
+.product-rank-badge.rank-gold {
+    background: linear-gradient(135deg, #F5B833, #D68F0E);
+    box-shadow: 0 2px 6px rgba(214, 143, 14, .25);
+}
+
+.product-rank-badge.rank-silver {
+    background: linear-gradient(135deg, #B8C2D1, #8A96A6);
+}
+
+.product-rank-badge.rank-bronze {
+    background: linear-gradient(135deg, #D08A5C, #A85E33);
+}
+
+.product-rank-badge.rank-default {
+    background: #0D46F5;
+}
+
+.product-rank-name {
+    flex: 1;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #0F172A;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-rank-orders {
+    font-size: 10.5px;
+    color: #64748B;
+    white-space: nowrap;
+}
+
+.product-rank-percent {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0D46F5;
+    min-width: 32px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* ==========================================
+   EMPTY STATE & ANIMATIONS
+   ========================================== */
+
+.chart-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 24px 16px;
+    color: #64748B;
+    text-align: center;
+}
+
+.chart-empty svg {
+    color: #CBD5E1;
+    margin-bottom: 2px;
+}
+
+.chart-empty p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.chart-empty span {
+    font-size: 10px;
+    color: #94A3B8;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   MOBILE BREAKPOINT OPTIMIZATION (MAX 600PX)
+   ========================================== */
+
+@media (max-width: 600px) {
+    .product-column-chart {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .chart-header {
+        padding-bottom: 6px;
+        margin-bottom: 8px;
+    }
+
+    .chart-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+    }
+
+    .chart-title-group h3 {
+        font-size: 12.5px;
+    }
+
+    .chart-title-group p {
+        font-size: 9.5px;
+    }
+
+    .chart-badge {
+        font-size: 8.5px;
+        padding: 2px 6px;
+    }
+
+    .chart-controls {
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+
+    .chart-filter-btn {
+        padding: 4px 6px;
+        font-size: 9.5px;
+    }
+
+    .chart-sort-btn {
+        padding: 4px 8px;
+        font-size: 9.5px;
+    }
+
+    .chart-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+    .stat-box {
+        padding: 6px 8px;
+        border-radius: 6px;
+    }
+
+    .stat-label {
+        font-size: 8.5px;
+    }
+
+    .stat-value {
+        font-size: 11.5px;
+    }
+
+    .stat-value-text {
+        font-size: 10.5px;
+    }
+
+    .product-rank-item {
+        padding: 6px 8px;
+        gap: 6px;
+    }
+
+    .product-rank-name {
+        font-size: 11px;
+    }
+
+    .product-rank-orders {
+        font-size: 9.5px;
+    }
+
+    .product-rank-percent {
+        font-size: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .product-column-chart,
+    .stat-box {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+.chart-filter-btn:focus-visible,
+.chart-sort-btn:focus-visible {
+    outline: 2px solid #0D46F5;
+    outline-offset: 2px;
+}

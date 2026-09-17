@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+.about-mission {
+    --k-blue-600: #1450f5;
+    --k-blue-50: #eff6ff;
+    --k-ink: #0f172a;
+    --k-slate: #64748b;
+
+    padding: 100px 7%;
+    background: #ffffff;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.mission-container {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.mission-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    color: var(--k-blue-600);
+    font-size: 12.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--k-blue-50);
+}
+
+/* Manifesto-style pull statement: a left rule instead of a boxed icon,
+   so the statement reads as a declaration rather than a feature-card. */
+.mission-statement {
+    margin: 28px 0 24px;
+    padding-left: 22px;
+    border-left: 3px solid var(--k-blue-600);
+}
+
+.mission-statement h2 {
+    margin: 0;
+    color: var(--k-ink);
+    font-size: clamp(26px, 3.4vw, 36px);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+.mission-body {
+    max-width: 640px;
+    margin: 0 0 32px;
+    color: var(--k-slate);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Grounds the abstract "accessible to everyone" claim in three concrete,
+   plain-spoken facts instead of leaving it as an unsupported assertion. */
+.mission-proof {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px;
+}
+
+.mission-proof span {
+    position: relative;
+    padding-left: 16px;
+    color: var(--k-ink);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.mission-proof span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--k-blue-600);
+    transform: translateY(-50%);
+}
+
+.mission-proof span:first-child {
+    padding-left: 0;
+}
+
+.mission-proof span:first-child::before {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .about-mission {
+        padding: 70px 22px;
+    }
+
+    .mission-statement {
+        padding-left: 16px;
+    }
+
+    .mission-proof {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .mission-proof span {
+        padding-left: 16px !important;
+    }
+
+    .mission-proof span::before {
+        display: block !important;
+    }
+}

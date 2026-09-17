@@ -1,0 +1,391 @@
+/* =========================================================
+   Column Mapping Container (Full Width Responsive)
+========================================================= */
+
+.column-mapping {
+    width: 100%;
+    margin-top: 18px;
+    padding: 20px;
+    background: var(--surface, #ffffff);
+    border: 1px solid var(--border, #e7eaf0);
+    border-radius: 14px;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.03);
+    box-sizing: border-box;
+}
+
+/* Header Section */
+.column-mapping-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.mapping-eyebrow {
+    display: inline-block;
+    margin-bottom: 3px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #2563eb;
+}
+
+.column-mapping-header h3 {
+    margin: 0 0 4px;
+    font-size: 16px;
+    font-weight: 750;
+    color: #0f172a;
+}
+
+.column-mapping-header p {
+    margin: 0;
+    color: #64748b;
+    font-size: 12.5px;
+    line-height: 1.5;
+}
+
+.mapping-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.mapping-status.success {
+    background: #ecfdf5;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+}
+
+.mapping-status.warning {
+    background: #fff7ed;
+    color: #c2410c;
+    border: 1px solid #fed7aa;
+}
+
+/* =========================================================
+   Mapping List (Laptop & Desktop Standard View)
+========================================================= */
+
+.mapping-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.mapping-row {
+    display: grid;
+    grid-template-columns: minmax(120px, 1fr) 28px minmax(120px, 1fr) 50px;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #f8fafc;
+    border: 1px solid #edf0f4;
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.mapping-row:hover {
+    background: #ffffff;
+    border-color: #cbd5e1;
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+.mapping-source {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #475569;
+}
+
+.mapping-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-weight: 700;
+}
+
+.mapping-target {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.mapping-target svg {
+    flex-shrink: 0;
+    color: #16a34a;
+}
+
+.mapping-confidence {
+    justify-self: end;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.mapping-confidence.high {
+    color: #15803d;
+}
+
+.mapping-confidence.medium {
+    color: #ca8a04;
+}
+
+/* Alerts & Extra Info */
+.mapping-alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 12px;
+    padding: 10px 12px;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 9px;
+    color: #b91c1c;
+}
+
+.mapping-alert.warning {
+    background: #fff7ed;
+    border-color: #fed7aa;
+    color: #c2410c;
+}
+
+.mapping-alert strong {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 12px;
+}
+
+.mapping-alert p {
+    margin: 0;
+    font-size: 11.5px;
+    line-height: 1.45;
+}
+
+.mapping-extra {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #edf0f4;
+}
+
+.mapping-extra>span {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 10.5px;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.mapping-extra-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.mapping-extra-list span {
+    padding: 4px 8px;
+    border-radius: 6px;
+    background: #eef2ff;
+    color: #4338ca;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+}
+
+.mapping-extra p {
+    margin: 7px 0 0;
+    color: #94a3b8;
+    font-size: 10.5px;
+}
+
+/* Actions Row */
+.column-mapping-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #edf0f4;
+}
+
+.mapping-cancel-btn,
+.mapping-confirm-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 36px;
+    padding: 0 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.18s ease;
+}
+
+.mapping-cancel-btn {
+    background: #ffffff;
+    color: #475569;
+    border: 1px solid #d9dee7;
+}
+
+.mapping-cancel-btn:hover:not(:disabled) {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    color: #1e293b;
+}
+
+.mapping-confirm-btn {
+    background: #2563eb;
+    color: #ffffff;
+    border: 1px solid #2563eb;
+}
+
+.mapping-confirm-btn:hover:not(:disabled) {
+    background: #1d4ed8;
+    border-color: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.18);
+}
+
+.mapping-cancel-btn:disabled,
+.mapping-confirm-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* =========================================================
+   Mobile Carousel View Optimization (max-width: 640px)
+========================================================= */
+
+@media (max-width: 640px) {
+    .column-mapping {
+        padding: 14px 12px;
+        margin-top: 12px;
+        border-radius: 12px;
+    }
+
+    /* Carousel track */
+    .mapping-list {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 10px;
+        padding: 4px 2px 10px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .mapping-list::-webkit-scrollbar {
+        height: 3px;
+    }
+
+    .mapping-list::-webkit-scrollbar-track {
+        background: #f1f5f9;
+        border-radius: 3px;
+    }
+
+    .mapping-list::-webkit-scrollbar-thumb {
+        background: #94a3b8;
+        border-radius: 3px;
+    }
+
+    /* Enhanced Card Styling */
+    .mapping-row {
+        flex: 0 0 82%;
+        scroll-snap-align: start;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 12px 14px;
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+        position: relative;
+    }
+
+    /* Source Box Header */
+    .mapping-source {
+        font-size: 11px;
+        font-weight: 600;
+        color: #64748b;
+        background: #f8fafc;
+        padding: 6px 10px;
+        border-radius: 6px;
+        border: 1px dashed #cbd5e1;
+    }
+
+    /* Down Arrow Indicator */
+    .mapping-arrow {
+        align-self: center;
+        color: #2563eb;
+        background: #eff6ff;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        margin: -2px 0;
+    }
+
+    .mapping-arrow svg {
+        transform: rotate(90deg);
+        width: 14px;
+        height: 14px;
+    }
+
+    /* Target Result */
+    .mapping-target {
+        font-size: 13px;
+        font-weight: 700;
+        color: #0f172a;
+        background: #f0fdf4;
+        padding: 8px 10px;
+        border-radius: 8px;
+        border: 1px solid #bbf7d0;
+    }
+
+    /* Confidence Badge */
+    .mapping-confidence {
+        align-self: flex-end;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 3px 8px;
+        background: #f8fafc;
+        border-radius: 20px;
+        border: 1px solid #e2e8f0;
+    }
+
+    .column-mapping-actions {
+        flex-direction: column-reverse;
+        gap: 8px;
+        margin-top: 12px;
+        padding-top: 12px;
+    }
+
+    .mapping-cancel-btn,
+    .mapping-confirm-btn {
+        width: 100%;
+        min-height: 38px;
+    }
+}

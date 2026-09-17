@@ -1,0 +1,732 @@
+/* =========================================================================
+   Growth Opportunities — AI Opportunity Engine
+   Same palette + technique as Performance Analysis / AI Recommendations:
+     • Blue  #0647ED  (icons, badges, accents, headings)
+     • White #FFFFFF  (surfaces)
+   Navy (a shade of the same blue) is used for body text instead of black.
+   Every icon chip and badge uses ONE consistent blue treatment — the label
+   text carries the meaning, not a red/amber/green color code.
+   ========================================================================= */
+
+.growth-opportunities {
+    --go-blue: #0647ED;
+    --go-blue-dark: #0435B8;
+    --go-blue-deep: #052C93;
+    --go-blue-050: #F3F6FF;
+    --go-blue-100: #E7EDFF;
+    --go-blue-200: #C9D6FF;
+
+    --go-navy: #142452;
+    --go-navy-600: #445078;
+    --go-navy-400: #8890A8;
+
+    --go-surface: #FFFFFF;
+    --go-background: #FAFBFF;
+    --go-line: #E7EDFF;
+
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--go-navy);
+    font-feature-settings: "tnum" 1, "cv11" 1;
+}
+
+.growth-opportunities *,
+.growth-opportunities *::before,
+.growth-opportunities *::after {
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Header                                                                 */
+/* ---------------------------------------------------------------------- */
+
+.growth-opportunities__header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.growth-opportunities__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    align-self: flex-start;
+    padding: 5px 12px;
+    border-radius: 999px;
+    background: var(--go-blue-050);
+    border: 1px solid var(--go-blue-100);
+    color: var(--go-blue);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.growth-opportunities__title {
+    margin: 6px 0 0;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--go-navy);
+    letter-spacing: -0.5px;
+}
+
+.growth-opportunities__subtitle {
+    margin: 0;
+    font-size: 14px;
+    color: var(--go-navy-600);
+    line-height: 1.55;
+    max-width: 62ch;
+}
+
+/* ---------------------------------------------------------------------- */
+/* 1 — Opportunity Score card                                              */
+/* ---------------------------------------------------------------------- */
+
+.growth-score {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+    padding: 28px 30px;
+    background: var(--go-surface);
+    border: 1px solid var(--go-line);
+    border-radius: 20px;
+    box-shadow: 0 1px 2px rgba(6, 71, 237, 0.04), 0 8px 24px rgba(6, 71, 237, 0.06);
+    overflow: hidden;
+}
+
+.growth-score::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--go-blue), var(--go-blue-deep));
+}
+
+.growth-score__ring {
+    position: relative;
+    width: 118px;
+    height: 118px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.growth-score__ring-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.growth-score__ring-track {
+    stroke: var(--go-blue-100);
+}
+
+.growth-score__ring-progress {
+    stroke: var(--go-blue);
+    transition: stroke-dashoffset 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.growth-score__ring-center {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.growth-score__ring-center strong {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--go-navy);
+    letter-spacing: -0.5px;
+}
+
+.growth-score__ring-center span {
+    font-size: 10.5px;
+    color: var(--go-navy-400);
+    margin-top: 4px;
+    font-weight: 600;
+}
+
+.growth-score__body {
+    flex: 1 1 300px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.growth-score__label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--go-navy-600);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.growth-score__label svg {
+    color: var(--go-blue);
+}
+
+.growth-score__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.growth-score__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.growth-score__stat-label {
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: var(--go-navy-400);
+}
+
+.growth-score__stat-value {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--go-blue);
+}
+
+.growth-score__explanation {
+    margin: 2px 0 0;
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--go-navy-600);
+    max-width: 62ch;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Shared block shell (used by Timeline)                                   */
+/* ---------------------------------------------------------------------- */
+
+.growth-block {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.growth-block__title {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--go-navy-400);
+}
+
+/* ---------------------------------------------------------------------- */
+/* 2 — Opportunity Cards (compact)                                         */
+/* ---------------------------------------------------------------------- */
+
+.growth-opportunities__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.growth-card {
+    flex: 1 1 260px;
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    background: var(--go-surface);
+    border: 1px solid var(--go-line);
+    border-left: 3px solid var(--go-blue);
+    border-radius: 14px;
+    box-shadow: 0 1px 2px rgba(6, 71, 237, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.growth-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 26px rgba(6, 71, 237, 0.10);
+    border-color: var(--go-blue-200);
+    border-left-color: var(--go-blue);
+}
+
+.growth-card__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.growth-card__icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 99px;
+    background: var(--go-blue);
+    box-shadow: 0 4px 10px rgba(6, 71, 237, 0.22);
+    flex-shrink: 0;
+}
+
+.growth-card__icon {
+    color: #ffffff;
+}
+
+.growth-card__header-tags {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.growth-card__category {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: var(--go-navy-400);
+    padding: 3px 8px;
+    border-radius: 999px;
+    background: var(--go-background);
+    border: 1px solid var(--go-line);
+    white-space: nowrap;
+}
+
+.growth-card__badge {
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+    background: var(--go-blue-050);
+    color: var(--go-blue);
+    border: 1px solid var(--go-blue-100);
+}
+
+.growth-card__body {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.growth-card__title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--go-navy);
+    letter-spacing: -0.1px;
+}
+
+.growth-card__block {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.growth-card__block-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: var(--go-navy-400);
+}
+
+.growth-card__block-label--action {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--go-blue);
+}
+
+.growth-card__block-text {
+    margin: 0;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: var(--go-navy-600);
+}
+
+.growth-card__block--action {
+    padding: 8px 10px;
+    background: var(--go-blue-050);
+    border: 1px solid var(--go-blue-100);
+    border-radius: 10px;
+}
+
+.growth-card__block--action .growth-card__block-text {
+    color: var(--go-navy);
+}
+
+.growth-card__meta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
+    gap: 10px 8px;
+    padding: 10px;
+    background: var(--go-background);
+    border: 1px solid var(--go-line);
+    border-radius: 10px;
+}
+
+.growth-card__meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+.growth-card__meta-label {
+    font-size: 9.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    color: var(--go-navy-400);
+}
+
+.growth-card__meta-value {
+    font-size: 11.5px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: var(--go-navy);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-word;
+}
+
+.growth-card__footer {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    color: var(--go-blue);
+    padding-top: 10px;
+    border-top: 1px solid var(--go-line);
+}
+
+.growth-card__footer svg {
+    flex-shrink: 0;
+}
+
+/* ---------------------------------------------------------------------- */
+/* 3 — Opportunity Timeline                                                 */
+/* ---------------------------------------------------------------------- */
+
+.growth-timeline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.growth-timeline__lane {
+    flex: 1 1 260px;
+    min-width: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+    background: var(--go-surface);
+    border: 1px solid var(--go-line);
+    border-radius: 16px;
+    box-shadow: 0 1px 2px rgba(6, 71, 237, 0.04);
+}
+
+.growth-timeline__lane-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--go-navy);
+}
+
+.growth-timeline__lane-header svg {
+    color: var(--go-blue);
+}
+
+.growth-timeline__count {
+    margin-left: auto;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--go-blue);
+    background: var(--go-blue-050);
+    border: 1px solid var(--go-blue-100);
+    padding: 2px 8px;
+    border-radius: 999px;
+}
+
+.growth-timeline__items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.growth-timeline__item {
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--go-navy-600);
+    padding: 8px 10px;
+    background: var(--go-background);
+    border: 1px solid var(--go-line);
+    border-left: 2px solid var(--go-blue);
+    border-radius: 8px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* 4 — AI Growth Summary                                                    */
+/* ---------------------------------------------------------------------- */
+
+.growth-summary {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 22px 24px;
+    background: var(--go-surface);
+    border: 1px solid var(--go-line);
+    border-radius: 18px;
+    box-shadow: 0 1px 2px rgba(6, 71, 237, 0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+.growth-summary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--go-blue), var(--go-blue-deep));
+}
+
+.growth-summary__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--go-blue);
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(6, 71, 237, 0.22);
+    flex-shrink: 0;
+}
+
+.growth-summary__body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.growth-summary__label {
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    color: var(--go-blue);
+}
+
+.growth-summary__text {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--go-navy);
+    max-width: 72ch;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Empty state                                                              */
+/* ---------------------------------------------------------------------- */
+
+.growth-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    padding: 48px 24px;
+    background: var(--go-background);
+    border: 1px dashed var(--go-line);
+    border-radius: 18px;
+}
+
+.growth-empty__icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: var(--go-blue);
+    color: #ffffff;
+    margin-bottom: 4px;
+}
+
+.growth-empty__title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--go-navy);
+}
+
+.growth-empty__description {
+    margin: 0;
+    font-size: 13.5px;
+    color: var(--go-navy-600);
+    max-width: 40ch;
+}
+
+/* ---------------------------------------------------------------------- */
+/* Responsive (< 640px) — Compact & Centered Mobile View                   */
+/* ---------------------------------------------------------------------- */
+
+@media (max-width: 640px) {
+    .growth-opportunities {
+        gap: 20px;
+    }
+
+    .growth-opportunities__header {
+        align-items: center;
+        text-align: center;
+    }
+
+    .growth-opportunities__eyebrow {
+        align-self: center;
+    }
+
+    .growth-opportunities__title {
+        font-size: 19px;
+    }
+
+    .growth-opportunities__subtitle {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    /* Score Card Center Alignment & Auto Height */
+    .growth-score {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px 16px;
+        gap: 16px;
+        width: 100%;
+        height: auto;
+    }
+
+    .growth-score__ring {
+        width: 110px;
+        height: 110px;
+        margin: 0 auto;
+    }
+
+    .growth-score__ring-center strong {
+        font-size: 26px;
+    }
+
+    .growth-score__body {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex: 0 1 auto;
+        gap: 10px;
+    }
+
+    .growth-score__label {
+        justify-content: center;
+        font-size: 11px;
+    }
+
+    .growth-score__stats {
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .growth-score__stat {
+        align-items: center;
+    }
+
+    .growth-score__explanation {
+        font-size: 12.5px;
+        line-height: 1.55;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    /* Cards & Grids Layout Adjustments */
+    .growth-opportunities__grid,
+    .growth-timeline {
+        gap: 10px;
+    }
+
+    .growth-card,
+    .growth-timeline__lane {
+        min-width: 100%;
+        padding: 14px 16px;
+    }
+
+    .growth-card__meta {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .growth-card:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .growth-card {
+        padding: 14px;
+    }
+
+    .growth-empty {
+        padding: 32px 16px;
+    }
+
+    .growth-summary {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 16px;
+    }
+
+    .growth-summary__body {
+        align-items: center;
+    }
+
+    .growth-summary__text {
+        text-align: center;
+        font-size: 13px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .growth-card,
+    .growth-score__ring-progress {
+        transition: none;
+    }
+}

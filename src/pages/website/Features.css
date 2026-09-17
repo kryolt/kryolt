@@ -1,0 +1,9 @@
+.features-page {
+    min-height: 100vh;
+    background: #F7FAFF;
+    padding-top: 18px;
+}
+
+.features-page main {
+    width: 100%;
+}

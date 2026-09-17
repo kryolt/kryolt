@@ -1,0 +1,604 @@
+.customer-insights {
+
+    background: #fff;
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    border: 1px solid #E8ECF3;
+
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, .04),
+        0 4px 12px rgba(15, 23, 42, .04);
+
+}
+
+.customer-insights-header {
+
+    margin-bottom: 16px;
+
+}
+
+.customer-insights-header h2 {
+
+    margin: 0;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    color: #0F172A;
+
+}
+
+.customer-insights-header p {
+
+    margin-top: 4px;
+
+    color: #64748B;
+
+    font-size: 12px;
+
+}
+
+.customer-insights-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 10px;
+
+}
+
+.insight-card {
+
+    position: relative;
+
+    background: #fff;
+
+    border: 1px solid #E8ECF3;
+
+    border-radius: 10px;
+
+    padding: 12px;
+
+    min-height: 80px;
+
+    min-width: 0;
+
+    box-shadow:
+        0 1px 2px rgba(15, 23, 42, .04),
+        0 4px 12px rgba(15, 23, 42, .04);
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
+}
+
+.insight-card::before {
+
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    height: 3px;
+
+    border-radius: 10px 10px 0 0;
+
+    background: #0D46F5;
+
+    opacity: 0;
+
+    transition: opacity .2s ease;
+}
+
+.insight-card:hover {
+
+    transform: translateY(-3px);
+
+    border-color: transparent;
+
+    box-shadow:
+        0 3px 8px rgba(15, 23, 42, .06),
+        0 10px 22px rgba(15, 23, 42, .08);
+
+}
+
+.insight-card:hover::before {
+
+    opacity: 1;
+
+}
+
+.insight-icon {
+
+    width: 26px;
+
+    height: 26px;
+
+    border-radius: 7px;
+
+    background: #0D46F5;
+
+    color: #fff;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    flex-shrink: 0;
+
+    box-shadow: 0 6px 14px rgba(13, 70, 245, .25);
+
+    transition: transform .2s ease;
+
+}
+
+.insight-card:hover .insight-icon {
+
+    transform: scale(1.06);
+
+}
+
+.insight-icon svg {
+
+    width: 14px;
+
+    height: 14px;
+
+}
+
+.insight-card span {
+
+    display: block;
+
+    color: #64748B;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+}
+
+.insight-card h3 {
+
+    margin: 4px 0 0;
+
+    font-size: clamp(14px, 1.1vw, 17px);
+
+    font-weight: 800;
+
+    color: #0F172A;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+/* =========================================================
+   RESPONSIVE — CUSTOMER INSIGHTS
+   Desktop layout remains unchanged
+========================================================= */
+
+/* =========================
+   TABLET: 601px — 900px
+========================= */
+
+@media (min-width: 601px) and (max-width: 900px) {
+
+    .customer-insights {
+        padding: 16px;
+    }
+
+    .customer-insights-grid {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+
+        width: 100%;
+        min-width: 0;
+
+    }
+
+    .insight-card {
+
+        width: 100%;
+        min-width: 0;
+
+        min-height: 82px;
+
+        padding: 11px;
+
+        overflow: hidden;
+
+    }
+
+    .insight-icon {
+
+        width: 25px;
+        height: 25px;
+
+        min-width: 25px;
+        min-height: 25px;
+
+        margin-bottom: 8px;
+
+    }
+
+    .insight-icon svg {
+
+        width: 13px;
+        height: 13px;
+
+    }
+
+    .insight-card span {
+
+        font-size: 10.5px;
+
+        line-height: 1.25;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+    }
+
+    .insight-card h3 {
+
+        width: 100%;
+        min-width: 0;
+
+        font-size: 15px;
+
+        line-height: 1.2;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE: 0 — 600px
+   EXACT 2 × 2 GRID
+========================= */
+
+@media (max-width: 600px) {
+
+    .customer-insights {
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        padding: 14px;
+
+        border-radius: 12px;
+
+        box-sizing: border-box;
+
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .customer-insights-header {
+
+        margin-bottom: 12px;
+
+    }
+
+    .customer-insights-header h2 {
+
+        font-size: 17px;
+
+        line-height: 1.25;
+
+    }
+
+    .customer-insights-header p {
+
+        margin-top: 4px;
+
+        font-size: 11px;
+
+        line-height: 1.45;
+
+    }
+
+
+    /* =========================
+       GRID
+       ALWAYS 2 COLUMNS
+    ========================= */
+
+    .customer-insights-grid {
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 9px;
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        box-sizing: border-box;
+
+    }
+
+
+    /* =========================
+       INSIGHT CARD
+    ========================= */
+
+    .insight-card {
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        min-height: 82px;
+
+        padding: 10px;
+
+        border-radius: 9px;
+
+        overflow: hidden;
+
+        box-sizing: border-box;
+
+    }
+
+
+    /* =========================
+       ICON
+    ========================= */
+
+    .insight-icon {
+
+        width: 24px;
+        height: 24px;
+
+        min-width: 24px;
+        min-height: 24px;
+
+        border-radius: 6px;
+
+        margin-bottom: 7px;
+
+    }
+
+    .insight-icon svg {
+
+        width: 12px;
+        height: 12px;
+
+    }
+
+
+    /* =========================
+       LABEL
+    ========================= */
+
+    .insight-card span {
+
+        display: block;
+
+        width: 100%;
+        min-width: 0;
+
+        font-size: 9.5px;
+
+        line-height: 1.25;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+    }
+
+
+    /* =========================
+       VALUE
+    ========================= */
+
+    .insight-card h3 {
+
+        display: block;
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        margin: 3px 0 0;
+
+        font-size: 14px;
+
+        line-height: 1.2;
+
+        font-weight: 800;
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+    }
+
+
+    /* =========================
+       MOBILE — NO HOVER LIFT
+    ========================= */
+
+    .insight-card:hover {
+
+        transform: none;
+
+        border-color: #E8ECF3;
+
+        box-shadow:
+            0 1px 2px rgba(15, 23, 42, .04),
+            0 4px 12px rgba(15, 23, 42, .04);
+
+    }
+
+    .insight-card:hover::before {
+
+        opacity: 0;
+
+    }
+
+    .insight-card:hover .insight-icon {
+
+        transform: none;
+
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE: ≤ 380px
+========================= */
+
+@media (max-width: 380px) {
+
+    .customer-insights {
+
+        padding: 12px;
+
+    }
+
+    .customer-insights-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 8px;
+
+    }
+
+    .insight-card {
+
+        min-height: 78px;
+
+        padding: 9px;
+
+    }
+
+    .insight-icon {
+
+        width: 23px;
+        height: 23px;
+
+        min-width: 23px;
+        min-height: 23px;
+
+        margin-bottom: 6px;
+
+    }
+
+    .insight-icon svg {
+
+        width: 11px;
+        height: 11px;
+
+    }
+
+    .insight-card span {
+
+        font-size: 9px;
+
+    }
+
+    .insight-card h3 {
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL: ≤ 340px
+========================= */
+
+@media (max-width: 340px) {
+
+    .customer-insights {
+
+        padding: 10px;
+
+    }
+
+    .customer-insights-grid {
+
+        gap: 7px;
+
+    }
+
+    .insight-card {
+
+        min-height: 74px;
+
+        padding: 8px;
+
+    }
+
+    .insight-card span {
+
+        font-size: 8.5px;
+
+    }
+
+    .insight-card h3 {
+
+        font-size: 12.5px;
+
+    }
+
+}
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .insight-card,
+    .insight-icon {
+
+        transition: none;
+
+    }
+
+}

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+.about-vision {
+    --k-blue-600: #1450f5;
+    --k-blue-900: #061e8c;
+    --k-ink: #0f172a;
+
+    padding: 100px 7%;
+    background: #f8faff;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.vision-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.vision-eyebrow {
+    display: inline-block;
+    color: var(--k-blue-600);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.vision-content h2 {
+    margin: 14px 0 18px;
+    color: var(--k-ink);
+    font-size: clamp(26px, 3.2vw, 36px);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+/* bug fix: stray "S" before the selector was breaking this rule */
+.vision-content p {
+    margin: 0;
+    max-width: 520px;
+    color: #475569;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.vision-card {
+    position: relative;
+    padding: 40px;
+    border-radius: 24px;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--k-blue-900), var(--k-blue-600));
+    /* bug fix: "#ffffff(13, 70, 245, 0.18)" is not valid CSS — colors
+       use rgb()/rgba(), never a hex value called as a function */
+    box-shadow: 0 20px 40px rgba(13, 70, 245, 0.22);
+    overflow: hidden;
+}
+
+/* Faint diagonal echo of the hero's brand-mark angle, so this card reads
+   as part of the same visual system rather than a plain gradient box. */
+.vision-card__accent {
+    position: absolute;
+    top: -30%;
+    right: -20%;
+    width: 70%;
+    height: 160%;
+    background: linear-gradient(155deg, rgba(255, 255, 255, 0.1), transparent 60%);
+    clip-path: polygon(40% 0%, 100% 0%, 60% 100%, 0% 100%);
+    pointer-events: none;
+}
+
+.vision-card svg {
+    position: relative;
+    margin-bottom: 22px;
+    color: #b9cbff;
+}
+
+.vision-card h3 {
+    position: relative;
+    margin: 0;
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .about-vision {
+        padding: 70px 22px;
+    }
+
+    .vision-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}

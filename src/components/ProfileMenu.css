@@ -1,0 +1,128 @@
+.profile-menu {
+    --panel-dark: #1E3A8A;
+    --border: #E7EAF0;
+
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 240px;
+    max-width: calc(100vw - 24px);
+
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 15px 40px rgba(15, 23, 42, .14);
+    overflow: hidden;
+    z-index: 9999;
+    animation: menuShow .18s ease;
+    font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.profile-menu button {
+    width: 100%;
+    border: none;
+    background: none;
+    padding: 13px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: #334155;
+    transition: background .18s ease, color .18s ease;
+}
+
+.profile-menu button svg {
+    color: #94A0AE;
+    flex-shrink: 0;
+    transition: color .18s ease;
+}
+
+.profile-menu button:hover {
+    background: #F5F7FA;
+    color: var(--panel-dark);
+}
+
+.profile-menu button:hover svg {
+    color: var(--panel-dark);
+}
+
+.profile-menu hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 6px 0;
+}
+
+.logout-btn {
+    color: #DC2626;
+}
+
+.logout-btn svg {
+    color: #DC2626 !important;
+}
+
+.logout-btn:hover {
+    background: #FEF2F2;
+    color: #DC2626;
+}
+
+@keyframes menuShow {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===========================
+   Mobile — small card, top-right corner
+=========================== */
+
+@media (max-width: 768px) {
+    .profile-menu {
+        top: calc(100% + 8px);
+        right: 0;
+        width: 200px;
+        border-radius: 12px;
+    }
+
+    .profile-menu button {
+        padding: 10px 14px;
+        gap: 10px;
+        font-size: 13px;
+    }
+
+    .profile-menu button svg {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-menu {
+        position: fixed;
+        top: 62px;
+        right: 10px;
+        left: auto;
+        bottom: auto;
+        width: 180px;
+        max-width: calc(100vw - 20px);
+        border-radius: 12px;
+    }
+
+    .profile-menu button {
+        padding: 9px 12px;
+        gap: 9px;
+        font-size: 12.5px;
+    }
+
+    .profile-menu button svg {
+        width: 15px;
+        height: 15px;
+    }
+}

@@ -1,0 +1,106 @@
+@import "./ProfileSection.css";
+
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 28px;
+    animation: subSectionFadeIn 0.35s ease-in-out;
+}
+
+@keyframes subSectionFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.settings-header h2 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.settings-header p {
+    margin-top: 6px;
+    color: #6B7280;
+    font-size: 14px;
+}
+
+.status-badge {
+    background: #ECFDF5;
+    color: #059669;
+    border: 1px solid #A7F3D0;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+}
+
+.status-badge:hover {
+    transform: scale(1.03);
+}
+
+.settings-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    animation: subSectionFadeIn 0.4s ease-in-out;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 10px;
+}
+
+.field input,
+.field select {
+    height: 48px;
+    border: 1px solid #D1D5DB;
+    border-radius: 12px;
+    padding: 0 16px;
+    font-size: 15px;
+    background: #fff;
+    transition: .25s;
+}
+
+.field input:focus,
+.field select:focus {
+    outline: none;
+    border-color: #2E5CE8;
+    box-shadow: 0 0 0 4px rgba(46, 92, 232, .12);
+}
+
+@media(max-width:768px) {
+
+    .settings-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .status-badge {
+        align-self: flex-start;
+    }
+
+}

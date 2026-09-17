@@ -1,0 +1,417 @@
+/* ========================================
+   PROFILE PAGE - FULL RESPONSIVE CSS
+   ======================================== */
+
+.profile-page {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Header Section */
+.profile-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+}
+
+.profile-head-content h1 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0 0 4px 0;
+}
+
+.profile-head-content p {
+    font-size: 14px;
+    color: #64748B;
+    margin: 0;
+}
+
+.edit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #2563EB;
+    color: #ffffff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    white-space: nowrap;
+}
+
+.edit-btn:hover {
+    background: #1D4ED8;
+}
+
+/* Layout Grid */
+.profile-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 24px;
+    align-items: start;
+    width: 100%;
+}
+
+.profile-main,
+.profile-side {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    min-width: 0;
+}
+
+/* Cards */
+.identity-card,
+.section-card {
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #E2E8F0;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.section-card h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0 0 16px 0;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #F1F5F9;
+}
+
+/* Identity Section */
+.identity-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.avatar-ring {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    flex-shrink: 0;
+}
+
+.profile-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #2563EB;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.status-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #10B981;
+    border-radius: 50%;
+    bottom: 0;
+    right: 0;
+    border: 2px solid #ffffff;
+}
+
+.identity-meta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.identity-name-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.identity-name-row h2 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 0;
+}
+
+.role-badge {
+    background: #EFF6FF;
+    color: #2563EB;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #059669;
+    background: #ECFDF5;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.meta-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 13px;
+    color: #475569;
+    flex-wrap: wrap;
+}
+
+.email-text {
+    word-break: break-all;
+    flex: 1;
+    min-width: 150px;
+}
+
+.meta-line.muted {
+    color: #94A3B8;
+    font-size: 12px;
+}
+
+.verify-email-btn {
+    background: #2563EB;
+    color: #ffffff;
+    border: none;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.verify-email-btn:hover {
+    background: #1D4ED8;
+}
+
+/* Chip Grid - Mobile Optimized */
+.chip-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding-top: 16px;
+    border-top: 1px solid #F1F5F9;
+}
+
+.chip {
+    background: #F8FAFC;
+    border: 1px solid #F1F5F9;
+    border-radius: 8px;
+    padding: 10px 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.chip-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #64748B;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.chip-value {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0F172A;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Details Info Rows */
+.info-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #F8FAFC;
+    font-size: 13px;
+    gap: 12px;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-row span {
+    color: #64748B;
+    flex-shrink: 0;
+}
+
+.info-row strong {
+    color: #0F172A;
+    font-weight: 600;
+    text-align: right;
+    word-break: break-all;
+}
+
+/* Sidebar Session Card */
+.session-panel-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #F1F5F9;
+    margin-bottom: 12px;
+}
+
+.session-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    color: #0F172A;
+    font-size: 14px;
+}
+
+.session-live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #059669;
+    background: #ECFDF5;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.live-dot {
+    width: 6px;
+    height: 6px;
+    background: #10B981;
+    border-radius: 50%;
+}
+
+.session-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.session-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+}
+
+.session-label {
+    color: #64748B;
+}
+
+.session-val {
+    font-weight: 600;
+    color: #0F172A;
+}
+
+.session-copy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #F1F5F9;
+    border: 1px solid #E2E8F0;
+    padding: 4px 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 11px;
+    color: #334155;
+}
+
+.session-copy-btn:hover {
+    background: #E2E8F0;
+}
+
+/* Common Classes */
+.mono {
+    font-family: monospace;
+}
+
+.text-good {
+    color: #059669;
+}
+
+.text-bad {
+    color: #DC2626;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1100px) {
+    .profile-body {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-page {
+        padding: 12px;
+    }
+
+    .profile-head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .edit-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .chip-row {
+        grid-template-columns: 1fr;
+        /* Single column chips on very small screens if preferred, or keep 2-cols */
+    }
+
+    .identity-card,
+    .section-card {
+        padding: 16px;
+    }
+}

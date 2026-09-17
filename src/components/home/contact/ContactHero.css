@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+.contact-hero {
+    --k-blue-900: #050b24;
+    --k-blue-700: #0a1c6b;
+    --k-blue-600: #1450f5;
+    --k-blue-200: #b9cbff;
+
+    position: relative;
+    padding: 110px 7% 90px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background:
+        radial-gradient(circle at 15% 25%, rgba(79, 125, 255, 0.3), transparent 45%),
+        linear-gradient(155deg, var(--k-blue-900) 0%, var(--k-blue-700) 55%, var(--k-blue-600) 100%);
+    overflow: hidden;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Same brand-mark echo used on the About hero and closing CTA, so this
+   page reads as part of the same product rather than a separate template. */
+.contact-hero-mark {
+    position: absolute;
+    top: 50%;
+    right: -10%;
+    width: min(420px, 45vw);
+    aspect-ratio: 1 / 1;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.contact-hero-mark__stroke {
+    position: absolute;
+    background: linear-gradient(155deg, rgba(255, 255, 255, 0.9), rgba(185, 203, 255, 0.25));
+}
+
+.contact-hero-mark__stroke--long {
+    top: 8%;
+    left: 30%;
+    width: 34%;
+    height: 62%;
+    clip-path: polygon(35% 0%, 100% 0%, 30% 100%, 0% 100%);
+}
+
+.contact-hero-mark__stroke--short {
+    bottom: 6%;
+    left: 42%;
+    width: 40%;
+    height: 26%;
+    clip-path: polygon(0% 0%, 32% 0%, 100% 100%, 68% 100%);
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+    animation: contact-hero-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.contact-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 14px;
+    margin-bottom: 24px;
+    border-radius: 999px;
+    color: #eef3ff;
+    font-size: 12.5px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(10px);
+}
+
+.contact-hero h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(30px, 4vw, 46px);
+    font-weight: 800;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+}
+
+.contact-hero p {
+    max-width: 480px;
+    margin: 20px auto 0;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+@keyframes contact-hero-rise {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .contact-hero-content {
+        animation: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-hero {
+        padding: 90px 22px 70px;
+    }
+
+    .contact-hero-mark {
+        opacity: 0.25;
+        right: -25%;
+    }
+}

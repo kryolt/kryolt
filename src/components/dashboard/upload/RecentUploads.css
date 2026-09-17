@@ -1,0 +1,310 @@
+.recent-uploads {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #e7eaf0;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 4px 18px rgba(15, 23, 42, 0.04);
+    animation: recentUploadsIn 0.35s ease both;
+}
+
+.recent-uploads-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.recent-uploads-title {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    min-width: 0;
+}
+
+.recent-uploads-icon {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0d46f5;
+    background: #eef3ff;
+    border: 1px solid #dbe5ff;
+    border-radius: 10px;
+}
+
+.recent-uploads-title h2 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 17px;
+    line-height: 1.25;
+    font-weight: 750;
+}
+
+.recent-uploads-title p {
+    margin: 3px 0 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.recent-uploads-refresh {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 7px 10px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 650;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.recent-uploads-refresh:hover:not(:disabled) {
+    color: #0d46f5;
+    border-color: #c7d6ff;
+    background: #f5f8ff;
+}
+
+.recent-uploads-refresh:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.is-spinning {
+    animation: recentUploadSpin 0.8s linear infinite;
+}
+
+.recent-uploads-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.recent-upload-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #edf0f5;
+    border-radius: 11px;
+    background: #fbfcfe;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.recent-upload-item:hover {
+    transform: translateY(-1px);
+    border-color: #d7e1fb;
+    background: #ffffff;
+    box-shadow: 0 5px 15px rgba(15, 23, 42, 0.05);
+}
+
+.recent-upload-file-icon {
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0d46f5;
+    background: #eef3ff;
+    border-radius: 9px;
+}
+
+.recent-upload-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.recent-upload-name-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.recent-upload-name-row h3 {
+    margin: 0;
+    min-width: 0;
+    overflow: hidden;
+    color: #1e293b;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.35;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.recent-upload-status {
+    flex: 0 0 auto;
+    padding: 3px 7px;
+    border: 1px solid #bbf7d0;
+    border-radius: 999px;
+    background: #f0fdf4;
+    color: #15803d;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* Only Rows + Date */
+.recent-upload-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+    color: #64748b;
+    font-size: 11px;
+}
+
+.meta-dot {
+    color: #cbd5e1;
+}
+
+.recent-upload-delete {
+    width: 32px;
+    height: 32px;
+    flex: 0 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background: transparent;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.recent-upload-delete:hover {
+    color: #dc2626;
+    border-color: #fecaca;
+    background: #fff5f5;
+}
+
+.recent-uploads-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    padding: 24px;
+    border: 1px dashed #dbe2ec;
+    border-radius: 12px;
+    background: #fafcff;
+    text-align: center;
+}
+
+.recent-uploads-empty-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 9px;
+    color: #0d46f5;
+    background: #eef3ff;
+    border-radius: 12px;
+}
+
+.recent-uploads-empty h3 {
+    margin: 0;
+    color: #1e293b;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.recent-uploads-empty p {
+    max-width: 340px;
+    margin: 5px 0 0;
+    color: #64748b;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.recent-uploads-loading {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.recent-upload-skeleton {
+    height: 66px;
+    border-radius: 11px;
+    background: linear-gradient(90deg,
+            #f1f5f9 25%,
+            #f8fafc 50%,
+            #f1f5f9 75%);
+    background-size: 200% 100%;
+    animation: recentUploadSkeleton 1.2s ease-in-out infinite;
+}
+
+@keyframes recentUploadsIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes recentUploadSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes recentUploadSkeleton {
+    from {
+        background-position: 200% 0;
+    }
+
+    to {
+        background-position: -200% 0;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .recent-uploads {
+        padding: 15px;
+        border-radius: 13px;
+    }
+
+    .recent-uploads-header {
+        align-items: flex-start;
+    }
+
+    .recent-uploads-refresh span {
+        display: none;
+    }
+
+    .recent-upload-item {
+        align-items: flex-start;
+        padding: 11px;
+    }
+
+    .recent-upload-name-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .recent-upload-meta {
+        line-height: 1.5;
+    }
+}

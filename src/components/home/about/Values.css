@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+.about-values {
+    --k-blue-600: #1450f5;
+    --k-blue-900: #061e8c;
+    --k-ink: #0f172a;
+    --k-slate: #64748b;
+
+    padding: 100px 7%;
+    background: #ffffff;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.values-header {
+    max-width: 700px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.values-header span {
+    color: var(--k-blue-600);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.values-header h2 {
+    margin: 12px 0 14px;
+    font-size: clamp(26px, 3.2vw, 36px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--k-ink);
+}
+
+.values-header p {
+    margin: 0;
+    color: var(--k-slate);
+    font-size: 15.5px;
+    line-height: 1.7;
+}
+
+.values-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.value-card {
+    padding: 28px 24px;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    background: #ffffff;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    border-color: #bfdbfe;
+    box-shadow: 0 15px 35px rgba(15, 23, 42, 0.07);
+}
+
+/* Uses the same dark-blue gradient as the hero mark, vision card, and
+   team photo frame, so this grid reads as part of the same system
+   instead of a generic light-blue icon box. */
+.value-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--k-blue-900), var(--k-blue-600));
+}
+
+/* bug fix: was #2E5CE8, an off-brand shade that didn't match any
+   other token on the page — titles elsewhere use ink, not blue */
+.value-card h3 {
+    margin: 0 0 10px;
+    color: var(--k-ink);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.value-card p {
+    margin: 0;
+    color: var(--k-slate);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .about-values {
+        padding: 70px 22px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}

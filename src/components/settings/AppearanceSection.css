@@ -1,0 +1,97 @@
+@import "./WorkspaceSection.css";
+
+@keyframes subSectionFadeIn {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(10px);
+
+    }
+
+    to {
+
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+
+}
+
+.status-badge.appearance {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    background: #EEF4FF;
+
+    color: #2563EB;
+
+    border: 1px solid #BFDBFE;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+}
+
+.settings-grid {
+
+    animation: subSectionFadeIn .35s ease;
+
+}
+
+.coming-soon-box {
+
+    margin-top: 24px;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    background: #F8FAFC;
+
+    border: 1px solid #E5E7EB;
+
+    animation: subSectionFadeIn .4s ease;
+
+}
+
+.coming-soon-box h4 {
+
+    margin: 0 0 8px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #111827;
+
+}
+
+.coming-soon-box p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #6B7280;
+
+}
+
+@media(max-width:768px) {
+
+    .coming-soon-box {
+
+        padding: 18px;
+
+    }
+
+}

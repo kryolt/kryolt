@@ -1,0 +1,387 @@
+/* ========================================
+   EDIT PROFILE MODAL - STYLES
+   ======================================== */
+
+:root {
+    --primary-blue: #4F46E5;
+    --primary-light: #6366F1;
+    --primary-dark: #2E5CE8;
+    --text-primary: #1F2937;
+    --text-secondary: #6B7280;
+    --text-muted: #9CA3AF;
+    --border-color: #E5E7EB;
+    --bg-light: #F9FAFB;
+    --bg-white: #FFFFFF;
+    --success-green: #10B981;
+    --error-red: #EF4444;
+}
+
+/* ========================================
+   OVERLAY BACKDROP
+   ======================================== */
+
+.edit-profile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 1rem;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   MODAL CONTAINER
+   ======================================== */
+
+.edit-profile-modal {
+    background: var(--bg-white);
+    border-radius: 12px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    max-width: 500px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideUp 0.3s ease-in-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   MODAL HEADER
+   ======================================== */
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    gap: 1rem;
+}
+
+.modal-header h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.close-btn:hover {
+    background: var(--bg-light);
+    color: var(--text-primary);
+}
+
+.close-btn:active {
+    transform: scale(0.95);
+}
+
+/* ========================================
+   MODAL BODY / CONTENT
+   ======================================== */
+
+.avatar-preview {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1.5rem 1.5rem;
+}
+
+.avatar-preview img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+    border: 3px solid var(--primary-blue);
+}
+
+.avatar-placeholder {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+/* ========================================
+   FORM GROUPS
+   ======================================== */
+
+.edit-group {
+    padding: 0 1.5rem 1.5rem;
+}
+
+.edit-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.edit-group label svg {
+    color: var(--primary-blue);
+    flex-shrink: 0;
+}
+
+.edit-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    background: var(--bg-white);
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.edit-group input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    background: var(--bg-white);
+}
+
+.edit-group input:disabled {
+    background: var(--bg-light);
+    color: var(--text-muted);
+    cursor: not-allowed;
+}
+
+.edit-group input::placeholder {
+    color: var(--text-muted);
+}
+
+/* ========================================
+   MODAL ACTIONS / BUTTONS
+   ======================================== */
+
+.edit-actions {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-light);
+    border-radius: 0 0 12px 12px;
+}
+
+.cancel-btn,
+.save-btn {
+    flex: 1;
+    padding: 0.85rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 40px;
+}
+
+.cancel-btn {
+    background: var(--bg-white);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+}
+
+.cancel-btn:hover {
+    background: var(--bg-light);
+    border-color: var(--text-secondary);
+}
+
+.cancel-btn:active {
+    transform: scale(0.98);
+}
+
+.save-btn {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-light));
+    color: white;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.2);
+}
+
+.save-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.3);
+}
+
+.save-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.save-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.save-btn svg {
+    flex-shrink: 0;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 640px) {
+    .edit-profile-overlay {
+        padding: 0.75rem;
+    }
+
+    .edit-profile-modal {
+        max-width: 100%;
+        max-height: 95vh;
+    }
+
+    .modal-header {
+        padding: 1.25rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.15rem;
+    }
+
+    .avatar-preview {
+        padding: 1.5rem 1.25rem 1rem;
+    }
+
+    .avatar-preview img,
+    .avatar-placeholder {
+        width: 80px;
+        height: 80px;
+        font-size: 1.5rem;
+    }
+
+    .edit-group {
+        padding: 0 1.25rem 1.25rem;
+    }
+
+    .edit-group label {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .edit-group input {
+        padding: 0.65rem 0.85rem;
+        font-size: 0.9rem;
+    }
+
+    .edit-actions {
+        padding: 1.25rem;
+        gap: 0.75rem;
+    }
+
+    .cancel-btn,
+    .save-btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.85rem;
+        min-height: 36px;
+    }
+}
+
+/* ========================================
+   SCROLLBAR STYLING
+   ======================================== */
+
+.edit-profile-modal::-webkit-scrollbar {
+    width: 8px;
+}
+
+.edit-profile-modal::-webkit-scrollbar-track {
+    background: var(--bg-light);
+}
+
+.edit-profile-modal::-webkit-scrollbar-thumb {
+    background: var(--border-color);
+    border-radius: 4px;
+}
+
+.edit-profile-modal::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+.edit-profile-modal:focus-visible {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+}
+
+.close-btn:focus-visible,
+.cancel-btn:focus-visible,
+.save-btn:focus-visible {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
+}
+
+/* ========================================
+   LOADING STATE
+   ======================================== */
+
+.save-btn[disabled] {
+    cursor: wait;
+}
+
+.save-btn[disabled] svg {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}

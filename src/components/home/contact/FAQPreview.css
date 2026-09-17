@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+.contact-faq-preview {
+    --k-blue-600: #1450f5;
+    --k-ink: #0f172a;
+    --k-slate: #64748b;
+
+    max-width: 1100px;
+    margin: 0 auto 100px;
+    padding: 44px 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    background: #f8faff;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.contact-section-label {
+    display: inline-block;
+    color: var(--k-blue-600);
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.contact-faq-preview h2 {
+    margin: 10px 0 8px;
+    color: var(--k-ink);
+    font-size: clamp(22px, 2.6vw, 27px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.contact-faq-preview p {
+    margin: 0;
+    max-width: 460px;
+    color: var(--k-slate);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.contact-faq-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 22px;
+    border-radius: 10px;
+    background: var(--k-blue-600);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-faq-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(20, 80, 245, 0.25);
+}
+
+.contact-faq-btn:focus-visible {
+    outline: 2px solid var(--k-blue-600);
+    outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+    .contact-faq-preview {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 34px 26px;
+        margin-bottom: 70px;
+    }
+
+    .contact-faq-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

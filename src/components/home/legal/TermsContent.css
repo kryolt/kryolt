@@ -1,0 +1,125 @@
+/* =========================================
+   KRYOLT TERMS CONTENT
+========================================= */
+
+.terms-content {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 32px 90px;
+    box-sizing: border-box;
+    color: #172033;
+}
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.terms-section {
+    margin-bottom: 44px;
+}
+
+.terms-section:last-child {
+    margin-bottom: 0;
+}
+
+.terms-section h2 {
+    margin: 0 0 15px;
+
+    color: #0f172a;
+    font-size: 23px;
+    line-height: 1.35;
+    font-weight: 750;
+    letter-spacing: -0.02em;
+}
+
+.terms-section p {
+    margin: 0 0 15px;
+
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+.terms-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.terms-contact-link {
+    display: inline-block;
+    margin-top: 4px;
+
+    color: #2563eb;
+    font-size: 15px;
+    font-weight: 650;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.terms-contact-link:hover {
+    color: #1d4ed8;
+    transform: translateX(2px);
+}
+
+.terms-contact-link:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .terms-content {
+        padding: 35px 24px 70px;
+    }
+
+    .terms-section {
+        margin-bottom: 38px;
+    }
+
+    .terms-section h2 {
+        font-size: 21px;
+    }
+
+    .terms-section p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .terms-content {
+        padding: 30px 18px 55px;
+    }
+
+    .terms-section {
+        margin-bottom: 34px;
+    }
+
+    .terms-section h2 {
+        font-size: 19px;
+    }
+
+    .terms-section p {
+        font-size: 14px;
+    }
+
+}

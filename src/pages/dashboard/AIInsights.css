@@ -1,0 +1,29 @@
+/* =========================================================
+   AI INSIGHTS — PAGE OPEN TRANSITION
+========================================================= */
+
+.ai-insights-page-transition {
+    width: 100%;
+    min-width: 0;
+
+    animation: aiInsightsPageIn 0.35s ease-out both;
+}
+
+@keyframes aiInsightsPageIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .ai-insights-page-transition {
+        animation: none;
+    }
+}

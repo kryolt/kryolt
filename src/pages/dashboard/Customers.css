@@ -1,0 +1,17 @@
+.customers-page-transition {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: customersPageFadeIn 0.35s ease-in-out forwards;
+}
+
+@keyframes customersPageFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

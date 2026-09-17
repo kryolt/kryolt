@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
+.about-cta {
+    --k-blue-900: #061e8c;
+    --k-blue-600: #0d46f5;
+
+    padding: 100px 7%;
+    background: #ffffff;
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.about-cta-content {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 70px 40px;
+    text-align: center;
+    border-radius: 28px;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at top right, rgba(96, 165, 250, 0.25), transparent 40%),
+        linear-gradient(135deg, var(--k-blue-900), var(--k-blue-600));
+}
+
+/* Faint echo of the hero's brand-mark geometry, so the page's closing
+   moment visually rhymes with its opening one. */
+.about-cta-mark {
+    position: absolute;
+    top: -20%;
+    left: -8%;
+    width: 260px;
+    aspect-ratio: 1 / 1;
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+.about-cta-mark__stroke {
+    position: absolute;
+    background: #ffffff;
+}
+
+.about-cta-mark__stroke--long {
+    top: 8%;
+    left: 30%;
+    width: 34%;
+    height: 62%;
+    clip-path: polygon(35% 0%, 100% 0%, 30% 100%, 0% 100%);
+}
+
+.about-cta-mark__stroke--short {
+    bottom: 6%;
+    left: 42%;
+    width: 40%;
+    height: 26%;
+    clip-path: polygon(0% 0%, 32% 0%, 100% 100%, 68% 100%);
+}
+
+.about-cta h2 {
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: clamp(28px, 3.6vw, 38px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.about-cta p {
+    position: relative;
+    max-width: 560px;
+    margin: 18px auto 28px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.about-cta-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 22px;
+    border-radius: 10px;
+    background: #ffffff;
+    color: var(--k-blue-600);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.about-cta-btn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+
+    .about-cta {
+        padding: 70px 22px;
+    }
+
+    .about-cta-content {
+        padding: 50px 25px;
+    }
+
+    .about-cta-mark {
+        width: 180px;
+    }
+}

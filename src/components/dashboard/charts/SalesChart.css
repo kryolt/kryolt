@@ -1,0 +1,473 @@
+/* =========================================================
+   SALES / KPI CHART CARD STYLES
+   ========================================================= */
+
+.chart-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 14px;
+    border: 1px solid #E7EAF0;
+    box-shadow: 0 1px 2px rgba(15, 23, 42, .04), 0 4px 12px rgba(15, 23, 42, .04);
+    transition: transform .2s ease, box-shadow .2s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(37, 99, 235, .08);
+}
+
+.chart-area {
+    flex: 1;
+    min-height: 180px;
+    display: flex;
+    width: 100%;
+}
+
+/* ==========================================
+   HEADER SECTION
+   ========================================== */
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+}
+
+.chart-title-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.chart-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: linear-gradient(135deg, #3B82F6, #6366F1);
+    box-shadow: 0 4px 10px -3px rgba(99, 102, 241, .4);
+}
+
+.chart-header h2 {
+    margin: 0;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #0F172A;
+    letter-spacing: -.01em;
+}
+
+.chart-header p {
+    margin-top: 1px;
+    color: #64748B;
+    font-size: 11px;
+}
+
+.chart-badge {
+    background: #DBEAFE;
+    color: #2563EB;
+    padding: 3px 8px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* ==========================================
+   KPI SUMMARY GRID
+   ========================================== */
+
+.sales-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.sales-summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 8px 10px;
+    background: #F8FAFC;
+    border: 1px solid #EEF2F7;
+    border-radius: 8px;
+    min-width: 0;
+}
+
+.sales-summary-label {
+    font-size: 9px;
+    font-weight: 600;
+    color: #94A3B8;
+    text-transform: uppercase;
+    letter-spacing: .02em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sales-summary-value {
+    font-size: 12px;
+    font-weight: 700;
+    color: #0F172A;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ==========================================
+   FILTER & SORT CONTROLS
+   ========================================== */
+
+.sales-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.sales-filter-group {
+    display: inline-flex;
+    padding: 2px;
+    background: #F1F5F9;
+    border-radius: 7px;
+    gap: 2px;
+    flex: 1;
+}
+
+.sales-filter-btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 5px 8px;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #64748B;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background .2s ease, color .2s ease;
+    text-align: center;
+}
+
+.sales-filter-btn:hover {
+    color: #1E293B;
+}
+
+.sales-filter-btn.active {
+    background: #fff;
+    color: #2563EB;
+    box-shadow: 0 1px 4px rgba(15, 23, 42, .08);
+}
+
+.sales-sort-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border: 1px solid #E2E8F0;
+    background: #fff;
+    padding: 5px 10px;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #475569;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: border-color .2s ease, color .2s ease, background .2s ease;
+}
+
+.sales-sort-btn:hover {
+    border-color: #2563EB;
+    color: #2563EB;
+    background: #F8FAFC;
+}
+
+/* ==========================================
+   TOP CITY CALLOUT
+   ========================================== */
+
+.sales-top-callout {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    background: linear-gradient(135deg, #EFF6FF, #F0FDFA);
+    border: 1px solid #DBEAFE;
+    border-radius: 8px;
+    color: #1E3A8A;
+    font-size: 11px;
+}
+
+.sales-top-callout svg {
+    flex-shrink: 0;
+    color: #F59E0B;
+}
+
+.sales-top-callout strong {
+    color: #0F172A;
+}
+
+/* ==========================================
+   CUSTOM TOOLTIP
+   ========================================== */
+
+.sales-tooltip {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, .09);
+    padding: 7px 10px;
+    min-width: 110px;
+}
+
+.sales-tooltip-head {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.sales-tooltip-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.sales-tooltip-value {
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #0F172A;
+}
+
+.sales-tooltip-contribution {
+    margin-top: 1px;
+    font-size: 9.5px;
+    color: #64748B;
+}
+
+/* ==========================================
+   REVENUE RANKING LIST
+   ========================================== */
+
+.sales-ranking {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #EEF2F7;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sales-rank-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    background: #F8FAFC;
+    border: 1px solid #EEF2F7;
+    border-radius: 8px;
+    min-width: 0;
+    transition: border-color .15s ease;
+}
+
+.sales-rank-item:hover {
+    border-color: #E2E8F0;
+}
+
+.sales-rank-badge {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    background: #94A3B8;
+}
+
+.sales-rank-badge.rank-gold {
+    background: linear-gradient(135deg, #F5B833, #D68F0E);
+    box-shadow: 0 2px 6px rgba(214, 143, 14, .25);
+}
+
+.sales-rank-badge.rank-silver {
+    background: linear-gradient(135deg, #B8C2D1, #8A96A6);
+}
+
+.sales-rank-badge.rank-bronze {
+    background: linear-gradient(135deg, #D08A5C, #A85E33);
+}
+
+.sales-rank-badge.rank-default {
+    background: #2563EB;
+}
+
+.sales-rank-name {
+    flex: 1;
+    font-size: 11.5px;
+    font-weight: 600;
+    color: #0F172A;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sales-rank-revenue {
+    font-size: 10.5px;
+    color: #64748B;
+    white-space: nowrap;
+}
+
+.sales-rank-percent {
+    font-size: 11px;
+    font-weight: 700;
+    color: #2563EB;
+    min-width: 32px;
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* ==========================================
+   EMPTY STATE & RECHARTS OVERRIDES
+   ========================================== */
+
+.chart-empty {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    color: #94A3B8;
+    font-size: 11.5px;
+    font-weight: 500;
+}
+
+.recharts-tooltip-wrapper {
+    border-radius: 8px;
+    outline: none;
+}
+
+/* ==========================================
+   MOBILE BREAKPOINT OPTIMIZATION (MAX 600PX)
+   ========================================== */
+
+@media (max-width: 600px) {
+    .chart-card {
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .chart-header {
+        margin-bottom: 8px;
+    }
+
+    .chart-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 6px;
+    }
+
+    .chart-header h2 {
+        font-size: 12.5px;
+    }
+
+    .chart-header p {
+        font-size: 9.5px;
+    }
+
+    .chart-badge {
+        padding: 2px 6px;
+        font-size: 8.5px;
+    }
+
+    .sales-top-callout {
+        font-size: 10px;
+        padding: 6px 8px;
+    }
+
+    .sales-controls {
+        gap: 6px;
+        margin-bottom: 8px;
+    }
+
+    .sales-filter-btn {
+        padding: 4px 6px;
+        font-size: 9.5px;
+    }
+
+    .sales-sort-btn {
+        padding: 4px 8px;
+        font-size: 9.5px;
+    }
+
+    .sales-summary {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6px;
+        margin-bottom: 10px;
+    }
+
+    .sales-summary-item {
+        padding: 6px 8px;
+        border-radius: 6px;
+    }
+
+    .sales-summary-label {
+        font-size: 8.5px;
+    }
+
+    .sales-summary-value {
+        font-size: 11px;
+    }
+
+    .sales-rank-item {
+        padding: 6px 8px;
+        gap: 6px;
+    }
+
+    .sales-rank-name {
+        font-size: 11px;
+    }
+
+    .sales-rank-revenue {
+        font-size: 9.5px;
+    }
+
+    .sales-rank-percent {
+        font-size: 10px;
+    }
+
+    .chart-area {
+        min-height: 150px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .chart-card {
+        transition: none;
+    }
+}
+
+.sales-filter-btn:focus-visible,
+.sales-sort-btn:focus-visible {
+    outline: 2px solid #2563EB;
+    outline-offset: 2px;
+}

@@ -1,0 +1,351 @@
+Order ID,Date,Customer,Email,Product,Category,Quantity,Cost Price,Sale Price,Payment Method,City,State
+ORD1331,2026-06-01,Manoj Joshi,manoj.joshi51@gmail.com,Laptop,Electronics,1,54002,61270,Net Banking,Noida,Uttar Pradesh
+ORD1083,2026-06-03,Naveen Tiwari,naveen.tiwari39@gmail.com,Mixer Grinder,Home Appliances,2,2223,3333,UPI,Chennai,Tamil Nadu
+ORD1219,2026-06-03,Meera Nair,meera.nair1@gmail.com,Laptop Bag,Accessories,2,758,1211,UPI,Kolkata,West Bengal
+ORD1038,2026-06-04,Sanjay Mehta,sanjay.mehta48@gmail.com,File Organizer,Stationery,3,182,302,UPI,Nagpur,Maharashtra
+ORD1055,2026-06-04,Nisha Verma,nisha.verma5@gmail.com,Bluetooth Speaker,Electronics,1,1376,2161,UPI,Pune,Maharashtra
+ORD1145,2026-06-04,Preeti Bansal,preeti.bansal25@gmail.com,USB Cable,Accessories,4,149,238,Cash,Delhi,Delhi
+ORD1162,2026-06-04,Vikram Trivedi,vikram.trivedi97@gmail.com,Mixer Grinder,Home Appliances,1,2138,3207,UPI,Kota,Rajasthan
+ORD1213,2026-06-04,Sandeep Mishra,sandeep.mishra69@gmail.com,Notebook Set,Stationery,3,123,205,UPI,Chandigarh,Chandigarh
+ORD1239,2026-06-05,Preeti Bansal,preeti.bansal25@gmail.com,Keyboard,Accessories,2,1085,1577,UPI,Delhi,Delhi
+ORD1304,2026-06-05,Pooja Bhatt,pooja.bhatt71@gmail.com,File Organizer,Stationery,1,185,307,Net Banking,Noida,Uttar Pradesh
+ORD1334,2026-06-05,Vivek Dubey,vivek.dubey70@gmail.com,Bookshelf,Furniture,2,4255,6077,UPI,Surat,Gujarat
+ORD1049,2026-06-06,Nitin Chopra,nitin.chopra23@gmail.com,Wall Painting,Home Decor,1,900,1499,Cash,Hyderabad,Telangana
+ORD1111,2026-06-06,Alka Tiwari,alka.tiwari44@gmail.com,Mouse,Accessories,1,495,791,UPI,Mumbai,Maharashtra
+ORD1188,2026-06-06,Sneha Patel,sneha.patel52@gmail.com,Study Lamp,Home Decor,2,386,608,Card,Lucknow,Uttar Pradesh
+ORD1236,2026-06-06,Vikram Iyer,vikram.iyer85@gmail.com,Table Lamp,Home Decor,2,456,759,Net Banking,Nagpur,Maharashtra
+ORD1260,2026-06-06,Kiran Pandey,kiran.pandey94@gmail.com,Study Lamp,Home Decor,2,376,592,Cash,Udaipur,Rajasthan
+ORD1278,2026-06-06,Vishal Sharma,vishal.sharma72@gmail.com,Water Bottle,Accessories,2,216,343,Card,Gurugram,Haryana
+ORD1025,2026-06-07,Amit Nair,amit.nair94@gmail.com,Router,Electronics,1,1344,2067,UPI,Pune,Maharashtra
+ORD1090,2026-06-07,Mohit Pandey,mohit.pandey72@gmail.com,Desk Organizer,Stationery,4,249,397,Net Banking,Kota,Rajasthan
+ORD1120,2026-06-07,Sanjay Mehta,sanjay.mehta48@gmail.com,Air Freshener,Home Appliances,4,153,255,UPI,Nagpur,Maharashtra
+ORD1141,2026-06-07,Sanjay Rao,sanjay.rao65@gmail.com,Smart Watch,Electronics,1,2566,3947,Cash,Chandigarh,Chandigarh
+ORD1159,2026-06-07,Sandeep Singh,sandeep.singh81@gmail.com,Air Freshener,Home Appliances,1,149,247,Cash,Indore,Madhya Pradesh
+ORD1167,2026-06-07,Ashok Joshi,ashok.joshi59@gmail.com,Backpack,Accessories,1,921,1329,UPI,Lucknow,Uttar Pradesh
+ORD1230,2026-06-07,Nitin Malhotra,nitin.malhotra33@gmail.com,Smart Watch,Electronics,2,2572,3956,Card,Jaipur,Rajasthan
+ORD1274,2026-06-07,Pooja Yadav,pooja.yadav25@gmail.com,Yoga Mat,Accessories,3,393,638,UPI,Gurugram,Haryana
+ORD1336,2026-06-07,Kavita Yadav,kavita.yadav96@gmail.com,Water Bottle,Accessories,2,220,349,UPI,Udaipur,Rajasthan
+ORD1171,2026-06-08,Mohit Kumar,mohit.kumar4@gmail.com,Headphones,Electronics,1,1784,2774,UPI,Chandigarh,Chandigarh
+ORD1237,2026-06-08,Tarun Iyer,tarun.iyer44@gmail.com,File Organizer,Stationery,4,179,298,Net Banking,Chandigarh,Chandigarh
+ORD1288,2026-06-08,Jyoti Rathore,jyoti.rathore31@gmail.com,LED Bulb,Home Appliances,3,91,150,Net Banking,Kolkata,West Bengal
+ORD1323,2026-06-08,Vivek Choudhary,vivek.choudhary67@gmail.com,LED Bulb,Home Appliances,2,91,150,UPI,Chennai,Tamil Nadu
+ORD1326,2026-06-08,Manish Rao,manish.rao88@gmail.com,Keyboard,Accessories,1,1143,1661,UPI,Kota,Rajasthan
+ORD1337,2026-06-08,Priya Mishra,priya.mishra30@gmail.com,Laptop Bag,Accessories,1,780,1246,Net Banking,Surat,Gujarat
+ORD1007,2026-06-09,Suresh Trivedi,suresh.trivedi97@gmail.com,Mixer Grinder,Home Appliances,1,2188,3281,Net Banking,Delhi,Delhi
+ORD1069,2026-06-09,Manoj Mehta,manoj.mehta31@gmail.com,HDMI Cable,Accessories,3,195,340,UPI,Nagpur,Maharashtra
+ORD1106,2026-06-10,Divya Sharma,divya.sharma76@gmail.com,Pen Drive,Accessories,3,348,595,Net Banking,Udaipur,Rajasthan
+ORD1180,2026-06-10,Naveen Malhotra,naveen.malhotra28@gmail.com,Office Chair,Furniture,1,5237,7049,UPI,Udaipur,Rajasthan
+ORD1187,2026-06-10,Kiran Pandey,kiran.pandey94@gmail.com,Monitor,Electronics,1,9117,12156,Card,Udaipur,Rajasthan
+ORD1252,2026-06-10,Preeti Bansal,preeti.bansal25@gmail.com,Bluetooth Speaker,Electronics,1,1421,2232,Net Banking,Delhi,Delhi
+ORD1348,2026-06-10,Mohit Pandey,mohit.pandey72@gmail.com,Extension Board,Electronics,3,357,560,Card,Kota,Rajasthan
+ORD1107,2026-06-11,Sneha Kaur,sneha.kaur27@gmail.com,Smart Watch,Electronics,3,2677,4118,Card,Chandigarh,Chandigarh
+ORD1151,2026-06-11,Alka Tiwari,alka.tiwari44@gmail.com,Air Freshener,Home Appliances,1,147,244,Cash,Mumbai,Maharashtra
+ORD1179,2026-06-11,Sandeep Trivedi,sandeep.trivedi47@gmail.com,Table Fan,Home Appliances,1,920,1430,UPI,Surat,Gujarat
+ORD1190,2026-06-11,Neha Kapoor,neha.kapoor31@gmail.com,Printer,Electronics,1,6323,8267,Card,Chandigarh,Chandigarh
+ORD1221,2026-06-11,Gaurav Yadav,gaurav.yadav61@gmail.com,Cushion Cover Set,Home Decor,3,341,584,Cash,Bhopal,Madhya Pradesh
+ORD1233,2026-06-11,Vikram Iyer,vikram.iyer85@gmail.com,Sofa Cover,Home Decor,2,683,1072,UPI,Nagpur,Maharashtra
+ORD1296,2026-06-11,Nitin Chopra,nitin.chopra23@gmail.com,Electric Kettle,Home Appliances,2,813,1320,UPI,Hyderabad,Telangana
+ORD1059,2026-06-12,Jyoti Iyer,jyoti.iyer77@gmail.com,Wall Clock,Home Decor,2,299,498,Net Banking,Delhi,Delhi
+ORD1088,2026-06-12,Sandeep Mishra,sandeep.mishra69@gmail.com,Pen Drive,Accessories,5,347,595,Card,Chandigarh,Chandigarh
+ORD1094,2026-06-12,Harish Choudhary,harish.choudhary92@gmail.com,Office Chair,Furniture,1,5212,7015,UPI,Pune,Maharashtra
+ORD1140,2026-06-12,Simran Patel,simran.patel28@gmail.com,Headphones,Electronics,2,1827,2841,UPI,Jaipur,Rajasthan
+ORD1178,2026-06-12,Meera Joshi,meera.joshi68@gmail.com,Notebook Set,Stationery,3,118,196,Cash,Patna,Bihar
+ORD1258,2026-06-12,Neha Kapoor,neha.kapoor31@gmail.com,Backpack,Accessories,2,910,1314,UPI,Chandigarh,Chandigarh
+ORD1074,2026-06-13,Naveen Tiwari,naveen.tiwari39@gmail.com,Headphones,Electronics,1,1825,2838,UPI,Chennai,Tamil Nadu
+ORD1110,2026-06-13,Naveen Tiwari,naveen.tiwari39@gmail.com,Notebook Set,Stationery,3,120,199,UPI,Chennai,Tamil Nadu
+ORD1267,2026-06-13,Sneha Tiwari,sneha.tiwari90@gmail.com,Trimmer,Electronics,3,829,1346,Card,Udaipur,Rajasthan
+ORD1311,2026-06-13,Rakesh Yadav,rakesh.yadav21@gmail.com,LED Bulb,Home Appliances,5,90,150,UPI,Chennai,Tamil Nadu
+ORD1001,2026-06-14,Pooja Rathore,pooja.rathore81@gmail.com,Yoga Mat,Accessories,2,413,670,Cash,Surat,Gujarat
+ORD1148,2026-06-14,Sneha Patel,sneha.patel52@gmail.com,Laptop Bag,Accessories,2,739,1182,Net Banking,Lucknow,Uttar Pradesh
+ORD1209,2026-06-14,Sandeep Choudhary,sandeep.choudhary73@gmail.com,Desk Organizer,Stationery,2,257,411,UPI,Kota,Rajasthan
+ORD1044,2026-06-15,Pooja Yadav,pooja.yadav25@gmail.com,Headphones,Electronics,1,1805,2806,UPI,Gurugram,Haryana
+ORD1320,2026-06-15,Rajesh Yadav,rajesh.yadav58@gmail.com,Yoga Mat,Accessories,2,413,671,Cash,Nagpur,Maharashtra
+ORD1071,2026-06-16,Amit Nair,amit.nair94@gmail.com,Bookshelf,Furniture,1,4252,6074,UPI,Pune,Maharashtra
+ORD1255,2026-06-16,Kavita Bhatt,kavita.bhatt74@gmail.com,Power Bank,Electronics,1,1090,1684,Net Banking,Nagpur,Maharashtra
+ORD1276,2026-06-16,Preeti Bansal,preeti.bansal25@gmail.com,Notebook Set,Stationery,4,120,199,UPI,Delhi,Delhi
+ORD1122,2026-06-18,Meera Nair,meera.nair1@gmail.com,Notebook Set,Stationery,3,124,206,UPI,Kolkata,West Bengal
+ORD1200,2026-06-18,Ashok Joshi,ashok.joshi59@gmail.com,Keyboard,Accessories,2,1090,1584,Cash,Lucknow,Uttar Pradesh
+ORD1208,2026-06-18,Vikram Tiwari,vikram.tiwari55@gmail.com,Pen Drive,Accessories,2,341,583,UPI,Chandigarh,Chandigarh
+ORD1214,2026-06-18,Vikram Rao,vikram.rao30@gmail.com,Trimmer,Electronics,1,827,1343,UPI,Hyderabad,Telangana
+ORD1225,2026-06-18,Vishal Sharma,vishal.sharma72@gmail.com,Table Lamp,Home Decor,4,454,755,UPI,Gurugram,Haryana
+ORD1249,2026-06-18,Bhavna Chauhan,bhavna.chauhan19@gmail.com,HDMI Cable,Accessories,3,194,339,UPI,Chandigarh,Chandigarh
+ORD1298,2026-06-18,Ritu Sinha,ritu.sinha6@gmail.com,Curtains Set,Home Decor,1,664,1021,UPI,Chennai,Tamil Nadu
+ORD1307,2026-06-18,Karan Patel,karan.patel78@gmail.com,Laptop Bag,Accessories,1,752,1202,UPI,Gurugram,Haryana
+ORD1021,2026-06-19,Komal Iyer,komal.iyer5@gmail.com,Water Bottle,Accessories,2,217,345,UPI,Ahmedabad,Gujarat
+ORD1079,2026-06-19,Tarun Iyer,tarun.iyer44@gmail.com,Mouse,Accessories,1,491,784,Net Banking,Chandigarh,Chandigarh
+ORD1144,2026-06-19,Preeti Bansal,preeti.bansal25@gmail.com,Wall Painting,Home Decor,1,889,1480,Net Banking,Delhi,Delhi
+ORD1195,2026-06-19,Rekha Singh,rekha.singh56@gmail.com,Table Lamp,Home Decor,3,446,743,Net Banking,Noida,Uttar Pradesh
+ORD1002,2026-06-20,Priya Patel,priya.patel47@gmail.com,Router,Electronics,3,1340,2060,UPI,Jaipur,Rajasthan
+ORD1031,2026-06-20,Arjun Tiwari,arjun.tiwari64@gmail.com,Ballpoint Pen Box,Stationery,3,61,101,UPI,Kolkata,West Bengal
+ORD1070,2026-06-20,Ashok Joshi,ashok.joshi59@gmail.com,Study Lamp,Home Decor,1,394,621,UPI,Lucknow,Uttar Pradesh
+ORD1321,2026-06-20,Naveen Joshi,naveen.joshi90@gmail.com,Bluetooth Speaker,Electronics,1,1442,2265,Net Banking,Delhi,Delhi
+ORD1333,2026-06-20,Shreya Verma,shreya.verma97@gmail.com,Study Table,Furniture,1,3625,5177,UPI,Jaipur,Rajasthan
+ORD1075,2026-06-21,Bhavna Chauhan,bhavna.chauhan19@gmail.com,Printer,Electronics,1,6556,8572,Card,Chandigarh,Chandigarh
+ORD1116,2026-06-21,Tarun Iyer,tarun.iyer44@gmail.com,Electric Kettle,Home Appliances,3,829,1346,UPI,Chandigarh,Chandigarh
+ORD1238,2026-06-21,Komal Iyer,komal.iyer5@gmail.com,Power Bank,Electronics,2,1132,1749,Card,Ahmedabad,Gujarat
+ORD1019,2026-06-22,Simran Patel,simran.patel28@gmail.com,Monitor,Electronics,1,8909,11877,Cash,Jaipur,Rajasthan
+ORD1045,2026-06-22,Vikram Trivedi,vikram.trivedi97@gmail.com,Air Freshener,Home Appliances,3,156,258,UPI,Kota,Rajasthan
+ORD1177,2026-06-22,Manoj Reddy,manoj.reddy37@gmail.com,Curtains Set,Home Decor,2,651,1001,UPI,Indore,Madhya Pradesh
+ORD1203,2026-06-22,Komal Saxena,komal.saxena6@gmail.com,Electric Kettle,Home Appliances,1,778,1264,Net Banking,Patna,Bihar
+ORD1113,2026-06-23,Deepak Rao,deepak.rao98@gmail.com,Curtains Set,Home Decor,2,670,1030,UPI,Pune,Maharashtra
+ORD1173,2026-06-23,Preeti Bansal,preeti.bansal25@gmail.com,Ballpoint Pen Box,Stationery,2,60,100,Cash,Delhi,Delhi
+ORD1182,2026-06-23,Vikram Trivedi,vikram.trivedi97@gmail.com,Power Bank,Electronics,2,1126,1738,UPI,Kota,Rajasthan
+ORD1248,2026-06-23,Kavita Trivedi,kavita.trivedi45@gmail.com,Cushion Cover Set,Home Decor,1,352,602,UPI,Delhi,Delhi
+ORD1330,2026-06-23,Simran Kumar,simran.kumar13@gmail.com,File Organizer,Stationery,3,181,301,UPI,Bhopal,Madhya Pradesh
+ORD1341,2026-06-23,Meera Nair,meera.nair1@gmail.com,Sofa Cover,Home Decor,1,706,1109,UPI,Kolkata,West Bengal
+ORD1063,2026-06-24,Mohit Pandey,mohit.pandey72@gmail.com,Headphones,Electronics,1,1839,2860,Cash,Kota,Rajasthan
+ORD1199,2026-06-24,Sunita Joshi,sunita.joshi9@gmail.com,Smart Watch,Electronics,1,2694,4144,UPI,Gurugram,Haryana
+ORD1243,2026-06-24,Nisha Verma,nisha.verma5@gmail.com,Desk Organizer,Stationery,3,249,398,UPI,Pune,Maharashtra
+ORD1254,2026-06-24,Suresh Trivedi,suresh.trivedi97@gmail.com,LED Bulb,Home Appliances,5,90,149,UPI,Delhi,Delhi
+ORD1062,2026-06-25,Sandeep Mishra,sandeep.mishra69@gmail.com,Office Chair,Furniture,2,5314,7153,Net Banking,Chandigarh,Chandigarh
+ORD1206,2026-06-25,Deepak Reddy,deepak.reddy98@gmail.com,Study Lamp,Home Decor,2,395,622,UPI,Indore,Madhya Pradesh
+ORD1286,2026-06-25,Jyoti Bhatt,jyoti.bhatt70@gmail.com,Electric Kettle,Home Appliances,1,794,1289,Net Banking,Delhi,Delhi
+ORD1347,2026-06-25,Sneha Tiwari,sneha.tiwari90@gmail.com,Mixer Grinder,Home Appliances,2,2192,3287,UPI,Udaipur,Rajasthan
+ORD1350,2026-06-25,Harish Kapoor,harish.kapoor41@gmail.com,Office Chair,Furniture,1,5316,7155,UPI,Chandigarh,Chandigarh
+ORD1012,2026-06-26,Mohit Kapoor,mohit.kapoor78@gmail.com,Sofa Cover,Home Decor,2,682,1071,UPI,Gurugram,Haryana
+ORD1078,2026-06-26,Kavita Mishra,kavita.mishra61@gmail.com,Office Chair,Furniture,1,5242,7056,UPI,Udaipur,Rajasthan
+ORD1257,2026-06-26,Ritu Trivedi,ritu.trivedi59@gmail.com,Yoga Mat,Accessories,3,396,642,Cash,Surat,Gujarat
+ORD1297,2026-06-26,Anjali Mishra,anjali.mishra71@gmail.com,Wall Painting,Home Decor,2,890,1482,UPI,Surat,Gujarat
+ORD1142,2026-06-27,Karan Sinha,karan.sinha1@gmail.com,Yoga Mat,Accessories,2,394,639,UPI,Indore,Madhya Pradesh
+ORD1264,2026-06-27,Anjali Bhatt,anjali.bhatt93@gmail.com,Air Freshener,Home Appliances,4,147,244,UPI,Chandigarh,Chandigarh
+ORD1287,2026-06-27,Vikram Verma,vikram.verma94@gmail.com,Laptop Bag,Accessories,3,768,1228,Net Banking,Bengaluru,Karnataka
+ORD1322,2026-06-27,Sandeep Choudhary,sandeep.choudhary73@gmail.com,Extension Board,Electronics,4,351,551,Card,Kota,Rajasthan
+ORD1346,2026-06-27,Swati Iyer,swati.iyer21@gmail.com,Monitor,Electronics,1,9311,12414,UPI,Chennai,Tamil Nadu
+ORD1349,2026-06-27,Vikram Tiwari,vikram.tiwari55@gmail.com,Smart Watch,Electronics,3,2577,3964,UPI,Chandigarh,Chandigarh
+ORD1040,2026-06-28,Vivek Choudhary,vivek.choudhary67@gmail.com,Bluetooth Speaker,Electronics,3,1391,2185,UPI,Chennai,Tamil Nadu
+ORD1154,2026-06-28,Meera Joshi,meera.joshi68@gmail.com,Electric Kettle,Home Appliances,1,826,1341,Card,Patna,Bihar
+ORD1160,2026-06-28,Ashok Joshi,ashok.joshi59@gmail.com,Wireless Earbuds,Electronics,1,1873,2956,Cash,Lucknow,Uttar Pradesh
+ORD1169,2026-06-28,Manoj Joshi,manoj.joshi51@gmail.com,Laptop Bag,Accessories,1,733,1173,UPI,Noida,Uttar Pradesh
+ORD1216,2026-06-28,Naveen Kumar,naveen.kumar18@gmail.com,Power Bank,Electronics,2,1109,1713,Cash,Chandigarh,Chandigarh
+ORD1318,2026-06-28,Naveen Tiwari,naveen.tiwari39@gmail.com,Router,Electronics,2,1323,2034,UPI,Chennai,Tamil Nadu
+ORD1325,2026-06-28,Rohit Joshi,rohit.joshi60@gmail.com,Keyboard,Accessories,1,1070,1556,UPI,Kota,Rajasthan
+ORD1036,2026-06-29,Preeti Yadav,preeti.yadav18@gmail.com,Sofa Cover,Home Decor,1,703,1103,Net Banking,Hyderabad,Telangana
+ORD1132,2026-06-29,Kiran Pandey,kiran.pandey94@gmail.com,Keyboard,Accessories,1,1116,1622,Net Banking,Udaipur,Rajasthan
+ORD1256,2026-06-29,Nitin Chopra,nitin.chopra23@gmail.com,Desk Organizer,Stationery,4,258,412,UPI,Hyderabad,Telangana
+ORD1006,2026-06-30,Harish Choudhary,harish.choudhary92@gmail.com,Laptop,Electronics,1,52843,59955,UPI,Pune,Maharashtra
+ORD1065,2026-06-30,Mohit Kapoor,mohit.kapoor78@gmail.com,Printer,Electronics,1,6443,8424,UPI,Gurugram,Haryana
+ORD1121,2026-06-30,Vikram Trivedi,vikram.trivedi97@gmail.com,Table Lamp,Home Decor,1,443,738,UPI,Kota,Rajasthan
+ORD1131,2026-06-30,Divya Sharma,divya.sharma76@gmail.com,Laptop,Electronics,2,52695,59788,UPI,Udaipur,Rajasthan
+ORD1205,2026-06-30,Simran Kumar,simran.kumar13@gmail.com,Router,Electronics,2,1289,1982,Card,Bhopal,Madhya Pradesh
+ORD1284,2026-06-30,Komal Saxena,komal.saxena6@gmail.com,Mouse,Accessories,1,505,808,Net Banking,Patna,Bihar
+ORD1303,2026-06-30,Simran Kumar,simran.kumar13@gmail.com,Water Bottle,Accessories,1,227,362,UPI,Bhopal,Madhya Pradesh
+ORD1030,2026-07-01,Preeti Yadav,preeti.yadav18@gmail.com,Smart Watch,Electronics,1,2580,3969,UPI,Hyderabad,Telangana
+ORD1058,2026-07-01,Meera Mehta,meera.mehta66@gmail.com,Wireless Earbuds,Electronics,1,1929,3045,UPI,Delhi,Delhi
+ORD1093,2026-07-01,Jyoti Rathore,jyoti.rathore31@gmail.com,Backpack,Accessories,1,893,1288,Card,Kolkata,West Bengal
+ORD1109,2026-07-01,Meera Nair,meera.nair1@gmail.com,Trimmer,Electronics,2,832,1351,Card,Kolkata,West Bengal
+ORD1138,2026-07-01,Sneha Kaur,sneha.kaur27@gmail.com,Cushion Cover Set,Home Decor,3,342,585,Cash,Chandigarh,Chandigarh
+ORD1204,2026-07-01,Kiran Rao,kiran.rao70@gmail.com,Curtains Set,Home Decor,2,643,989,Card,Gurugram,Haryana
+ORD1271,2026-07-01,Sunita Joshi,sunita.joshi9@gmail.com,Extension Board,Electronics,1,348,546,Card,Gurugram,Haryana
+ORD1314,2026-07-01,Rajesh Yadav,rajesh.yadav58@gmail.com,Office Chair,Furniture,1,5213,7017,Net Banking,Nagpur,Maharashtra
+ORD1335,2026-07-01,Nisha Dubey,nisha.dubey5@gmail.com,Keyboard,Accessories,1,1075,1562,Cash,Pune,Maharashtra
+ORD1004,2026-07-02,Preeti Yadav,preeti.yadav18@gmail.com,Backpack,Accessories,1,923,1332,UPI,Hyderabad,Telangana
+ORD1043,2026-07-02,Jyoti Kaur,jyoti.kaur99@gmail.com,Laptop,Electronics,1,52702,59795,Card,Jaipur,Rajasthan
+ORD1048,2026-07-02,Ritu Sinha,ritu.sinha6@gmail.com,Table Fan,Home Appliances,2,927,1440,UPI,Chennai,Tamil Nadu
+ORD1054,2026-07-02,Manoj Joshi,manoj.joshi51@gmail.com,Iron Box,Home Appliances,2,959,1514,UPI,Noida,Uttar Pradesh
+ORD1112,2026-07-02,Gaurav Yadav,gaurav.yadav61@gmail.com,Bookshelf,Furniture,1,4240,6057,UPI,Bhopal,Madhya Pradesh
+ORD1268,2026-07-02,Nitin Malhotra,nitin.malhotra33@gmail.com,Backpack,Accessories,3,924,1334,Net Banking,Jaipur,Rajasthan
+ORD1011,2026-07-03,Vishal Sharma,vishal.sharma72@gmail.com,Sofa Cover,Home Decor,3,679,1066,Cash,Gurugram,Haryana
+ORD1172,2026-07-03,Jyoti Iyer,jyoti.iyer77@gmail.com,Bluetooth Speaker,Electronics,1,1370,2151,Card,Delhi,Delhi
+ORD1194,2026-07-03,Komal Saxena,komal.saxena6@gmail.com,Air Freshener,Home Appliances,2,155,257,Cash,Patna,Bihar
+ORD1009,2026-07-04,Vikram Rao,vikram.rao30@gmail.com,Notebook Set,Stationery,2,121,201,UPI,Hyderabad,Telangana
+ORD1129,2026-07-04,Simran Kumar,simran.kumar13@gmail.com,Office Chair,Furniture,1,5210,7012,Net Banking,Bhopal,Madhya Pradesh
+ORD1130,2026-07-04,Rohit Joshi,rohit.joshi60@gmail.com,Ballpoint Pen Box,Stationery,5,62,102,UPI,Kota,Rajasthan
+ORD1244,2026-07-04,Jyoti Rathore,jyoti.rathore31@gmail.com,Electric Kettle,Home Appliances,2,788,1280,Net Banking,Kolkata,West Bengal
+ORD1273,2026-07-04,Vikram Iyer,vikram.iyer85@gmail.com,Cushion Cover Set,Home Decor,2,358,613,Card,Nagpur,Maharashtra
+ORD1291,2026-07-04,Meera Iyer,meera.iyer63@gmail.com,Wireless Earbuds,Electronics,1,1869,2949,Cash,Bengaluru,Karnataka
+ORD1312,2026-07-04,Vishal Kaur,vishal.kaur63@gmail.com,Router,Electronics,1,1302,2002,UPI,Ahmedabad,Gujarat
+ORD1052,2026-07-05,Meera Iyer,meera.iyer63@gmail.com,Wall Painting,Home Decor,1,922,1535,Net Banking,Bengaluru,Karnataka
+ORD1053,2026-07-05,Alka Tiwari,alka.tiwari44@gmail.com,Router,Electronics,1,1337,2055,Card,Mumbai,Maharashtra
+ORD1081,2026-07-05,Neha Kapoor,neha.kapoor31@gmail.com,Wall Painting,Home Decor,1,904,1506,UPI,Chandigarh,Chandigarh
+ORD1168,2026-07-05,Kiran Rao,kiran.rao70@gmail.com,Sofa Cover,Home Decor,1,703,1103,UPI,Gurugram,Haryana
+ORD1210,2026-07-05,Sneha Patel,sneha.patel52@gmail.com,Laptop Bag,Accessories,1,735,1175,UPI,Lucknow,Uttar Pradesh
+ORD1066,2026-07-06,Vishal Sharma,vishal.sharma72@gmail.com,Mouse,Accessories,2,504,806,UPI,Gurugram,Haryana
+ORD1294,2026-07-06,Sandeep Singh,sandeep.singh81@gmail.com,Office Chair,Furniture,1,5253,7070,Card,Indore,Madhya Pradesh
+ORD1077,2026-07-07,Rohit Verma,rohit.verma77@gmail.com,Iron Box,Home Appliances,1,926,1461,UPI,Delhi,Delhi
+ORD1080,2026-07-07,Kiran Rao,kiran.rao70@gmail.com,Office Chair,Furniture,1,5215,7019,Card,Gurugram,Haryana
+ORD1119,2026-07-08,Jyoti Bhatt,jyoti.bhatt70@gmail.com,File Organizer,Stationery,3,178,296,Net Banking,Delhi,Delhi
+ORD1234,2026-07-08,Alka Tiwari,alka.tiwari44@gmail.com,Notebook Set,Stationery,3,117,194,UPI,Mumbai,Maharashtra
+ORD1247,2026-07-08,Rekha Pandey,rekha.pandey55@gmail.com,Table Fan,Home Appliances,2,927,1440,Net Banking,Udaipur,Rajasthan
+ORD1305,2026-07-08,Priya Sharma,priya.sharma43@gmail.com,Water Bottle,Accessories,3,214,340,UPI,Noida,Uttar Pradesh
+ORD1016,2026-07-09,Manoj Mehta,manoj.mehta31@gmail.com,Yoga Mat,Accessories,2,411,667,UPI,Nagpur,Maharashtra
+ORD1099,2026-07-09,Pooja Bhatt,pooja.bhatt71@gmail.com,Extension Board,Electronics,3,354,555,UPI,Noida,Uttar Pradesh
+ORD1133,2026-07-09,Naveen Pandey,naveen.pandey63@gmail.com,Bookshelf,Furniture,1,4108,5868,UPI,Noida,Uttar Pradesh
+ORD1134,2026-07-09,Nisha Verma,nisha.verma5@gmail.com,Office Chair,Furniture,2,5079,6837,UPI,Pune,Maharashtra
+ORD1185,2026-07-09,Kavita Trivedi,kavita.trivedi45@gmail.com,Mixer Grinder,Home Appliances,1,2225,3337,UPI,Delhi,Delhi
+ORD1262,2026-07-09,Nisha Bansal,nisha.bansal29@gmail.com,Router,Electronics,2,1334,2052,UPI,Ahmedabad,Gujarat
+ORD1292,2026-07-09,Harish Choudhary,harish.choudhary92@gmail.com,Table Fan,Home Appliances,2,922,1433,Net Banking,Pune,Maharashtra
+ORD1313,2026-07-09,Rohit Joshi,rohit.joshi60@gmail.com,Study Lamp,Home Decor,3,369,582,Net Banking,Kota,Rajasthan
+ORD1339,2026-07-09,Priya Sharma,priya.sharma43@gmail.com,Power Bank,Electronics,1,1143,1765,Card,Noida,Uttar Pradesh
+ORD1340,2026-07-09,Shreya Verma,shreya.verma97@gmail.com,Mouse,Accessories,2,504,806,Net Banking,Jaipur,Rajasthan
+ORD1343,2026-07-09,Sanjay Chopra,sanjay.chopra68@gmail.com,Printer,Electronics,1,6648,8693,UPI,Ahmedabad,Gujarat
+ORD1344,2026-07-09,Sneha Kaur,sneha.kaur27@gmail.com,Power Bank,Electronics,3,1129,1744,Cash,Chandigarh,Chandigarh
+ORD1046,2026-07-10,Ritu Sinha,ritu.sinha6@gmail.com,Extension Board,Electronics,2,340,534,Net Banking,Chennai,Tamil Nadu
+ORD1166,2026-07-10,Komal Saxena,komal.saxena6@gmail.com,Bluetooth Speaker,Electronics,2,1434,2253,UPI,Patna,Bihar
+ORD1186,2026-07-10,Sandeep Yadav,sandeep.yadav29@gmail.com,Electric Kettle,Home Appliances,1,778,1263,UPI,Delhi,Delhi
+ORD1251,2026-07-10,Sandeep Trivedi,sandeep.trivedi47@gmail.com,Wireless Earbuds,Electronics,2,1913,3019,Cash,Surat,Gujarat
+ORD1270,2026-07-10,Nisha Verma,nisha.verma5@gmail.com,Laptop,Electronics,1,50768,57601,Card,Pune,Maharashtra
+ORD1283,2026-07-10,Kavita Trivedi,kavita.trivedi45@gmail.com,Laptop,Electronics,1,52613,59694,Net Banking,Delhi,Delhi
+ORD1013,2026-07-11,Simran Patel,simran.patel28@gmail.com,Office Chair,Furniture,1,5306,7142,UPI,Jaipur,Rajasthan
+ORD1108,2026-07-11,Meera Nair,meera.nair1@gmail.com,HDMI Cable,Accessories,1,206,360,UPI,Kolkata,West Bengal
+ORD1228,2026-07-11,Manish Rao,manish.rao88@gmail.com,Table Fan,Home Appliances,3,905,1408,Cash,Kota,Rajasthan
+ORD1242,2026-07-11,Naveen Pandey,naveen.pandey63@gmail.com,Mixer Grinder,Home Appliances,1,2172,3258,Net Banking,Noida,Uttar Pradesh
+ORD1266,2026-07-11,Bhavna Chauhan,bhavna.chauhan19@gmail.com,Iron Box,Home Appliances,1,930,1467,UPI,Chandigarh,Chandigarh
+ORD1269,2026-07-11,Mohit Pandey,mohit.pandey72@gmail.com,Backpack,Accessories,1,904,1305,Card,Kota,Rajasthan
+ORD1280,2026-07-11,Meera Reddy,meera.reddy46@gmail.com,File Organizer,Stationery,3,187,311,UPI,Gurugram,Haryana
+ORD1338,2026-07-11,Sanjay Chauhan,sanjay.chauhan18@gmail.com,Air Freshener,Home Appliances,4,154,255,UPI,Bhopal,Madhya Pradesh
+ORD1124,2026-07-12,Arjun Mishra,arjun.mishra92@gmail.com,Bookshelf,Furniture,1,4126,5893,Cash,Pune,Maharashtra
+ORD1146,2026-07-12,Jyoti Bhatt,jyoti.bhatt70@gmail.com,Printer,Electronics,1,6426,8402,Card,Delhi,Delhi
+ORD1152,2026-07-12,Sanjay Chopra,sanjay.chopra68@gmail.com,Air Freshener,Home Appliances,2,151,251,Cash,Ahmedabad,Gujarat
+ORD1184,2026-07-12,Nitin Malhotra,nitin.malhotra33@gmail.com,Bluetooth Speaker,Electronics,1,1373,2156,Card,Jaipur,Rajasthan
+ORD1302,2026-07-12,Sandeep Singh,sandeep.singh81@gmail.com,Mouse,Accessories,1,517,826,Cash,Indore,Madhya Pradesh
+ORD1008,2026-07-13,Komal Iyer,komal.iyer5@gmail.com,Office Chair,Furniture,1,5363,7219,Cash,Ahmedabad,Gujarat
+ORD1020,2026-07-13,Pooja Verma,pooja.verma49@gmail.com,Router,Electronics,1,1322,2033,UPI,Mumbai,Maharashtra
+ORD1061,2026-07-13,Pooja Rathore,pooja.rathore81@gmail.com,Iron Box,Home Appliances,1,940,1482,UPI,Surat,Gujarat
+ORD1086,2026-07-13,Alka Tiwari,alka.tiwari44@gmail.com,Notebook Set,Stationery,2,124,205,Net Banking,Mumbai,Maharashtra
+ORD1104,2026-07-13,Vikram Tiwari,vikram.tiwari55@gmail.com,Notebook Set,Stationery,2,124,205,Cash,Chandigarh,Chandigarh
+ORD1143,2026-07-13,Anjali Chauhan,anjali.chauhan80@gmail.com,Power Bank,Electronics,2,1128,1742,UPI,Nagpur,Maharashtra
+ORD1158,2026-07-13,Komal Bhatt,komal.bhatt70@gmail.com,Office Chair,Furniture,2,5194,6990,Card,Jaipur,Rajasthan
+ORD1193,2026-07-13,Karan Sinha,karan.sinha1@gmail.com,Smart Watch,Electronics,2,2539,3905,UPI,Indore,Madhya Pradesh
+ORD1306,2026-07-13,Sandeep Singh,sandeep.singh81@gmail.com,Iron Box,Home Appliances,1,987,1558,Card,Indore,Madhya Pradesh
+ORD1308,2026-07-13,Meera Reddy,meera.reddy46@gmail.com,Iron Box,Home Appliances,2,965,1522,UPI,Gurugram,Haryana
+ORD1050,2026-07-14,Manoj Yadav,manoj.yadav18@gmail.com,Bookshelf,Furniture,1,4316,6164,UPI,Mumbai,Maharashtra
+ORD1056,2026-07-14,Shreya Verma,shreya.verma97@gmail.com,Air Freshener,Home Appliances,2,153,254,UPI,Jaipur,Rajasthan
+ORD1068,2026-07-14,Rakesh Yadav,rakesh.yadav21@gmail.com,Mouse,Accessories,3,494,789,UPI,Chennai,Tamil Nadu
+ORD1098,2026-07-14,Manish Rao,manish.rao88@gmail.com,Laptop Bag,Accessories,1,742,1185,Net Banking,Kota,Rajasthan
+ORD1163,2026-07-14,Nitin Chopra,nitin.chopra23@gmail.com,USB Cable,Accessories,1,147,235,Net Banking,Hyderabad,Telangana
+ORD1259,2026-07-14,Pooja Bhatt,pooja.bhatt71@gmail.com,Study Lamp,Home Decor,4,370,583,UPI,Noida,Uttar Pradesh
+ORD1281,2026-07-14,Neha Kapoor,neha.kapoor31@gmail.com,Laptop Bag,Accessories,2,755,1208,UPI,Chandigarh,Chandigarh
+ORD1290,2026-07-14,Manish Iyer,manish.iyer53@gmail.com,Table Lamp,Home Decor,4,458,762,Net Banking,Chennai,Tamil Nadu
+ORD1309,2026-07-14,Kavita Trivedi,kavita.trivedi45@gmail.com,Trimmer,Electronics,2,808,1312,UPI,Delhi,Delhi
+ORD1042,2026-07-15,Harish Choudhary,harish.choudhary92@gmail.com,Keyboard,Accessories,2,1127,1638,UPI,Pune,Maharashtra
+ORD1181,2026-07-15,Vikram Iyer,vikram.iyer85@gmail.com,Power Bank,Electronics,1,1085,1676,UPI,Nagpur,Maharashtra
+ORD1224,2026-07-15,Bhavna Chauhan,bhavna.chauhan19@gmail.com,Notebook Set,Stationery,3,123,204,UPI,Chandigarh,Chandigarh
+ORD1265,2026-07-15,Manoj Mehta,manoj.mehta31@gmail.com,LED Bulb,Home Appliances,3,92,152,UPI,Nagpur,Maharashtra
+ORD1295,2026-07-15,Suresh Trivedi,suresh.trivedi97@gmail.com,Power Bank,Electronics,1,1089,1683,Net Banking,Delhi,Delhi
+ORD1139,2026-07-16,Rajesh Yadav,rajesh.yadav58@gmail.com,File Organizer,Stationery,5,178,296,Card,Nagpur,Maharashtra
+ORD1174,2026-07-16,Tarun Iyer,tarun.iyer44@gmail.com,File Organizer,Stationery,1,185,308,UPI,Chandigarh,Chandigarh
+ORD1125,2026-07-17,Gaurav Yadav,gaurav.yadav61@gmail.com,Laptop Bag,Accessories,2,775,1240,UPI,Bhopal,Madhya Pradesh
+ORD1277,2026-07-17,Manoj Joshi,manoj.joshi51@gmail.com,Power Bank,Electronics,1,1082,1672,Cash,Noida,Uttar Pradesh
+ORD1060,2026-07-18,Divya Sharma,divya.sharma76@gmail.com,Yoga Mat,Accessories,2,403,654,Net Banking,Udaipur,Rajasthan
+ORD1156,2026-07-18,Ashok Joshi,ashok.joshi59@gmail.com,Wireless Earbuds,Electronics,2,1852,2923,UPI,Lucknow,Uttar Pradesh
+ORD1161,2026-07-18,Sanjay Kumar,sanjay.kumar49@gmail.com,Mixer Grinder,Home Appliances,2,2222,3333,Cash,Delhi,Delhi
+ORD1241,2026-07-18,Kiran Rao,kiran.rao70@gmail.com,Keyboard,Accessories,1,1111,1615,Card,Gurugram,Haryana
+ORD1316,2026-07-18,Meera Iyer,meera.iyer63@gmail.com,Wall Clock,Home Decor,1,296,492,UPI,Bengaluru,Karnataka
+ORD1034,2026-07-19,Nisha Bansal,nisha.bansal29@gmail.com,USB Cable,Accessories,2,155,248,Card,Ahmedabad,Gujarat
+ORD1047,2026-07-19,Sandeep Trivedi,sandeep.trivedi47@gmail.com,Study Table,Furniture,1,3414,4876,Net Banking,Surat,Gujarat
+ORD1101,2026-07-19,Vivek Choudhary,vivek.choudhary67@gmail.com,Bluetooth Speaker,Electronics,3,1443,2267,UPI,Chennai,Tamil Nadu
+ORD1103,2026-07-19,Vishal Kaur,vishal.kaur63@gmail.com,Power Bank,Electronics,1,1105,1707,Cash,Ahmedabad,Gujarat
+ORD1197,2026-07-19,Kiran Pandey,kiran.pandey94@gmail.com,Smart Watch,Electronics,2,2670,4107,Net Banking,Udaipur,Rajasthan
+ORD1202,2026-07-19,Ashok Joshi,ashok.joshi59@gmail.com,Backpack,Accessories,2,884,1276,Cash,Lucknow,Uttar Pradesh
+ORD1207,2026-07-19,Neha Kapoor,neha.kapoor31@gmail.com,Desk Organizer,Stationery,1,250,399,UPI,Chandigarh,Chandigarh
+ORD1285,2026-07-19,Vikram Rathore,vikram.rathore30@gmail.com,Router,Electronics,3,1264,1943,UPI,Mumbai,Maharashtra
+ORD1329,2026-07-19,Deepak Rao,deepak.rao98@gmail.com,Wall Painting,Home Decor,3,881,1468,UPI,Pune,Maharashtra
+ORD1342,2026-07-19,Sanjay Rao,sanjay.rao65@gmail.com,Desk Organizer,Stationery,2,248,396,UPI,Chandigarh,Chandigarh
+ORD1102,2026-07-20,Arjun Tiwari,arjun.tiwari64@gmail.com,Bookshelf,Furniture,1,4087,5837,Net Banking,Kolkata,West Bengal
+ORD1135,2026-07-20,Vivek Choudhary,vivek.choudhary67@gmail.com,Cushion Cover Set,Home Decor,3,356,609,Cash,Chennai,Tamil Nadu
+ORD1192,2026-07-20,Vikram Verma,vikram.verma94@gmail.com,Smart Watch,Electronics,1,2646,4069,Net Banking,Bengaluru,Karnataka
+ORD1223,2026-07-20,Deepak Reddy,deepak.reddy98@gmail.com,Pen Drive,Accessories,2,358,612,UPI,Indore,Madhya Pradesh
+ORD1240,2026-07-20,Pooja Yadav,pooja.yadav25@gmail.com,Water Bottle,Accessories,3,223,354,UPI,Gurugram,Haryana
+ORD1275,2026-07-20,Neha Kapoor,neha.kapoor31@gmail.com,Electric Kettle,Home Appliances,1,819,1330,Cash,Chandigarh,Chandigarh
+ORD1128,2026-07-21,Karan Patel,karan.patel78@gmail.com,Yoga Mat,Accessories,4,398,646,UPI,Gurugram,Haryana
+ORD1196,2026-07-21,Preeti Bansal,preeti.bansal25@gmail.com,Air Freshener,Home Appliances,1,153,254,Cash,Delhi,Delhi
+ORD1023,2026-07-22,Kavita Yadav,kavita.yadav96@gmail.com,Power Bank,Electronics,1,1118,1726,UPI,Udaipur,Rajasthan
+ORD1037,2026-07-22,Komal Saxena,komal.saxena6@gmail.com,Backpack,Accessories,3,926,1336,Cash,Patna,Bihar
+ORD1150,2026-07-22,Kavita Mishra,kavita.mishra61@gmail.com,Notebook Set,Stationery,5,121,200,UPI,Udaipur,Rajasthan
+ORD1155,2026-07-22,Neha Chopra,neha.chopra69@gmail.com,Notebook Set,Stationery,2,119,197,UPI,Noida,Uttar Pradesh
+ORD1164,2026-07-22,Karan Sinha,karan.sinha1@gmail.com,Power Bank,Electronics,3,1124,1736,UPI,Indore,Madhya Pradesh
+ORD1176,2026-07-22,Jyoti Rathore,jyoti.rathore31@gmail.com,Bookshelf,Furniture,1,4159,5941,UPI,Kolkata,West Bengal
+ORD1231,2026-07-22,Arjun Mishra,arjun.mishra92@gmail.com,Electric Kettle,Home Appliances,1,826,1341,UPI,Pune,Maharashtra
+ORD1310,2026-07-22,Anjali Mishra,anjali.mishra71@gmail.com,Sofa Cover,Home Decor,1,704,1106,Net Banking,Surat,Gujarat
+ORD1003,2026-07-23,Komal Iyer,komal.iyer5@gmail.com,Printer,Electronics,1,6640,8682,Card,Ahmedabad,Gujarat
+ORD1014,2026-07-23,Alka Tiwari,alka.tiwari44@gmail.com,File Organizer,Stationery,3,183,305,UPI,Mumbai,Maharashtra
+ORD1137,2026-07-23,Shreya Verma,shreya.verma97@gmail.com,Water Bottle,Accessories,2,224,356,Card,Jaipur,Rajasthan
+ORD1301,2026-07-23,Naveen Pandey,naveen.pandey63@gmail.com,Wireless Earbuds,Electronics,1,1907,3009,UPI,Noida,Uttar Pradesh
+ORD1327,2026-07-23,Rakesh Yadav,rakesh.yadav21@gmail.com,LED Bulb,Home Appliances,5,92,153,Net Banking,Chennai,Tamil Nadu
+ORD1345,2026-07-23,Neha Chopra,neha.chopra69@gmail.com,Yoga Mat,Accessories,2,403,654,UPI,Noida,Uttar Pradesh
+ORD1015,2026-07-24,Komal Bhatt,komal.bhatt70@gmail.com,Ballpoint Pen Box,Stationery,5,61,101,Cash,Jaipur,Rajasthan
+ORD1032,2026-07-24,Vikram Verma,vikram.verma94@gmail.com,Smart Watch,Electronics,1,2621,4031,UPI,Bengaluru,Karnataka
+ORD1033,2026-07-24,Vishal Kaur,vishal.kaur63@gmail.com,Extension Board,Electronics,1,363,569,Cash,Ahmedabad,Gujarat
+ORD1035,2026-07-24,Simran Kumar,simran.kumar13@gmail.com,Wall Painting,Home Decor,3,923,1538,Card,Bhopal,Madhya Pradesh
+ORD1041,2026-07-24,Sanjay Joshi,sanjay.joshi96@gmail.com,Monitor,Electronics,1,9026,12034,UPI,Nagpur,Maharashtra
+ORD1136,2026-07-24,Neha Chauhan,neha.chauhan71@gmail.com,Power Bank,Electronics,2,1135,1753,Card,Mumbai,Maharashtra
+ORD1218,2026-07-24,Ritu Trivedi,ritu.trivedi59@gmail.com,Curtains Set,Home Decor,1,651,1001,Card,Surat,Gujarat
+ORD1261,2026-07-24,Arjun Rathore,arjun.rathore52@gmail.com,Laptop,Electronics,1,52253,59286,UPI,Jaipur,Rajasthan
+ORD1328,2026-07-24,Deepak Reddy,deepak.reddy98@gmail.com,Ballpoint Pen Box,Stationery,5,60,99,Card,Indore,Madhya Pradesh
+ORD1024,2026-07-25,Harish Choudhary,harish.choudhary92@gmail.com,Printer,Electronics,1,6671,8722,Card,Pune,Maharashtra
+ORD1039,2026-07-25,Priya Mishra,priya.mishra30@gmail.com,Iron Box,Home Appliances,1,934,1473,UPI,Surat,Gujarat
+ORD1073,2026-07-25,Pallavi Joshi,pallavi.joshi71@gmail.com,Study Lamp,Home Decor,3,385,607,Net Banking,Ahmedabad,Gujarat
+ORD1117,2026-07-25,Meera Mehta,meera.mehta66@gmail.com,Pen Drive,Accessories,2,351,600,Card,Delhi,Delhi
+ORD1217,2026-07-25,Sanjay Kumar,sanjay.kumar49@gmail.com,Trimmer,Electronics,1,789,1282,UPI,Delhi,Delhi
+ORD1220,2026-07-25,Mohit Kumar,mohit.kumar4@gmail.com,Curtains Set,Home Decor,2,647,994,UPI,Chandigarh,Chandigarh
+ORD1332,2026-07-25,Simran Kumar,simran.kumar13@gmail.com,Ballpoint Pen Box,Stationery,2,62,102,UPI,Bhopal,Madhya Pradesh
+ORD1010,2026-07-26,Vikram Trivedi,vikram.trivedi97@gmail.com,Laptop Bag,Accessories,3,734,1173,UPI,Kota,Rajasthan
+ORD1017,2026-07-26,Sanjay Rao,sanjay.rao65@gmail.com,Extension Board,Electronics,2,354,556,Card,Chandigarh,Chandigarh
+ORD1082,2026-07-26,Harish Kapoor,harish.kapoor41@gmail.com,Bluetooth Speaker,Electronics,1,1417,2226,UPI,Chandigarh,Chandigarh
+ORD1085,2026-07-26,Ritu Trivedi,ritu.trivedi59@gmail.com,HDMI Cable,Accessories,2,208,362,Card,Surat,Gujarat
+ORD1153,2026-07-26,Manish Rathore,manish.rathore45@gmail.com,Office Chair,Furniture,1,5354,7207,Cash,Patna,Bihar
+ORD1157,2026-07-26,Manish Rathore,manish.rathore45@gmail.com,Cushion Cover Set,Home Decor,3,359,615,Cash,Patna,Bihar
+ORD1018,2026-07-27,Poonam Kaur,poonam.kaur8@gmail.com,Headphones,Electronics,2,1810,2815,Net Banking,Jaipur,Rajasthan
+ORD1091,2026-07-27,Naveen Tiwari,naveen.tiwari39@gmail.com,Mouse,Accessories,1,492,786,UPI,Chennai,Tamil Nadu
+ORD1092,2026-07-27,Priya Sharma,priya.sharma43@gmail.com,HDMI Cable,Accessories,5,196,341,Cash,Noida,Uttar Pradesh
+ORD1123,2026-07-27,Vikram Rao,vikram.rao30@gmail.com,Extension Board,Electronics,1,348,547,UPI,Hyderabad,Telangana
+ORD1246,2026-07-27,Pooja Verma,pooja.verma49@gmail.com,Bluetooth Speaker,Electronics,2,1423,2236,Cash,Mumbai,Maharashtra
+ORD1028,2026-07-28,Kiran Choudhary,kiran.choudhary75@gmail.com,Router,Electronics,1,1337,2057,Cash,Kolkata,West Bengal
+ORD1076,2026-07-28,Meera Mehta,meera.mehta66@gmail.com,Air Freshener,Home Appliances,1,150,250,UPI,Delhi,Delhi
+ORD1100,2026-07-28,Simran Kumar,simran.kumar13@gmail.com,Wireless Earbuds,Electronics,2,1889,2981,Cash,Bhopal,Madhya Pradesh
+ORD1211,2026-07-28,Mohit Joshi,mohit.joshi21@gmail.com,Table Lamp,Home Decor,2,466,775,Card,Chennai,Tamil Nadu
+ORD1235,2026-07-28,Vikram Trivedi,vikram.trivedi97@gmail.com,Sofa Cover,Home Decor,1,687,1079,Card,Kota,Rajasthan
+ORD1022,2026-07-29,Neha Chopra,neha.chopra69@gmail.com,Study Lamp,Home Decor,3,374,589,Card,Noida,Uttar Pradesh
+ORD1051,2026-07-29,Jyoti Rathore,jyoti.rathore31@gmail.com,Power Bank,Electronics,2,1101,1700,Net Banking,Kolkata,West Bengal
+ORD1105,2026-07-29,Manoj Yadav,manoj.yadav18@gmail.com,Power Bank,Electronics,2,1099,1697,UPI,Mumbai,Maharashtra
+ORD1115,2026-07-29,Sanjay Joshi,sanjay.joshi96@gmail.com,USB Cable,Accessories,2,155,247,UPI,Nagpur,Maharashtra
+ORD1175,2026-07-29,Rekha Singh,rekha.singh56@gmail.com,Keyboard,Accessories,2,1133,1648,Cash,Noida,Uttar Pradesh
+ORD1227,2026-07-29,Vikram Rao,vikram.rao30@gmail.com,Trimmer,Electronics,2,787,1278,UPI,Hyderabad,Telangana
+ORD1263,2026-07-29,Tarun Iyer,tarun.iyer44@gmail.com,Mouse,Accessories,1,491,784,Card,Chandigarh,Chandigarh
+ORD1317,2026-07-29,Arjun Mishra,arjun.mishra92@gmail.com,Air Freshener,Home Appliances,3,149,248,Card,Pune,Maharashtra
+ORD1026,2026-07-30,Komal Bhatt,komal.bhatt70@gmail.com,Desk Organizer,Stationery,3,260,415,Card,Jaipur,Rajasthan
+ORD1127,2026-07-30,Tarun Iyer,tarun.iyer44@gmail.com,Power Bank,Electronics,1,1125,1738,Net Banking,Chandigarh,Chandigarh
+ORD1226,2026-07-30,Rohit Verma,rohit.verma77@gmail.com,Wireless Earbuds,Electronics,2,1927,3042,UPI,Delhi,Delhi
+ORD1250,2026-07-30,Manoj Reddy,manoj.reddy37@gmail.com,Yoga Mat,Accessories,4,392,635,UPI,Indore,Madhya Pradesh
+ORD1324,2026-07-30,Poonam Kaur,poonam.kaur8@gmail.com,Table Fan,Home Appliances,1,919,1428,UPI,Jaipur,Rajasthan
+ORD1005,2026-07-31,Harish Choudhary,harish.choudhary92@gmail.com,Study Table,Furniture,1,3595,5135,UPI,Pune,Maharashtra
+ORD1084,2026-07-31,Kavita Bhatt,kavita.bhatt74@gmail.com,Electric Kettle,Home Appliances,1,827,1343,Cash,Nagpur,Maharashtra
+ORD1096,2026-07-31,Kavita Yadav,kavita.yadav96@gmail.com,Iron Box,Home Appliances,1,958,1512,Cash,Udaipur,Rajasthan
+ORD1215,2026-07-31,Sneha Patel,sneha.patel52@gmail.com,Curtains Set,Home Decor,1,631,969,UPI,Lucknow,Uttar Pradesh
+ORD1229,2026-07-31,Sanjay Joshi,sanjay.joshi96@gmail.com,Water Bottle,Accessories,1,225,358,UPI,Nagpur,Maharashtra
+ORD1272,2026-07-31,Sandeep Singh,sandeep.singh81@gmail.com,Wall Painting,Home Decor,1,874,1455,UPI,Indore,Madhya Pradesh
+ORD1282,2026-07-31,Anu Sinha,anu.sinha84@gmail.com,Laptop,Electronics,1,51781,58750,Card,Hyderabad,Telangana
+ORD1300,2026-07-31,Manish Rathore,manish.rathore45@gmail.com,LED Bulb,Home Appliances,3,87,145,UPI,Patna,Bihar
+ORD1118,2026-08-01,Ritu Sinha,ritu.sinha6@gmail.com,Router,Electronics,1,1296,1992,UPI,Chennai,Tamil Nadu
+ORD1126,2026-08-01,Vivek Dubey,vivek.dubey70@gmail.com,Trimmer,Electronics,1,818,1328,UPI,Surat,Gujarat
+ORD1289,2026-08-01,Gaurav Yadav,gaurav.yadav61@gmail.com,Ballpoint Pen Box,Stationery,1,60,98,Cash,Bhopal,Madhya Pradesh
+ORD1029,2026-08-02,Meera Nair,meera.nair1@gmail.com,Router,Electronics,1,1286,1977,UPI,Kolkata,West Bengal
+ORD1067,2026-08-02,Ritu Sinha,ritu.sinha6@gmail.com,USB Cable,Accessories,2,152,241,Card,Chennai,Tamil Nadu
+ORD1170,2026-08-02,Gaurav Yadav,gaurav.yadav61@gmail.com,Table Fan,Home Appliances,1,876,1361,Cash,Bhopal,Madhya Pradesh
+ORD1245,2026-08-02,Jyoti Kaur,jyoti.kaur99@gmail.com,Office Chair,Furniture,1,5093,6856,UPI,Jaipur,Rajasthan
+ORD1293,2026-08-02,Sandeep Mishra,sandeep.mishra69@gmail.com,Wireless Earbuds,Electronics,3,1889,2982,Net Banking,Chandigarh,Chandigarh
+ORD1087,2026-08-03,Sandeep Singh,sandeep.singh81@gmail.com,File Organizer,Stationery,3,185,307,Card,Indore,Madhya Pradesh
+ORD1095,2026-08-03,Manish Rao,manish.rao88@gmail.com,Trimmer,Electronics,1,804,1306,Card,Kota,Rajasthan
+ORD1114,2026-08-03,Sanjay Mehta,sanjay.mehta48@gmail.com,Extension Board,Electronics,2,343,538,UPI,Nagpur,Maharashtra
+ORD1183,2026-08-03,Sandeep Yadav,sandeep.yadav29@gmail.com,Study Lamp,Home Decor,2,389,613,Cash,Delhi,Delhi
+ORD1232,2026-08-03,Meera Mehta,meera.mehta66@gmail.com,HDMI Cable,Accessories,4,199,348,UPI,Delhi,Delhi
+ORD1027,2026-08-04,Kavita Mishra,kavita.mishra61@gmail.com,Yoga Mat,Accessories,1,400,650,Card,Udaipur,Rajasthan
+ORD1189,2026-08-04,Ashok Joshi,ashok.joshi59@gmail.com,Mouse,Accessories,2,501,800,UPI,Lucknow,Uttar Pradesh
+ORD1212,2026-08-04,Deepak Reddy,deepak.reddy98@gmail.com,Router,Electronics,1,1296,1993,UPI,Indore,Madhya Pradesh
+ORD1222,2026-08-04,Rakesh Mehta,rakesh.mehta87@gmail.com,Laptop,Electronics,1,51861,58842,Net Banking,Mumbai,Maharashtra
+ORD1315,2026-08-04,Priya Patel,priya.patel47@gmail.com,Table Fan,Home Appliances,2,916,1425,UPI,Jaipur,Rajasthan
+ORD1089,2026-08-05,Anjali Mishra,anjali.mishra71@gmail.com,USB Cable,Accessories,3,152,243,Card,Surat,Gujarat
+ORD1097,2026-08-05,Arjun Mishra,arjun.mishra92@gmail.com,LED Bulb,Home Appliances,2,93,154,Card,Pune,Maharashtra
+ORD1057,2026-08-06,Mohit Pandey,mohit.pandey72@gmail.com,Monitor,Electronics,1,8882,11842,Cash,Kota,Rajasthan
+ORD1072,2026-08-06,Sanjay Chopra,sanjay.chopra68@gmail.com,Electric Kettle,Home Appliances,1,827,1343,Cash,Ahmedabad,Gujarat
+ORD1149,2026-08-06,Ashok Nair,ashok.nair77@gmail.com,Iron Box,Home Appliances,1,964,1522,Card,Chennai,Tamil Nadu
+ORD1253,2026-08-06,Nitin Chopra,nitin.chopra23@gmail.com,LED Bulb,Home Appliances,4,93,154,Net Banking,Hyderabad,Telangana
+ORD1279,2026-08-06,Vivek Choudhary,vivek.choudhary67@gmail.com,Power Bank,Electronics,1,1114,1720,UPI,Chennai,Tamil Nadu
+ORD1064,2026-08-07,Amit Tiwari,amit.tiwari70@gmail.com,Trimmer,Electronics,2,831,1349,UPI,Ahmedabad,Gujarat
+ORD1147,2026-08-07,Sanjay Kumar,sanjay.kumar49@gmail.com,Keyboard,Accessories,2,1104,1604,Cash,Delhi,Delhi
+ORD1165,2026-08-07,Sunita Joshi,sunita.joshi9@gmail.com,Ballpoint Pen Box,Stationery,2,60,99,UPI,Gurugram,Haryana
+ORD1191,2026-08-07,Kavita Bhatt,kavita.bhatt74@gmail.com,Curtains Set,Home Decor,1,638,980,UPI,Nagpur,Maharashtra
+ORD1198,2026-08-07,Pooja Verma,pooja.verma49@gmail.com,Sofa Cover,Home Decor,1,704,1105,UPI,Mumbai,Maharashtra
+ORD1201,2026-08-07,Vikram Rao,vikram.rao30@gmail.com,Smart Watch,Electronics,2,2682,4124,Cash,Hyderabad,Telangana
+ORD1299,2026-08-07,Harish Choudhary,harish.choudhary92@gmail.com,Wall Clock,Home Decor,2,292,486,Net Banking,Pune,Maharashtra
+ORD1319,2026-08-07,Sneha Patel,sneha.patel52@gmail.com,Desk Organizer,Stationery,1,255,407,Cash,Lucknow,Uttar Pradesh

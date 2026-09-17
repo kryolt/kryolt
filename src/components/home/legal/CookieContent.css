@@ -1,0 +1,183 @@
+/* =========================================
+   KRYOLT COOKIE CONTENT
+========================================= */
+
+.cookie-content {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px 32px 90px;
+    box-sizing: border-box;
+    color: #172033;
+}
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.cookie-section {
+    margin-bottom: 44px;
+}
+
+.cookie-section:last-child {
+    margin-bottom: 0;
+}
+
+.cookie-section h2 {
+    margin: 0 0 15px;
+
+    color: #0f172a;
+    font-size: 23px;
+    line-height: 1.35;
+    font-weight: 750;
+    letter-spacing: -0.02em;
+}
+
+.cookie-section>p {
+    margin: 0;
+
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.85;
+}
+
+/* =========================================
+   COOKIE TYPES
+========================================= */
+
+.cookie-list {
+    display: grid;
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.cookie-item {
+    padding: 22px 24px;
+
+    background: #f8faff;
+    border: 1px solid #e5ebf7;
+    border-radius: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cookie-item:hover {
+    border-color: #cbdafe;
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.06);
+    transform: translateY(-2px);
+}
+
+.cookie-item h3 {
+    margin: 0 0 8px;
+
+    color: #1e293b;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.cookie-item p {
+    margin: 0;
+
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+/* =========================================
+   CONTACT LINK
+========================================= */
+
+.cookie-contact-link {
+    display: inline-block;
+    margin-top: 12px;
+
+    color: #2563eb;
+    font-size: 15px;
+    font-weight: 650;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.cookie-contact-link:hover {
+    color: #1d4ed8;
+    transform: translateX(2px);
+}
+
+.cookie-contact-link:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .cookie-content {
+        padding: 35px 24px 70px;
+    }
+
+    .cookie-section {
+        margin-bottom: 38px;
+    }
+
+    .cookie-section h2 {
+        font-size: 21px;
+    }
+
+    .cookie-section>p {
+        font-size: 14px;
+        line-height: 1.8;
+    }
+
+    .cookie-item {
+        padding: 20px;
+    }
+
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .cookie-content {
+        padding: 30px 18px 55px;
+    }
+
+    .cookie-section {
+        margin-bottom: 34px;
+    }
+
+    .cookie-section h2 {
+        font-size: 19px;
+    }
+
+    .cookie-section>p {
+        font-size: 14px;
+    }
+
+    .cookie-item {
+        padding: 18px;
+        border-radius: 12px;
+    }
+
+    .cookie-item h3 {
+        font-size: 15px;
+    }
+
+    .cookie-item p {
+        font-size: 13.5px;
+    }
+
+}

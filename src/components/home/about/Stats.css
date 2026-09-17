@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+.about-stats {
+    --k-blue-600: #0a1c6b;
+    --k-blue-200: #b9cbff;
+
+    padding: 64px 7%;
+    background: var(--k-blue-600);
+    font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.stats-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex: 1 1 0;
+    min-width: 0;
+    padding: 15px 20px;
+    border-right: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.stat-item:last-child {
+    border-right: none;
+}
+
+.stat-item strong {
+    flex-shrink: 0;
+    white-space: nowrap;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.stat-item span {
+    /* This is what actually fixes the overlap: a flex child's default
+       min-width is "auto" (= its content width), so long text like
+       "Not weeks, to first insight" refused to shrink and spilled into
+       the next column instead of wrapping. min-width: 0 lets it wrap
+       inside its own column like normal text should. */
+    flex: 1 1 auto;
+    min-width: 0;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+}
+
+@media (max-width: 700px) {
+    .stats-container {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        padding: 20px 4px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .stat-item strong {
+        font-size: 24px;
+    }
+}

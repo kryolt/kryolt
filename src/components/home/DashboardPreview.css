@@ -1,0 +1,724 @@
+/* =========================================================
+   KRYOLT — DASHBOARD PREVIEW
+   Premium SaaS Layout
+   Desktop → Tablet → Mobile
+========================================================= */
+
+.dashboard-preview-section {
+    position: relative;
+
+    width: 100%;
+    max-width: 1320px;
+
+    margin: 0 auto;
+
+    padding: 90px 40px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
+
+    align-items: center;
+
+    gap: 80px;
+
+    background: #ffffff;
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
+
+.preview-left {
+    width: 100%;
+    max-width: 560px;
+    min-width: 0;
+}
+
+.preview-badge {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 8px 16px;
+
+    margin-bottom: 22px;
+
+    background: #dce6f8;
+    color: #2e5ce8;
+
+    border: 1px solid rgba(46, 92, 232, 0.12);
+
+    border-radius: 999px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.3px;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.preview-left h2 {
+    width: 100%;
+    max-width: 560px;
+
+    margin: 0 0 22px;
+
+    color: #111827;
+
+    font-size: clamp(40px, 4vw, 54px);
+
+    line-height: 1.06;
+
+    font-weight: 800;
+
+    letter-spacing: -2px;
+}
+
+.preview-left h2 span {
+    color: #2e5ce8;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.preview-left p {
+    width: 100%;
+    max-width: 500px;
+
+    margin: 0 0 30px;
+
+    color: #64748b;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+.preview-left p strong {
+    color: #111827;
+    font-weight: 700;
+}
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.preview-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 50px;
+
+    padding: 13px 24px;
+
+    border: 1px solid #2e5ce8;
+
+    border-radius: 11px;
+
+    background:
+        linear-gradient(180deg,
+            #3d6bef 0%,
+            #2e5ce8 100%);
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(46, 92, 232, 0.18);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.preview-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 28px rgba(46, 92, 232, 0.25);
+}
+
+.preview-btn svg {
+    transition: transform 0.25s ease;
+}
+
+.preview-btn:hover svg {
+    transform: translate(3px, -3px);
+}
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.preview-right {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+/* =========================================================
+   GLOW
+========================================================= */
+
+.glow-blob {
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    background:
+        radial-gradient(circle,
+            rgba(46, 92, 232, 0.14),
+            transparent 70%);
+
+    filter: blur(12px);
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+/* =========================================================
+   DASHBOARD WINDOW
+========================================================= */
+
+.dashboard-window {
+    position: relative;
+
+    z-index: 1;
+
+    width: 100%;
+    max-width: 500px;
+
+    background: #ffffff;
+
+    border: 1px solid #e6edff;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(46, 92, 232, 0.12),
+        0 4px 12px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.dashboard-window:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 28px 65px rgba(46, 92, 232, 0.16);
+}
+
+/* =========================================================
+   WINDOW TOP
+========================================================= */
+
+.window-top {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 13px 18px;
+
+    background: #f8fbff;
+
+    border-bottom: 1px solid #edf2f7;
+}
+
+.window-dots {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    flex-shrink: 0;
+}
+
+.window-top span.red,
+.window-top span.yellow,
+.window-top span.green {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+}
+
+.window-top .red {
+    background: #ff5f57;
+}
+
+.window-top .yellow {
+    background: #febc2e;
+}
+
+.window-top .green {
+    background: #28c840;
+}
+
+.window-title {
+    color: #94a3b8;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* =========================================================
+   WINDOW CONTENT
+========================================================= */
+
+.window-content {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 12px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   MINI CARDS
+========================================================= */
+
+.mini-card {
+    min-width: 0;
+
+    padding: 13px;
+
+    background: #f8fbff;
+
+    border: 1px solid #edf2f7;
+
+    border-radius: 13px;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.mini-card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 18px rgba(46, 92, 232, 0.08);
+}
+
+.mini-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 6px;
+
+    margin-bottom: 10px;
+}
+
+.mini-icon {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #dce6f8;
+
+    color: #2e5ce8;
+}
+
+.mini-trend {
+    padding: 3px 7px;
+
+    border-radius: 999px;
+
+    background: #ecfdf5;
+
+    color: #059669;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.mini-label {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #64748b;
+
+    font-size: 11px;
+}
+
+.mini-card h3 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.4px;
+}
+
+/* =========================================================
+   GRAPH
+========================================================= */
+
+.graph-box {
+    grid-column: 1 / -1;
+
+    padding: 16px;
+
+    background:
+        linear-gradient(180deg,
+            #f8fbff 0%,
+            #ffffff 100%);
+
+    border: 1px solid #edf2f7;
+
+    border-radius: 14px;
+}
+
+.graph-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+.graph-header span:first-child {
+    color: #111827;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.graph-badge {
+    padding: 4px 9px;
+
+    border-radius: 999px;
+
+    background: #dce6f8;
+
+    color: #2e5ce8;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.graph-bars {
+    height: 115px;
+
+    display: flex;
+    align-items: flex-end;
+
+    gap: 9px;
+}
+
+.graph-bar {
+    flex: 1;
+
+    min-width: 0;
+
+    border-radius: 6px 6px 2px 2px;
+
+    background:
+        linear-gradient(180deg,
+            #93b4f5,
+            #2e5ce8);
+
+    opacity: 0.55;
+
+    animation: grow 2.5s infinite alternate;
+}
+
+.graph-bar.active {
+    opacity: 1;
+
+    box-shadow:
+        0 -5px 15px rgba(46, 92, 232, 0.28);
+}
+
+.graph-bar.h1 {
+    height: 40%;
+}
+
+.graph-bar.h2 {
+    height: 65%;
+}
+
+.graph-bar.h3 {
+    height: 50%;
+}
+
+.graph-bar.h4 {
+    height: 85%;
+}
+
+.graph-bar.h5 {
+    height: 58%;
+}
+
+.graph-bar.h6 {
+    height: 100%;
+}
+
+@keyframes grow {
+    from {
+        transform: scaleY(0.88);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+/* =========================================================
+   MEDIUM DESKTOP
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .dashboard-preview-section {
+        padding: 75px 32px;
+
+        grid-template-columns:
+            minmax(0, 1fr) minmax(360px, 0.9fr);
+
+        gap: 50px;
+    }
+
+    .preview-left h2 {
+        font-size: 44px;
+    }
+
+    .dashboard-window {
+        max-width: 440px;
+    }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .dashboard-preview-section {
+        display: flex;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        padding: 70px 24px;
+
+        gap: 50px;
+    }
+
+    .preview-left {
+        max-width: 680px;
+    }
+
+    .preview-left h2 {
+        margin-left: auto;
+        margin-right: auto;
+
+        font-size: 44px;
+    }
+
+    .preview-left p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .preview-btn {
+        margin: 0 auto;
+    }
+
+    .preview-right {
+        width: 100%;
+        max-width: 520px;
+    }
+
+    .glow-blob {
+        display: none;
+    }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .dashboard-preview-section {
+        padding: 60px 20px;
+
+        gap: 40px;
+    }
+
+    .preview-badge {
+        font-size: 11px;
+
+        padding: 7px 13px;
+    }
+
+    .preview-left h2 {
+        font-size: 36px;
+
+        line-height: 1.08;
+
+        letter-spacing: -1.2px;
+    }
+
+    .preview-left p {
+        font-size: 15px;
+
+        line-height: 1.65;
+    }
+
+    .dashboard-window {
+        border-radius: 17px;
+    }
+
+    .window-content {
+        padding: 14px;
+
+        gap: 9px;
+    }
+
+    .mini-card {
+        padding: 10px;
+    }
+
+    .mini-card h3 {
+        font-size: 15px;
+    }
+
+    .graph-bars {
+        height: 90px;
+    }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .dashboard-preview-section {
+        padding: 50px 16px 60px;
+
+        gap: 35px;
+    }
+
+    .preview-left h2 {
+        font-size: 31px;
+
+        letter-spacing: -0.8px;
+    }
+
+    .preview-left p {
+        max-width: 320px;
+
+        font-size: 14px;
+    }
+
+    .preview-btn {
+        padding: 12px 20px;
+
+        font-size: 13px;
+    }
+
+    .window-content {
+        padding: 11px;
+
+        gap: 7px;
+    }
+
+    .mini-card {
+        padding: 8px;
+
+        border-radius: 10px;
+    }
+
+    .mini-card h3 {
+        font-size: 13px;
+    }
+
+    .mini-label {
+        font-size: 10px;
+    }
+
+    .mini-trend {
+        font-size: 8px;
+
+        padding: 2px 5px;
+    }
+
+    .graph-box {
+        padding: 11px;
+    }
+
+    .graph-bars {
+        height: 75px;
+    }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .dashboard-window,
+    .preview-btn,
+    .mini-card,
+    .graph-bar {
+        animation: none;
+        transition: none;
+    }
+
+    .dashboard-window:hover,
+    .preview-btn:hover,
+    .mini-card:hover {
+        transform: none;
+    }
+}

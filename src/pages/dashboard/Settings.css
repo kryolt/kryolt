@@ -1,0 +1,135 @@
+/* ========================================
+   SETTINGS PAGE - MAIN CONTAINER
+   ======================================== */
+
+.settings-page {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    animation: settingsFadeIn 0.35s ease-in-out;
+}
+
+@keyframes settingsFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+.settings-header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.settings-header h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #0F172A;
+    line-height: 1.2;
+}
+
+.settings-header p {
+    margin: 0;
+    color: #64748B;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ========================================
+   LAYOUT GRID
+   ======================================== */
+
+.settings-layout {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+    width: 100%;
+}
+
+/* ========================================
+   SIDEBAR CONTAINER (Double Border Fixed)
+   ======================================== */
+
+.settings-sidebar {
+    position: sticky;
+    top: 20px;
+    width: 100%;
+    /* Sabhi extra borders & extra card backgrounds removed */
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Agar Sidebar component ke andar extra border ho toh neutralize karein */
+.settings-sidebar>* {
+    background: #ffffff;
+    border: 1px solid #E5E7EB;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* ========================================
+   CONTENT AREA
+   ======================================== */
+
+.settings-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 0;
+    width: 100%;
+}
+
+.settings-content>.savebar {
+    position: sticky;
+    bottom: 20px;
+    z-index: 20;
+}
+
+/* ========================================
+   RESPONSIVE — TABLET & MOBILE
+   ======================================== */
+
+@media (max-width: 1024px) {
+    .settings-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .settings-sidebar {
+        position: relative;
+        top: 0;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .settings-page {
+        gap: 16px;
+    }
+
+    .settings-header h1 {
+        font-size: 22px;
+    }
+
+    .settings-header p {
+        font-size: 13px;
+    }
+}

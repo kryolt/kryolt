@@ -1,0 +1,277 @@
+.top-customers {
+
+    background: #fff;
+
+    border-radius: 16px;
+
+    padding: 18px;
+
+    border: 1px solid #E6EAF2;
+
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .04);
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+.top-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 14px;
+
+}
+
+.tc-eyebrow {
+
+    margin: 0;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #64748B;
+
+    text-transform: uppercase;
+
+    letter-spacing: .04em;
+
+}
+
+.tc-big-number {
+
+    margin: 5px 0 0;
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    color: #0F172A;
+
+    letter-spacing: -0.02em;
+
+}
+
+.tc-subtext {
+
+    margin: 3px 0 0;
+
+    color: #64748B;
+
+    font-size: 12px;
+
+}
+
+.top-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+.top-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px 12px;
+
+    border-radius: 12px;
+
+    background: #F8FAFC;
+
+    transition: .2s;
+
+}
+
+.top-item:hover {
+
+    background: #EEF4FF;
+
+    transform: translateX(3px);
+
+}
+
+.rank {
+
+    flex: 0 0 32px;
+
+    width: 32px;
+
+    height: 32px;
+
+    border-radius: 50%;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: 700;
+
+    font-size: 12px;
+
+}
+
+.rank-gold {
+
+    background: linear-gradient(135deg, #F5B833, #D68F0E);
+
+}
+
+.rank-silver {
+
+    background: linear-gradient(135deg, #B8C2D1, #8A96A6);
+
+}
+
+.rank-bronze {
+
+    background: linear-gradient(135deg, #D08A5C, #A85E33);
+
+}
+
+.rank-default {
+
+    background: #2E5CE8;
+
+}
+
+.customer-info {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+.customer-info-top {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 8px;
+
+}
+
+.customer-info h4 {
+
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #0F172A;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+}
+
+.customer-info-bottom {
+
+    margin-top: 1px;
+
+}
+
+.customer-info-bottom span {
+
+    color: #94A3B8;
+
+    font-size: 11px;
+
+}
+
+.customer-revenue {
+
+    font-weight: 700;
+
+    font-size: 12.5px;
+
+    color: #2E5CE8;
+
+    white-space: nowrap;
+
+    flex: 0 0 auto;
+
+}
+
+.tc-track {
+
+    margin-top: 6px;
+
+    height: 4px;
+
+    border-radius: 999px;
+
+    background: #EEF1F8;
+
+    overflow: hidden;
+
+}
+
+.tc-fill {
+
+    height: 100%;
+
+    border-radius: 999px;
+
+    background: #8AA6F0;
+
+    transition: width .3s ease;
+
+}
+
+.tc-fill-top {
+
+    background: linear-gradient(90deg, #F5B833, #D68F0E);
+
+}
+
+.tc-empty-state {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 40px 16px;
+
+    color: #94A3B8;
+
+    text-align: center;
+
+}
+
+.tc-empty-state p {
+
+    margin: 0;
+
+    font-size: 13px;
+
+}

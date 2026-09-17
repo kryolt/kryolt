@@ -1,0 +1,228 @@
+/* =========================================
+   KRYOLT PRIVACY CONTENT
+========================================= */
+
+.legal-layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 64px;
+    align-items: start;
+    padding-top: 56px;
+}
+
+/* ---------- TOC SIDEBAR ---------- */
+
+.legal-toc {
+    position: sticky;
+    top: 96px;
+}
+
+.legal-toc-label {
+    display: block;
+    margin-bottom: 14px;
+    color: #94a3b8;
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.legal-toc ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border-left: 1px solid #eef1f6;
+}
+
+.legal-toc-link {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 7px 0 7px 16px;
+    margin-left: -1px;
+    border-left: 2px solid transparent;
+    color: #64748b;
+    font-size: 13.5px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.legal-toc-index {
+    font-family: "Sora", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    color: #c3cbd6;
+    transition: color 0.15s ease;
+}
+
+.legal-toc-link:hover {
+    color: #2854e0;
+}
+
+.legal-toc-link.is-active {
+    color: #0b1220;
+    font-weight: 650;
+    border-left-color: #2854e0;
+}
+
+.legal-toc-link.is-active .legal-toc-index {
+    color: #2854e0;
+}
+
+/* ---------- ARTICLE ---------- */
+
+.legal-content {
+    width: 100%;
+    max-width: 720px;
+    color: #172033;
+    padding-bottom: 40px;
+}
+
+.legal-intro {
+    max-width: 620px;
+    margin: 0 0 44px;
+    padding-bottom: 36px;
+    border-bottom: 1px solid #e8ecf3;
+    color: #5b6472;
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.legal-section {
+    position: relative;
+    margin-bottom: 46px;
+    padding-left: 0;
+    scroll-margin-top: 100px;
+}
+
+.legal-section-index {
+    display: block;
+    margin-bottom: 8px;
+    font-family: "Sora", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #2854e0;
+}
+
+.legal-section h2 {
+    margin: 0 0 14px;
+    color: #0b1220;
+    font-family: "Sora", sans-serif;
+    font-size: 21px;
+    line-height: 1.35;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+}
+
+.legal-section p {
+    margin: 0;
+    color: #5b6472;
+    font-size: 15.5px;
+    line-height: 1.85;
+}
+
+/* ---------- EMAIL LINK ---------- */
+
+.legal-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    padding: 9px 16px;
+    border-radius: 8px;
+    background: #f4f7fe;
+    border: 1px solid #dce6f8;
+    color: #2854e0;
+    font-size: 14.5px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.legal-email:hover {
+    background: #eaf0fd;
+    transform: translateX(2px);
+}
+
+.legal-email:focus-visible {
+    outline: 2px solid #2854e0;
+    outline-offset: 3px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+    .legal-layout {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-top: 32px;
+    }
+
+    .legal-toc {
+        position: static;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #eef1f6;
+        margin-bottom: 8px;
+    }
+
+    .legal-toc ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        border-left: none;
+        gap: 8px;
+    }
+
+    .legal-toc-link {
+        border-left: none;
+        border: 1px solid #e2e8f0;
+        border-radius: 999px;
+        padding: 6px 12px;
+        gap: 6px;
+    }
+
+    .legal-toc-link.is-active {
+        border-color: #2854e0;
+        background: #f4f7fe;
+    }
+
+    .legal-content {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .legal-toc-label {
+        font-size: 11px;
+    }
+
+    .legal-intro {
+        font-size: 15px;
+        margin-bottom: 32px;
+        padding-bottom: 28px;
+    }
+
+    .legal-section {
+        margin-bottom: 34px;
+    }
+
+    .legal-section h2 {
+        font-size: 19px;
+    }
+
+    .legal-section p {
+        font-size: 14.5px;
+        line-height: 1.8;
+    }
+
+    .legal-email {
+        width: 100%;
+        justify-content: center;
+    }
+}
