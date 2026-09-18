@@ -31,21 +31,21 @@ import "./CheckoutPage.css";
 
 const PLAN_FEATURES = {
     Professional: [
-        "Unlimited Uploads",
-        "AI-Generated Reports",
-        "Business Dashboard",
+        "50,000 Rows / Upload",
+        "AI Insights",
+        "PDF Reports",
+        "Advanced Analytics",
         "Priority Support",
     ],
 
     Business: [
-        "Everything in Professional",
-        "Unlimited Team Members",
-        "Cloud Backup",
-        "API Access",
-        "Dedicated Support",
+        "200,000 Rows / Upload",
+        "AI-Powered Business Insights",
+        "Advanced Analytics & Reports",
+        "Priority Processing",
+        "Dedicated Priority Support",
     ],
 };
-
 
 function formatAmount(value) {
     const amount = Number(value);
@@ -900,6 +900,10 @@ export default function CheckoutPage() {
                                     appliedCoupon?.code ||
                                     null
                                 }
+
+                                onSuccess={() => {
+                                    navigate("/dashboard", { replace: true });
+                                }}
 
                                 disabled={
                                     loadingSummary ||

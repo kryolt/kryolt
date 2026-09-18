@@ -6,17 +6,12 @@ import {
 
 
 function UpgradeButton({
-
     plan = "Professional",
-
     amount = 499,
-
     couponCode = null,
-
     disabled = false,
-
+    onSuccess = null,
     children,
-
 }) {
 
     const {
@@ -75,6 +70,8 @@ function UpgradeButton({
 
                 couponCode:
                     couponCode || null,
+
+                onSuccess,
 
             });
 
