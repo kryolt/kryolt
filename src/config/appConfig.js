@@ -22,7 +22,7 @@ export const APP = {
         instagram: "https://instagram.com/kryolt_",
         x: "https://x.com/kryolt",
         facebook: "https://facebook.com/kryolt",
-        linkedin: "https://linkedin.com/in/kryolt",
+        linkedin: "https://www.linkedin.com/company/kryolt/",
         youtube: {
             channel: "https://www.youtube.com/@Kryolt",
             demo: "https://www.youtube.com/@Kryolt",
