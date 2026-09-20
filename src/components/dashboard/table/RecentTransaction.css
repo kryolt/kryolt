@@ -1,11 +1,16 @@
 .table-card {
+    width: 100%;
     padding: 20px;
     border-radius: 16px;
     background: #fff;
     border: 1px solid #E7EAF0;
-    box-shadow: 0 4px 14px rgba(15, 23, 42, .04);
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
     box-sizing: border-box;
 }
+
+/* ==========================================
+   HEADER
+   ========================================== */
 
 .table-header {
     display: flex;
@@ -37,6 +42,7 @@
 .export-btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
     border: 1px solid #E7EAF0;
     background: #fff;
@@ -46,7 +52,10 @@
     color: #475569;
     border-radius: 8px;
     cursor: pointer;
-    transition: border-color .2s ease, color .2s ease, background .2s ease;
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease;
     white-space: nowrap;
 }
 
@@ -62,7 +71,7 @@
 
 .summary-cards {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 10px;
     margin-bottom: 16px;
 }
@@ -71,11 +80,12 @@
     display: flex;
     flex-direction: column;
     gap: 3px;
+    min-width: 0;
     padding: 10px 12px;
     background: #F8FAFC;
     border: 1px solid #EEF1F6;
     border-radius: 10px;
-    min-width: 0;
+    box-sizing: border-box;
 }
 
 .summary-label {
@@ -83,7 +93,7 @@
     font-weight: 600;
     color: #94A3B8;
     text-transform: uppercase;
-    letter-spacing: .02em;
+    letter-spacing: 0.02em;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -110,6 +120,10 @@
     color: #E5484D;
 }
 
+/* ==========================================
+   FILTER / TABLE ACTIONS
+   ========================================== */
+
 .table-actions {
     display: flex;
     align-items: center;
@@ -118,19 +132,22 @@
 }
 
 .table-actions input {
+    width: 220px;
+    max-width: 100%;
     padding: 8px 12px;
     border: 1px solid #E7EAF0;
     border-radius: 8px;
     outline: none;
     font-size: 13px;
-    width: 220px;
-    max-width: 100%;
-    transition: border-color .2s ease, box-shadow .2s ease;
+    box-sizing: border-box;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .table-actions input:focus {
     border-color: #0D46F5;
-    box-shadow: 0 0 0 3px rgba(13, 70, 245, .1);
+    box-shadow: 0 0 0 3px rgba(13, 70, 245, 0.1);
 }
 
 .table-select {
@@ -147,26 +164,29 @@
 
 .table-filter-group {
     display: inline-flex;
+    align-items: center;
     flex-shrink: 0;
+    gap: 3px;
     padding: 3px;
     background: #F1F5F9;
     border-radius: 9px;
-    gap: 3px;
 }
 
 .table-filter-btn {
+    min-width: 34px;
+    padding: 6px 11px;
     border: none;
     background: transparent;
-    padding: 6px 11px;
-    min-width: 34px;
-    font-size: 12px;
-    font-weight: 600;
     color: #64748B;
     border-radius: 7px;
+    font-size: 12px;
+    font-weight: 600;
     cursor: pointer;
     white-space: nowrap;
     flex-shrink: 0;
-    transition: background .2s ease, color .2s ease;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
 }
 
 .table-filter-btn:hover {
@@ -176,7 +196,7 @@
 .table-filter-btn.active {
     background: #fff;
     color: #0D46F5;
-    box-shadow: 0 2px 6px rgba(15, 23, 42, .08);
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
 }
 
 .table-actions span {
@@ -184,6 +204,10 @@
     color: #64748B;
     font-weight: 500;
 }
+
+/* ==========================================
+   STATUS
+   ========================================== */
 
 .status {
     padding: 4px 10px;
@@ -213,58 +237,170 @@
     color: #64748B;
 }
 
+/* ==========================================
+   TRANSACTION TABLE
+   ========================================== */
+
 .table-wrapper {
     width: 100%;
+    max-width: 100%;
     overflow-x: auto;
+    overflow-y: hidden;
+    box-sizing: border-box;
     -webkit-overflow-scrolling: touch;
 }
 
-.table-wrapper table {
-    width: 100%;
+.transactions-table {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: none !important;
+
+    margin: 0;
+    padding: 0;
+
     border-collapse: collapse;
-    min-width: 760px;
-    table-layout: fixed;
+    border-spacing: 0;
+
+    table-layout: fixed !important;
+    box-sizing: border-box;
 }
 
-.table-wrapper th,
-.table-wrapper td {
-    padding: 11px 14px;
-    text-align: left;
-    white-space: nowrap;
+/* ==========================================
+   COLUMN WIDTHS
+   9 COLUMNS = EXACTLY 100%
+   ========================================== */
+
+.transactions-table th:nth-child(1),
+.transactions-table td:nth-child(1) {
+    width: 5%;
+}
+
+.transactions-table th:nth-child(2),
+.transactions-table td:nth-child(2) {
+    width: 11%;
+}
+
+.transactions-table th:nth-child(3),
+.transactions-table td:nth-child(3) {
+    width: 14%;
+}
+
+.transactions-table th:nth-child(4),
+.transactions-table td:nth-child(4) {
+    width: 16%;
+}
+
+.transactions-table th:nth-child(5),
+.transactions-table td:nth-child(5) {
+    width: 7%;
+}
+
+.transactions-table th:nth-child(6),
+.transactions-table td:nth-child(6) {
+    width: 11%;
+}
+
+.transactions-table th:nth-child(7),
+.transactions-table td:nth-child(7) {
+    width: 15%;
+}
+
+.transactions-table th:nth-child(8),
+.transactions-table td:nth-child(8) {
+    width: 10%;
+}
+
+.transactions-table th:nth-child(9),
+.transactions-table td:nth-child(9) {
+    width: 11%;
+}
+
+/* ==========================================
+   TABLE CELLS
+   ========================================== */
+
+.transactions-table th,
+.transactions-table td {
+    box-sizing: border-box;
+    padding: 11px 12px;
+
     border-bottom: 1px solid #F1F5F9;
-    font-size: 13.5px;
+
+    font-size: 13px;
+    line-height: 1.35;
+
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+
     color: #334155;
+    vertical-align: middle;
 }
 
-.table-wrapper th {
+.transactions-table th {
+    background: #FAFBFD;
     color: #64748B;
-    font-weight: 600;
     font-size: 12px;
+    font-weight: 600;
 }
 
-/* Columns beyond Product (City/Category/Payment/Status/etc.) are dynamic
-   in count, so only the first four fixed columns get an explicit width —
-   the rest share the remaining space automatically. */
-.table-wrapper th:nth-child(1),
-.table-wrapper td:nth-child(1) {
-    width: 40px;
+/* ==========================================
+   COLUMN ALIGNMENT
+   ========================================== */
+
+/* # */
+.transactions-table th:nth-child(1),
+.transactions-table td:nth-child(1) {
+    text-align: center;
 }
 
-.table-wrapper th:nth-child(2),
-.table-wrapper td:nth-child(2) {
-    width: 110px;
+/* Date */
+.transactions-table th:nth-child(2),
+.transactions-table td:nth-child(2) {
+    text-align: center;
 }
 
-.table-wrapper th:nth-child(3),
-.table-wrapper td:nth-child(3) {
-    width: 140px;
+/* Customer */
+.transactions-table th:nth-child(3),
+.transactions-table td:nth-child(3) {
+    text-align: left;
 }
 
-.table-wrapper th:nth-child(4),
-.table-wrapper td:nth-child(4) {
-    width: 140px;
+/* Product */
+.transactions-table th:nth-child(4),
+.transactions-table td:nth-child(4) {
+    text-align: left;
+}
+
+/* Qty */
+.transactions-table th:nth-child(5),
+.transactions-table td:nth-child(5) {
+    text-align: center;
+}
+
+/* City */
+.transactions-table th:nth-child(6),
+.transactions-table td:nth-child(6) {
+    text-align: left;
+}
+
+/* Category */
+.transactions-table th:nth-child(7),
+.transactions-table td:nth-child(7) {
+    text-align: left;
+}
+
+/* Payment */
+.transactions-table th:nth-child(8),
+.transactions-table td:nth-child(8) {
+    text-align: center;
+}
+
+/* Amount */
+.transactions-table th:nth-child(9),
+.transactions-table td:nth-child(9) {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
 }
 
 /* ==========================================
@@ -273,70 +409,135 @@
 
 .table-row {
     cursor: pointer;
-    transition: background .15s ease, transform .15s ease, box-shadow .15s ease;
+    transition:
+        background 0.15s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
 }
 
 .table-row:hover {
     background: #F8FAFF;
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(15, 23, 42, .05);
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05);
 }
 
 /* ==========================================
-   FOOTER + PAGINATION
+   FOOTER
    ========================================== */
 
 .table-footer {
+    position: relative;
+
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center;
+
+    min-height: 34px;
     margin-top: 14px;
     padding-top: 12px;
+
     border-top: 1px solid #F1F5F9;
 }
 
 .table-footer-info {
+    position: absolute;
+    left: 0;
+
     font-size: 12.5px;
     color: #64748B;
     font-weight: 500;
 }
 
+/* ==========================================
+   PAGINATION
+   ========================================== */
+
 .pagination {
-    display: flex;
+    display: flex !important;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+
+    gap: 14px !important;
+
+    width: auto !important;
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    flex-wrap: nowrap;
 }
 
 .pagination-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 96px !important;
+
+    width: 96px !important;
+    min-width: 96px !important;
+    max-width: 96px !important;
+
+    min-height: 34px;
+
+    box-sizing: border-box;
+
+    padding: 7px 10px;
+
     border: 1px solid #E7EAF0;
     background: #fff;
-    padding: 6px 12px;
-    font-size: 12px;
-    font-weight: 600;
+
     color: #475569;
     border-radius: 7px;
+
+    font-size: 12px;
+    font-weight: 600;
+
     cursor: pointer;
-    transition: border-color .2s ease, color .2s ease;
+
+    transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease;
+
+    white-space: nowrap;
+    overflow: visible;
 }
 
 .pagination-btn:hover:not(:disabled) {
     border-color: #0D46F5;
     color: #0D46F5;
+    background: #F5F8FF;
 }
 
 .pagination-btn:disabled {
-    opacity: .45;
+    opacity: 0.45;
     cursor: not-allowed;
 }
 
 .pagination-current {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 auto !important;
+
+    min-width: max-content;
+    min-height: 34px;
+
+    margin: 0 2px;
+
+    color: #334155;
+
     font-size: 12.5px;
     font-weight: 600;
-    color: #334155;
+
     white-space: nowrap;
 }
+
+/* ==========================================
+   MOBILE
+   ========================================== */
 
 @media (max-width: 640px) {
 
@@ -348,6 +549,8 @@
         font-size: 16px;
     }
 
+    /* Export buttons */
+
     .table-export-actions {
         width: 100%;
     }
@@ -357,14 +560,18 @@
         justify-content: center;
     }
 
+    /* Summary */
+
     .summary-cards {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 8px;
     }
 
     .summary-value {
         font-size: 13px;
     }
+
+    /* Filters */
 
     .table-actions {
         width: 100%;
@@ -388,65 +595,140 @@
         white-space: nowrap;
     }
 
+    /* Footer */
+
     .table-footer {
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
+        justify-content: center;
+
+        gap: 10px;
+        min-height: auto;
+
         text-align: center;
     }
 
+    .table-footer-info {
+        position: static;
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+    /* Mobile pagination */
+
     .pagination {
+        display: grid !important;
+
+        grid-template-columns: 88px max-content 88px;
+
+        align-items: center;
         justify-content: center;
+
+        column-gap: 10px;
+
+        width: fit-content !important;
+        max-width: 100%;
+
+        margin: 0 auto;
     }
 
-    .table-wrapper table,
-    .table-wrapper thead,
-    .table-wrapper tbody,
-    .table-wrapper th,
-    .table-wrapper td,
-    .table-wrapper tr {
-        display: block;
-        min-width: 0;
+    .pagination-btn {
+        width: 88px !important;
+        min-width: 88px !important;
+        max-width: 88px !important;
+
+        min-height: 36px;
+
+        padding: 8px;
     }
 
-    .table-wrapper th,
-    .table-wrapper td {
-        width: auto !important;
+    .pagination-current {
+        min-height: 36px;
+        font-size: 12px;
     }
 
-    .table-wrapper thead {
+    /* ==========================================
+       MOBILE TABLE → CARD ROWS
+       ========================================== */
+
+    .table-wrapper {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .transactions-table {
+        display: block !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+
+        table-layout: auto !important;
+    }
+
+    .transactions-table thead {
         display: none;
     }
 
-    .table-wrapper tr {
+    .transactions-table tbody,
+    .transactions-table tr,
+    .transactions-table th,
+    .transactions-table td {
+        display: block;
+        width: auto !important;
+        min-width: 0 !important;
+    }
+
+    .transactions-table tr {
         margin-bottom: 12px;
+
+        padding: 10px 12px;
+
         border: 1px solid #F1F5F9;
         border-radius: 10px;
-        padding: 10px 12px;
+
         background: #FAFAFA;
+
+        box-sizing: border-box;
     }
 
     .table-row:hover {
         transform: none;
     }
 
-    .table-wrapper td {
+    .transactions-table td {
         display: flex;
-        justify-content: space-between;
+
         align-items: center;
+        justify-content: space-between;
+
+        width: 100% !important;
+
         padding: 6px 0;
+
         border-bottom: none;
+
         white-space: normal;
+
         font-size: 13px;
+
+        text-align: right;
     }
 
-    .table-wrapper td::before {
+    .transactions-table td::before {
         content: attr(data-label);
-        font-weight: 600;
-        color: #64748B;
+
         margin-right: 12px;
+
+        color: #64748B;
+        font-weight: 600;
+
+        text-align: left;
     }
 
-    .table-wrapper td:first-child {
+    .transactions-table td:first-child {
         display: none;
     }
 }
@@ -468,7 +750,12 @@
         border: none;
     }
 
-    .table-wrapper table {
-        min-width: 0;
+    .table-wrapper {
+        overflow: visible;
+    }
+
+    .transactions-table {
+        width: 100% !important;
+        min-width: 0 !important;
     }
 }

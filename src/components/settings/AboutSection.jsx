@@ -38,7 +38,7 @@ function AboutSection() {
 
                     <div className="about-content">
                         <h4>Website</h4>
-                        <p>https://www.kryolt.com</p>
+                        <p>https://kryolt.com</p>
                     </div>
 
                 </div>
@@ -60,7 +60,7 @@ function AboutSection() {
 
                     <div className="about-content">
                         <h4>Terms & Conditions</h4>
-                        <p>https://www.kryolt.com/terms</p>
+                        <p>https://kryolt.com/terms</p>
                     </div>
 
                 </div>
@@ -71,7 +71,7 @@ function AboutSection() {
 
                     <div className="about-content">
                         <h4>Privacy Policy</h4>
-                        <p>https://www.kryolt.com/privacy</p>
+                        <p>https://kryolt.com/privacy</p>
                     </div>
 
                 </div>

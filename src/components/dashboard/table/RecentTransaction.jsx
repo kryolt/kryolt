@@ -429,7 +429,22 @@ function RecentTransaction() {
 
             <div className="table-wrapper">
 
-                <table>
+                <table className="transactions-table">
+                    <colgroup>
+                        <col className="col-index" />
+                        <col className="col-date" />
+                        <col className="col-customer" />
+                        <col className="col-product" />
+
+                        {visibleColumns.map((col) => (
+                            <col
+                                key={`col-${col.key}`}
+                                className={`col-${col.key}`}
+                            />
+                        ))}
+
+                        <col className="col-amount" />
+                    </colgroup>
 
                     <thead>
                         <tr>
@@ -437,9 +452,11 @@ function RecentTransaction() {
                             <th>Date</th>
                             <th>Customer</th>
                             <th>Product</th>
+
                             {visibleColumns.map((col) => (
                                 <th key={col.key}>{col.label}</th>
                             ))}
+
                             <th>Amount</th>
                         </tr>
                     </thead>
@@ -450,22 +467,38 @@ function RecentTransaction() {
                             const status = row.Status || "Completed";
 
                             return (
-                                <tr key={(page - 1) * pageSize + index} className="table-row">
+                                <tr
+                                    key={(page - 1) * pageSize + index}
+                                    className="table-row"
+                                >
                                     <td data-label="#">
                                         {(page - 1) * pageSize + index + 1}
                                     </td>
-                                    <td data-label="Date">{row.Date || row.OrderDate || "-"}</td>
-                                    <td data-label="Customer">
-                                        {row.Customer || row.CustomerName || row.Name || "-"}
+
+                                    <td data-label="Date">
+                                        {row.Date || row.OrderDate || "-"}
                                     </td>
+
+                                    <td data-label="Customer">
+                                        {row.Customer ||
+                                            row.CustomerName ||
+                                            row.Name ||
+                                            "-"}
+                                    </td>
+
                                     <td data-label="Product">
-                                        {row.Product || row.ProductName || row.Item || "-"}
+                                        {row.Product ||
+                                            row.ProductName ||
+                                            row.Item ||
+                                            "-"}
                                     </td>
 
                                     {visibleColumns.map((col) => (
                                         <td key={col.key} data-label={col.label}>
                                             {col.key === "status" ? (
-                                                <span className={`status ${statusClass(status)}`}>
+                                                <span
+                                                    className={`status ${statusClass(status)}`}
+                                                >
                                                     {status}
                                                 </span>
                                             ) : col.key === "qty" ? (
@@ -476,12 +509,13 @@ function RecentTransaction() {
                                         </td>
                                     ))}
 
-                                    <td data-label="Amount">₹{amount.toLocaleString("en-IN")}</td>
+                                    <td data-label="Amount">
+                                        ₹{amount.toLocaleString("en-IN")}
+                                    </td>
                                 </tr>
                             );
                         })}
                     </tbody>
-
                 </table>
 
             </div>
