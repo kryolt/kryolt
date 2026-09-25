@@ -25,7 +25,7 @@ export const APP = {
         linkedin: "https://www.linkedin.com/company/kryolt/",
         youtube: {
             channel: "https://www.youtube.com/@Kryolt",
-            demo: "https://www.youtube.com/@Kryolt",
+            demo: "https://youtu.be/lWcyQVtoLG0?si=AnC2bsoRNnSXI13R",
         },
     },
 };
