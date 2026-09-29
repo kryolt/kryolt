@@ -1,0 +1,11 @@
+txt
+User-agent: *
+Allow: /
+
+# Private authenticated application
+Disallow: /dashboard/
+
+# Transactional page
+Disallow: /checkout
+
+Sitemap: https://kryolt.com/sitemap.xml
