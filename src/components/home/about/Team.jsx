@@ -19,7 +19,7 @@ function Team() {
                     <div className="team-image">
                         <img
                             src={ramawtarPhoto}
-                            alt="Ramawtar King"
+                            alt="Ramawtar King, Founder of Kryolt"
                         />
                     </div>
 

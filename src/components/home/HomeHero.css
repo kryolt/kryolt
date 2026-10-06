@@ -224,10 +224,10 @@
 
     color: #0a0e1a;
 
-    font-size: 48px;
+    font-size: 42px;
     line-height: 1.08;
 
-    font-weight: 800;
+    font-weight: 850;
 
     letter-spacing: -1.8px;
 }
@@ -1196,7 +1196,7 @@
     .hero-title {
         max-width: 390px;
 
-        font-size: 34px;
+        font-size: 28.2px;
 
         line-height: 1.12;
 
@@ -1204,11 +1204,11 @@
     }
 
     .hero-subtext {
-        max-width: 390px;
+        max-width: 380px;
 
         margin-top: 20px;
 
-        font-size: 15px;
+        font-size: 13.9px;
 
         line-height: 1.65;
     }
@@ -1405,7 +1405,7 @@
     .hero-title {
         max-width: 350px;
 
-        font-size: 30px;
+        font-size: 23px;
 
         letter-spacing: -0.9px;
     }

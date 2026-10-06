@@ -17,6 +17,43 @@ import HomeFooter from "../components/home/HomeFooter";
 
 import "./Home.css";
 
+import SEO from "../components/seo/SEO";
+
+const HOME_STRUCTURED_DATA = {
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Organization",
+            "@id": "https://kryolt.com/#organization",
+            name: "Kryolt",
+            url: "https://kryolt.com/",
+            logo: "https://kryolt.com/Kryolt.jpeg",
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://kryolt.com/#website",
+            name: "Kryolt",
+            url: "https://kryolt.com/",
+            publisher: {
+                "@id": "https://kryolt.com/#organization",
+            },
+        },
+        {
+            "@type": "SoftwareApplication",
+            "@id": "https://kryolt.com/#software",
+            name: "Kryolt",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web",
+            url: "https://kryolt.com/",
+            description:
+                "Kryolt helps small businesses turn business data into interactive dashboards, analytics, reports and AI-powered insights.",
+            publisher: {
+                "@id": "https://kryolt.com/#organization",
+            },
+        },
+    ],
+};
+
 function Home() {
     const navigate = useNavigate();
 
@@ -37,48 +74,90 @@ function Home() {
     }, []);
 
     // Routes a pricing card click to either signup (free) or checkout (paid).
-    const handlePricingAction = useCallback((plan) => {
-        if (!plan) return;
+    const handlePricingAction = useCallback(
+        (plan) => {
+            if (!plan) return;
 
-        if (plan.action === "signup") {
-            setSelectedPlan(plan.title || plan.id || "Free");
-            setShowAuth(true);
-            return;
-        }
+            if (plan.action === "signup") {
+                setSelectedPlan(plan.title || plan.id || "Free");
+                setShowAuth(true);
+                return;
+            }
 
-        if (plan.action === "checkout") {
-            // New-user WELCOME40 offer replaces the Home history entry so the
-            // post-payment back navigation goes Dashboard -> Home, not
-            // Dashboard -> Payment -> Checkout -> Home.
-            const isNewUserOffer =
-                plan.promoOffer === true &&
-                String(plan.couponCode || "").trim().toUpperCase() === "WELCOME40";
+            if (plan.action === "checkout") {
+                // New-user WELCOME40 offer replaces the Home history entry
+                // so the post-payment back navigation goes
+                // Dashboard -> Home, not
+                // Dashboard -> Payment -> Checkout -> Home.
+                const isNewUserOffer =
+                    plan.promoOffer === true &&
+                    String(plan.couponCode || "")
+                        .trim()
+                        .toUpperCase() === "WELCOME40";
 
-            navigate("/checkout", {
-                replace: isNewUserOffer,
-                state: {
-                    plan,
-                    couponCode: plan.couponCode || null,
-                    promoOffer: plan.promoOffer === true,
-                },
-            });
-        }
-    }, [navigate]);
+                navigate("/checkout", {
+                    replace: isNewUserOffer,
+                    state: {
+                        plan,
+                        couponCode: plan.couponCode || null,
+                        promoOffer: plan.promoOffer === true,
+                    },
+                });
+            }
+        },
+        [navigate]
+    );
 
-    const closeAuthModal = useCallback(() => setShowAuth(false), []);
+    const closeAuthModal = useCallback(
+        () => setShowAuth(false),
+        []
+    );
 
     return (
         <>
-            <HomeNavbar onGetStartedClick={handleGetStarted} />
-            <HomeHero onGetStartedClick={handleStartFree} />
-            <Trusted />
-            <Features />
-            <DashboardPreview />
-            <HowItWorks />
-            <Pricing onGetStartedClick={handlePricingAction} />
-            <Testimonials />
-            <FAQ />
-            <CTA onStartFree={handleStartFree} />
+            <SEO
+                title="AI Business Intelligence Software for Small Businesses | Kryolt"
+                description="Kryolt helps small businesses turn their business data into interactive dashboards, analytics, reports and AI-powered insights."
+                canonicalPath="/"
+                image="/Kryolt.jpeg"
+                imageAlt="Kryolt AI Business Intelligence Platform"
+                structuredData={HOME_STRUCTURED_DATA}
+            />
+
+            <HomeNavbar
+                onGetStartedClick={handleGetStarted}
+            />
+
+            {/*
+              .home-main lets Home.css control the spacing BETWEEN sections
+              from one place (see the "SECTION SPACING" block in Home.css).
+            */}
+            <main className="home-main">
+                <HomeHero
+                    onGetStartedClick={handleStartFree}
+                />
+
+                <Trusted />
+
+                <Features />
+
+                <DashboardPreview />
+
+                <HowItWorks />
+
+                <Pricing
+                    onGetStartedClick={handlePricingAction}
+                />
+
+                <Testimonials />
+
+                <FAQ />
+
+                <CTA
+                    onStartFree={handleStartFree}
+                />
+            </main>
+
             <HomeFooter />
 
             <AuthModal

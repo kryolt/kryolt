@@ -1,106 +1,155 @@
+/* =========================================================
+   FAQ — responsive accordion
+   Brand blue matches the Kryolt logo
+========================================================= */
+
 .faq {
-    padding: 60px 7%;
+    --brand: #0443EE;
+    --brand-soft: #E3EBFF;
+    --ink: #111827;
+    --muted: #64748B;
+
+    /* if the navbar is fixed, "#faq" links won't hide the heading under it */
+    scroll-margin-top: 90px;
+
+    /* navbar ke niche extra jagah: --nav-gap ya +50px badal ke gap adjust karo */
+    --nav-gap: clamp(32px, 6vw, 48px);
+
+    padding: calc(var(--nav-gap) + 50px) clamp(16px, 5vw, 7%) clamp(40px, 7vw, 60px);
     background: #fff;
 }
 
-/* ===========================
+/* =========================================================
    HEADING
-=========================== */
+========================================================= */
 
 .faq-heading {
+    max-width: 640px;
+    margin: 0 auto clamp(24px, 4vw, 34px);
     text-align: center;
-    margin-bottom: 34px;
 }
 
 .faq-heading span {
-    color: #2E5CE8;
-    font-size: 12px;
+    display: inline-block;
+    color: var(--brand);
+    font-size: clamp(11px, 1.4vw, 12px);
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 0.14em;
 }
 
 .faq-heading h2 {
-    font-size: 28px;
-    color: #111827;
     margin: 10px 0;
+    color: var(--ink);
+    font-size: clamp(23px, 4.6vw, 28px);
+    line-height: 1.25;
     font-weight: 700;
-    letter-spacing: -0.4px;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
 }
 
 .faq-heading p {
-    color: #64748B;
-    font-size: 14.5px;
+    margin: 0;
+    color: var(--muted);
+    font-size: clamp(13.5px, 1.8vw, 14.5px);
+    line-height: 1.6;
 }
 
-/* ===========================
-   FAQ BOX
-=========================== */
+/* =========================================================
+   LIST + ITEM
+========================================================= */
 
 .faq-container {
     max-width: 680px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .faq-item {
-    background: #fff;
     margin-bottom: 10px;
+
+    background: #fff;
     border: 1px solid #E5E7EB;
     border-radius: 14px;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.04);
     overflow: hidden;
-    transition: border-color .3s ease, box-shadow .3s ease;
-    box-shadow: 0 3px 10px rgba(15, 23, 42, .04);
-}
 
-.faq-item:hover {
-    border-color: #DCE6F8;
-    box-shadow: 0 10px 20px rgba(46, 92, 232, .10);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .faq-item.active {
-    border-color: #2E5CE8;
-    box-shadow: 0 10px 22px rgba(46, 92, 232, .12);
+    border-color: var(--brand);
+    box-shadow: 0 10px 22px rgba(4, 67, 238, 0.12);
 }
 
-/* ===========================
-   QUESTION
-=========================== */
+.faq-item:focus-within {
+    border-color: var(--brand);
+}
+
+/* =========================================================
+   QUESTION (h3 > button)
+========================================================= */
+
+.faq-heading-item {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
 
 .faq-question {
-    width: 100%;
-    padding: 14px 18px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     gap: 14px;
+
+    width: 100%;
+    min-height: 52px;
+    /* comfortable tap target */
+    padding: 14px 18px;
+    box-sizing: border-box;
+
     background: none;
     border: none;
+    color: var(--ink);
     cursor: pointer;
+
+    font-family: inherit;
     font-size: 14px;
     font-weight: 600;
-    color: #111827;
-    transition: color .25s ease;
+    line-height: 1.4;
     text-align: left;
+
+    transition: color 0.25s ease;
 }
 
-.faq-question:hover {
-    color: #2E5CE8;
+.faq-question>span:first-child {
+    min-width: 0;
+    /* long questions wrap instead of pushing the icon out */
 }
 
 .faq-item.active .faq-question {
-    color: #2E5CE8;
+    color: var(--brand);
+}
+
+.faq-question:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: -2px;
+    border-radius: 12px;
 }
 
 .faq-icon {
-    width: 24px;
-    height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+
+    width: 24px;
+    height: 24px;
+
     border-radius: 50%;
     background: #F1F5FB;
-    color: #2E5CE8;
-    flex-shrink: 0;
-    transition: transform .35s cubic-bezier(.22, 1, .36, 1), background .3s ease;
+    color: var(--brand);
+
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+        background 0.3s ease;
 }
 
 .faq-icon svg {
@@ -109,19 +158,21 @@
 }
 
 .faq-item.active .faq-icon {
-    background: #2E5CE8;
+    background: var(--brand);
     color: #fff;
     transform: rotate(180deg);
 }
 
-/* ===========================
+/* =========================================================
    ANSWER — smooth grid-rows expand
-=========================== */
+   visibility:hidden keeps closed answers out of the tab order
+   and away from screen readers
+========================================================= */
 
 .faq-answer-wrap {
     display: grid;
     grid-template-rows: 0fr;
-    transition: grid-template-rows .35s cubic-bezier(.22, 1, .36, 1);
+    transition: grid-template-rows 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .faq-item.active .faq-answer-wrap {
@@ -130,64 +181,94 @@
 
 .faq-answer-inner {
     overflow: hidden;
+    visibility: hidden;
+    transition: visibility 0.35s;
+}
+
+.faq-item.active .faq-answer-inner {
+    visibility: visible;
 }
 
 .faq-answer {
     margin: 0;
     padding: 0 18px 16px;
-    color: #64748B;
+    color: var(--muted);
     font-size: 13.5px;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
-/* ===========================
-   TABLET
-=========================== */
+/* hover only on real-pointer devices (no sticky hover on phones) */
+@media (hover: hover) {
+    .faq-item:hover {
+        border-color: #D3DEF7;
+        box-shadow: 0 10px 20px rgba(4, 67, 238, 0.1);
+    }
 
-@media(max-width:900px) {
-    .faq-container {
-        max-width: 100%;
+    .faq-item.active:hover {
+        border-color: var(--brand);
+    }
+
+    .faq-question:hover {
+        color: var(--brand);
     }
 }
 
-/* ===========================
+/* =========================================================
    MOBILE
-=========================== */
+========================================================= */
 
-@media(max-width:768px) {
-    .faq {
-        padding: 50px 20px;
-    }
-
-    .faq-heading h2 {
-        font-size: 24px;
+@media (max-width: 640px) {
+    .faq-item {
+        margin-bottom: 8px;
+        border-radius: 12px;
     }
 
     .faq-question {
+        min-height: 48px;
+        gap: 12px;
+        padding: 12px 14px;
         font-size: 13.5px;
-        padding: 13px 16px;
-    }
-
-    .faq-answer {
-        padding: 0 16px 14px;
-        font-size: 13px;
     }
 
     .faq-icon {
         width: 22px;
         height: 22px;
     }
+
+    .faq-icon svg {
+        width: 13px;
+        height: 13px;
+    }
+
+    .faq-answer {
+        padding: 0 14px 14px;
+        font-size: 13px;
+        line-height: 1.6;
+    }
 }
 
-/* ===========================
+@media (max-width: 380px) {
+    .faq-question {
+        padding: 11px 12px;
+        font-size: 13px;
+    }
+
+    .faq-answer {
+        padding: 0 12px 12px;
+        font-size: 12.5px;
+    }
+}
+
+/* =========================================================
    REDUCED MOTION
-=========================== */
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
     .faq-item,
     .faq-icon,
-    .faq-answer-wrap {
+    .faq-answer-wrap,
+    .faq-answer-inner {
         transition: none;
     }
 }

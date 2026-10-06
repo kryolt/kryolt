@@ -1,5 +1,7 @@
 import "./Terms.css";
 
+import SEO from "../../components/seo/SEO";
+
 import HomeNavbar from "../../components/home/HomeNavbar";
 import TermsContent from "../../components/home/legal/TermsContent";
 import HomeFooter from "../../components/home/HomeFooter";
@@ -7,6 +9,12 @@ import HomeFooter from "../../components/home/HomeFooter";
 function Terms() {
     return (
         <div className="legal-page terms-page">
+
+            <SEO
+                title="Terms & Conditions | Kryolt"
+                description="Read Kryolt's Terms & Conditions to understand the terms governing your use of the Kryolt platform and services."
+                canonicalPath="/terms"
+            />
 
             <HomeNavbar />
 

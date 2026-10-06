@@ -3,6 +3,7 @@ import { Outlet, useLocation } from "react-router-dom";
 
 import Sidebar from "../components/dashboard/navigation/Sidebar";
 import DashboardNavbar from "../components/dashboard/navigation/DashboardNavbar";
+import SEO from "../components/seo/SEO";
 
 import "./DashboardLayout.css";
 
@@ -37,7 +38,7 @@ function DashboardLayout() {
             resizeTimer = setTimeout(() => {
                 const mobile = window.innerWidth <= MOBILE_BREAKPOINT;
 
-                // State update tabhi hoga jab boundary pass ho (Desktop <-> Mobile transition)
+                // Update state only when crossing the mobile boundary
                 if (prevIsMobileRef.current !== mobile) {
                     setIsMobile(mobile);
                     prevIsMobileRef.current = mobile;
@@ -63,7 +64,6 @@ function DashboardLayout() {
 
     useEffect(() => {
         const handleGlobalKeyDown = (event) => {
-            // Prevent sidebar toggle logic on F12 key press
             if (event.key === "F12") {
                 event.stopPropagation();
             }
@@ -172,29 +172,37 @@ function DashboardLayout() {
         .join(" ");
 
     return (
-        <div className={layoutClassName}>
-            <Sidebar
-                collapsed={sidebarCollapsed}
-                mobileOpen={mobileMenuOpen}
-                isMobile={isMobile}
-                onToggle={toggleDesktopSidebar}
-                onToggleCollapse={toggleDesktopSidebar}
-                onClose={closeMobileMenu}
+        <>
+            <SEO
+                title="Dashboard | Kryolt"
+                description="Kryolt business intelligence dashboard for analyzing business data."
+                robots="noindex, nofollow"
             />
 
-            <div className="dashboard-main">
-                <div className="dashboard-navbar-wrap">
-                    <DashboardNavbar
-                        onMenuClick={toggleMobileMenu}
-                        isMobile={isMobile}
-                    />
-                </div>
+            <div className={layoutClassName}>
+                <Sidebar
+                    collapsed={sidebarCollapsed}
+                    mobileOpen={mobileMenuOpen}
+                    isMobile={isMobile}
+                    onToggle={toggleDesktopSidebar}
+                    onToggleCollapse={toggleDesktopSidebar}
+                    onClose={closeMobileMenu}
+                />
 
-                <main className="dashboard-content">
-                    <Outlet />
-                </main>
+                <div className="dashboard-main">
+                    <div className="dashboard-navbar-wrap">
+                        <DashboardNavbar
+                            onMenuClick={toggleMobileMenu}
+                            isMobile={isMobile}
+                        />
+                    </div>
+
+                    <main className="dashboard-content">
+                        <Outlet />
+                    </main>
+                </div>
             </div>
-        </div>
+        </>
     );
 }
 

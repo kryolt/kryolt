@@ -2,6 +2,8 @@ import { useState } from "react";
 
 import "./Pricing.css";
 
+import SEO from "../../components/seo/SEO";
+
 import { APP } from "../../config/appConfig";
 
 import {
@@ -13,9 +15,7 @@ import {
     CheckCheck,
 } from "lucide-react";
 
-import {
-    getActivePlans,
-} from "../../config/pricingConfig";
+import { getActivePlans } from "../../config/pricingConfig";
 
 import {
     getActiveOffer,
@@ -23,68 +23,48 @@ import {
 } from "../../config/offersConfig";
 
 
-function Pricing({
-    onGetStartedClick,
-}) {
+function Pricing({ onGetStartedClick }) {
 
     const plans = getActivePlans();
 
-    const [copiedCode, setCopiedCode] =
-        useState(false);
+    const [copiedCode, setCopiedCode] = useState(false);
 
 
     // =====================================================
     // FIND PROFESSIONAL PLAN
     // =====================================================
 
-    const professionalPlan =
-        plans.find(
-            (plan) =>
-                String(plan.title)
-                    .toLowerCase() ===
-                "professional"
-        );
+    const professionalPlan = plans.find(
+        (plan) =>
+            String(plan.title).toLowerCase() === "professional"
+    );
 
 
     // =====================================================
     // OFFER
     // =====================================================
-    // Keep this simple for now.
-    //
     // The offer config decides which campaign is active.
     // No coupon is passed to checkout automatically.
     // =====================================================
 
-    const activeOffer =
-        getActiveOffer({
-            // New-user eligibility can be connected to
-            // your auth/user state later without touching
-            // pricingConfig.
-            isNewUser: true,
-        });
+    const activeOffer = getActiveOffer({
+        // Connect real new-user eligibility from auth later.
+        isNewUser: true,
+    });
 
 
     // =====================================================
-    // ORIGINAL PRICE
+    // PRICES
     // =====================================================
 
-    const professionalPrice =
-        Number(
-            professionalPlan?.price ?? 0
-        );
+    const professionalPrice = Number(professionalPlan?.price ?? 0);
 
-
-    // =====================================================
-    // OFFER PRICE
-    // =====================================================
-
-    const discountedPrice =
-        activeOffer
-            ? calculateOfferPrice(
-                professionalPrice,
-                activeOffer.discountPercent
-            )
-            : professionalPrice;
+    const discountedPrice = activeOffer
+        ? calculateOfferPrice(
+            professionalPrice,
+            activeOffer.discountPercent
+        )
+        : professionalPrice;
 
 
     // =====================================================
@@ -99,9 +79,7 @@ function Pricing({
 
         try {
 
-            await navigator.clipboard.writeText(
-                activeOffer.couponCode
-            );
+            await navigator.clipboard.writeText(activeOffer.couponCode);
 
             setCopiedCode(true);
 
@@ -111,10 +89,7 @@ function Pricing({
 
         } catch (error) {
 
-            console.error(
-                "Unable to copy coupon:",
-                error
-            );
+            console.error("Unable to copy coupon:", error);
 
         }
     };
@@ -132,200 +107,119 @@ function Pricing({
 
         onGetStartedClick({
             ...plan,
-
-            action:
-                plan.action ||
-                "checkout",
+            action: plan.action || "checkout",
         });
     };
 
 
     return (
+        <>
+            <SEO
+                title="Kryolt Pricing | AI Business Intelligence Software"
+                description="Explore Kryolt plans and pricing for business analytics, dashboards, AI-powered insights and reporting."
+                canonicalPath="/pricing"
+            />
 
-        <section
-            id="pricing"
-            className="pricing"
-        >
+            <section
+                id="pricing"
+                className="pricing"
+                aria-labelledby="pricing-title"
+            >
 
-            {/* =================================================
-                HEADER
-            ================================================= */}
+                {/* ================= HEADER ================= */}
 
-            <div className="pricing-heading">
+                <div className="pricing-heading">
 
-                <span>
-                    PRICING
-                </span>
+                    <span>PRICING</span>
 
-                <h2>
-                    Choose Your Plan
-                </h2>
+                    <h2 id="pricing-title">Choose Your Plan</h2>
 
-                <p>
-                    Start free with {APP.name} and upgrade
-                    whenever your business grows.
-                </p>
+                    <p>
+                        Start free with {APP.name} and upgrade
+                        whenever your business grows.
+                    </p>
 
-            </div>
+                </div>
 
 
-            {/* =================================================
-                ACTIVE OFFER
-            ================================================= */}
+                {/* ================= ACTIVE OFFER ================= */}
 
-            {activeOffer &&
-                professionalPlan && (
+                {activeOffer && professionalPlan && (
 
-                    <div
-                        className="pricing-promo-card"
-                    >
+                    <div className="pricing-promo-card">
 
-                        <div
-                            className="pricing-promo-content"
-                        >
+                        <div className="pricing-promo-content">
 
-                            <div
-                                className="pricing-promo-badge"
-                            >
+                            <div className="pricing-promo-badge">
 
-                                <Sparkles
-                                    size={14}
-                                />
+                                <Sparkles size={14} aria-hidden="true" />
 
-                                {activeOffer.type ===
-                                    "festival"
+                                {activeOffer.type === "festival"
                                     ? "SPECIAL OFFER"
-                                    : "NEW USER OFFER"
-                                }
+                                    : "NEW USER OFFER"}
 
                             </div>
 
+                            <h3>{activeOffer.title}</h3>
 
-                            <h3>
-                                {activeOffer.title}
-                            </h3>
+                            <p>{activeOffer.description}</p>
 
+                            <div className="pricing-promo-price">
 
-                            <p>
-                                {activeOffer.description}
-                            </p>
-
-
-                            <div
-                                className="pricing-promo-price"
-                            >
-
-                                <span
-                                    className=
-                                    "pricing-promo-old-price"
-                                >
-
-                                    ₹
-                                    {professionalPrice.toLocaleString(
-                                        "en-IN"
-                                    )}
-
+                                <span className="pricing-promo-old-price">
+                                    ₹{professionalPrice.toLocaleString("en-IN")}
                                 </span>
-
 
                                 <strong>
-
-                                    ₹
-                                    {discountedPrice.toLocaleString(
-                                        "en-IN"
-                                    )}
-
+                                    ₹{discountedPrice.toLocaleString("en-IN")}
                                 </strong>
 
-
-                                <span>
-                                    / month
-                                </span>
+                                <span>/ month</span>
 
                             </div>
 
-
-                            {/* =====================================
-                            COUPON
-                        ===================================== */}
+                            {/* COUPON */}
 
                             <button
                                 type="button"
-                                className=
-                                "pricing-promo-code"
-                                onClick={
-                                    handleCopyCoupon
-                                }
+                                className="pricing-promo-code"
+                                onClick={handleCopyCoupon}
                                 title="Copy coupon code"
+                                aria-label={`Copy coupon code ${activeOffer.couponCode}`}
                             >
 
                                 {copiedCode ? (
-                                    <CheckCheck
-                                        size={15}
-                                    />
+                                    <CheckCheck size={15} aria-hidden="true" />
                                 ) : (
-                                    <Tag
-                                        size={15}
-                                    />
+                                    <Tag size={15} aria-hidden="true" />
                                 )}
 
+                                <span>Use code</span>
 
-                                <span>
-                                    Use code
-                                </span>
-
-
-                                <strong>
-                                    {
-                                        activeOffer.couponCode
-                                    }
-                                </strong>
-
+                                <strong>{activeOffer.couponCode}</strong>
 
                                 {copiedCode ? (
-                                    <span>
-                                        Copied
-                                    </span>
+                                    <span>Copied</span>
                                 ) : (
-                                    <Copy
-                                        size={14}
-                                    />
+                                    <Copy size={14} aria-hidden="true" />
                                 )}
 
                             </button>
 
+                            {/* NO AUTOMATIC CHECKOUT */}
 
-                            {/* =====================================
-                            IMPORTANT:
-                            NO AUTOMATIC CHECKOUT
-                        ===================================== */}
-
-                            <small
-                                className=
-                                "pricing-promo-note"
-                            >
+                            <small className="pricing-promo-note">
                                 Copy the code and apply it
                                 manually at checkout.
                             </small>
 
                         </div>
 
+                        <div className="pricing-promo-save">
 
-                        <div
-                            className=
-                            "pricing-promo-save"
-                        >
+                            <span>SAVE</span>
 
-                            <span>
-                                SAVE
-                            </span>
-
-                            <strong>
-                                {
-                                    activeOffer
-                                        .discountPercent
-                                }%
-                            </strong>
+                            <strong>{activeOffer.discountPercent}%</strong>
 
                         </div>
 
@@ -333,150 +227,97 @@ function Pricing({
                 )}
 
 
-            {/* =================================================
-                PRICING GRID
-            ================================================= */}
+                {/* ================= PRICING GRID ================= */}
 
-            <div
-                className=
-                "pricing-grid three-columns"
-            >
+                <div className="pricing-grid three-columns">
 
-                {plans.map((plan) => (
+                    {plans.map((plan) => (
 
-                    <div
-                        key={plan.id}
-                        className={`
-                            pricing-card
-                            ${plan.popular
-                                ? "popular"
-                                : ""
-                            }
-                        `}
-                    >
-
-                        {plan.popular && (
-
-                            <div
-                                className=
-                                "popular-tag"
-                                aria-label=
-                                "Most popular plan"
-                            >
-
-                                <Sparkles
-                                    size={13}
-                                    strokeWidth={2.5}
-                                />
-
-                                Most Popular
-
-                            </div>
-
-                        )}
-
-
-                        <h3>
-                            {plan.title}
-                        </h3>
-
-
-                        <div
-                            className=
-                            "plan-price-row"
+                        <article
+                            key={plan.id}
+                            className={`pricing-card ${plan.popular ? "popular" : ""}`}
                         >
 
-                            <p
-                                className=
-                                "plan-price"
-                            >
-                                {plan.displayPrice}
-                            </p>
+                            {plan.popular && (
 
-
-                            {plan.period && (
-
-                                <span
-                                    className=
-                                    "plan-period"
+                                <div
+                                    className="popular-tag"
+                                    aria-label="Most popular plan"
                                 >
-                                    {plan.period}
-                                </span>
+
+                                    <Sparkles size={13} strokeWidth={2.5} aria-hidden="true" />
+
+                                    Most Popular
+
+                                </div>
 
                             )}
 
-                        </div>
+                            <h3>{plan.title}</h3>
 
+                            <div className="plan-price-row">
 
-                        <p
-                            className=
-                            "plan-desc"
-                        >
-                            {plan.desc}
-                        </p>
+                                <p className="plan-price">
+                                    {plan.displayPrice}
+                                </p>
 
+                                {plan.period && (
+                                    <span className="plan-period">
+                                        {plan.period}
+                                    </span>
+                                )}
 
-                        <ul>
+                            </div>
 
-                            {plan.features.map(
-                                (feature) => (
+                            <p className="plan-desc">{plan.desc}</p>
 
-                                    <li
-                                        key={feature}
-                                    >
+                            <ul>
+
+                                {plan.features.map((feature) => (
+
+                                    <li key={feature}>
 
                                         <span
-                                            className=
-                                            "check-icon"
+                                            className="check-icon"
                                             aria-hidden="true"
                                         >
-
-                                            <Check
-                                                size={13}
-                                                strokeWidth={3}
-                                            />
-
+                                            <Check size={13} strokeWidth={3} />
                                         </span>
 
-                                        {feature}
+                                        <span className="feature-text">
+                                            {feature}
+                                        </span>
 
                                     </li>
 
                                 ))}
 
-                        </ul>
+                            </ul>
 
+                            <button
+                                type="button"
+                                className={
+                                    plan.popular
+                                        ? "btn-primary"
+                                        : "btn-secondary"
+                                }
+                                onClick={() => handlePlanAction(plan)}
+                            >
 
-                        <button
-                            type="button"
-                            className={
-                                plan.popular
-                                    ? "btn-primary"
-                                    : "btn-secondary"
-                            }
-                            onClick={() =>
-                                handlePlanAction(
-                                    plan
-                                )
-                            }
-                        >
+                                {plan.button}
 
-                            {plan.button}
+                                <ArrowRight size={16} strokeWidth={2.5} aria-hidden="true" />
 
-                            <ArrowRight
-                                size={16}
-                                strokeWidth={2.5}
-                            />
+                            </button>
 
-                        </button>
+                        </article>
 
-                    </div>
+                    ))}
 
-                ))}
+                </div>
 
-            </div>
-
-        </section>
+            </section>
+        </>
     );
 }
 

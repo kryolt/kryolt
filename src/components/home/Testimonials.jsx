@@ -18,18 +18,18 @@ const testimonials = [
     {
         text: `Uploading CSV files and generating dashboards is amazingly simple. Perfect solution for small businesses.`,
         name: "Amit Patel",
-        role: "Business Consultant",
+        role: "Distributor",
         rating: 5
     }
 ];
 
 function Testimonials() {
     return (
-        <section className="testimonials">
+        <section className="testimonials" aria-labelledby="testimonials-title">
 
             <div className="testimonials-heading">
                 <span>TESTIMONIALS</span>
-                <h2>Loved by Businesses</h2>
+                <h2 id="testimonials-title">Loved by Businesses</h2>
                 <p>
                     Thousands of business owners trust {APP.name} to analyze
                     their sales and make better decisions.
@@ -38,16 +38,29 @@ function Testimonials() {
 
             <div className="testimonials-grid">
                 {testimonials.map((item) => (
-                    <div className="testimonial-card" key={item.name}>
+                    <article className="testimonial-card" key={item.name}>
 
-                        <Quote className="quote-icon" size={32} strokeWidth={0} aria-hidden="true" />
+                        <Quote
+                            className="quote-icon"
+                            size={32}
+                            strokeWidth={0}
+                            fill="currentColor"
+                            aria-hidden="true"
+                        />
 
                         <div
                             className="stars"
+                            role="img"
                             aria-label={`Rated ${item.rating} out of 5 stars`}
                         >
                             {Array.from({ length: item.rating }).map((_, i) => (
-                                <Star key={i} size={16} fill="#2E5CE8" strokeWidth={0} aria-hidden="true" />
+                                <Star
+                                    key={i}
+                                    size={16}
+                                    fill="currentColor"
+                                    strokeWidth={0}
+                                    aria-hidden="true"
+                                />
                             ))}
                         </div>
 
@@ -55,18 +68,19 @@ function Testimonials() {
                             {item.text}
                         </blockquote>
 
-                        <div className="user">
+                        {/* Card title is a name, not a section heading, so no h3/h4 here */}
+                        <footer className="user">
                             <div className="avatar" aria-hidden="true">
                                 {item.name.charAt(0)}
                             </div>
 
-                            <div>
-                                <h4>{item.name}</h4>
-                                <span>{item.role}</span>
+                            <div className="user-info">
+                                <strong className="user-name">{item.name}</strong>
+                                <span className="user-role">{item.role}</span>
                             </div>
-                        </div>
+                        </footer>
 
-                    </div>
+                    </article>
                 ))}
             </div>
 

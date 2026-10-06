@@ -1,5 +1,7 @@
 import "./CookiePolicy.css";
 
+import SEO from "../../components/seo/SEO";
+
 import HomeNavbar from "../../components/home/HomeNavbar";
 import CookieContent from "../../components/home/legal/CookieContent";
 import HomeFooter from "../../components/home/HomeFooter";
@@ -7,6 +9,12 @@ import HomeFooter from "../../components/home/HomeFooter";
 function CookiePolicy() {
     return (
         <div className="legal-page cookie-policy-page">
+
+            <SEO
+                title="Cookie Policy | Kryolt"
+                description="Read Kryolt's Cookie Policy to understand how cookies and similar technologies are used across our website and services."
+                canonicalPath="/cookies"
+            />
 
             <HomeNavbar />
 

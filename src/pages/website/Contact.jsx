@@ -12,6 +12,8 @@ import AuthModal from "../../components/auth/AuthModal";
 
 import "./Contact.css";
 
+import SEO from "../../components/seo/SEO";
+
 
 function Contact() {
 
@@ -21,6 +23,12 @@ function Contact() {
     return (
 
         <div className="website-page contact-page">
+
+            <SEO
+                title="Contact Kryolt | AI Business Intelligence Platform"
+                description="Get in touch with Kryolt for questions about AI-powered business intelligence, dashboards, analytics, reports and business data insights."
+                canonicalPath="/contact"
+            />
 
 
             <HomeNavbar

@@ -1,0 +1,2792 @@
+/* =========================================================
+   KRYOLT — SALES ANALYTICS  (complete file)
+   Original rules kept in the same order + enhancements at the bottom.
+   ========================================================= */
+
+.sa-page {
+    --sa-blue: #2e5ce8;
+    --sa-blue-dark: #2148c7;
+    --sa-blue-soft: #eef3ff;
+    --sa-navy: #0a0e1a;
+    --sa-text: #334155;
+    --sa-muted: #64748b;
+    --sa-border: #e5eaf2;
+    --sa-soft: #f8fafc;
+    --sa-white: #ffffff;
+    color: var(--sa-text);
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.sa-page *,
+.sa-page *::before,
+.sa-page *::after {
+    box-sizing: border-box;
+}
+
+.sa-container {
+    width: min(1180px, calc(100% - 48px));
+    margin: 0 auto;
+}
+
+/* ---------- COMMON SECTIONS ---------- */
+.sa-section {
+    padding: 88px 0;
+}
+
+.sa-section-soft {
+    background: #f8faff;
+}
+
+.sa-section-heading {
+    max-width: 720px;
+    margin-bottom: 42px;
+}
+
+.sa-section-heading.center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.sa-kicker {
+    color: var(--sa-blue);
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.sa-section-heading h2,
+.sa-centered-heading h2 {
+    margin: 0;
+    color: var(--sa-navy);
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    line-height: 1.08;
+    letter-spacing: -.045em;
+}
+
+.sa-section-heading p,
+.sa-centered-heading p {
+    margin: 15px 0 0;
+    color: var(--sa-muted);
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ---------- HERO ---------- */
+.sa-hero {
+    position: relative;
+    padding: 72px 0 78px;
+    background:
+        radial-gradient(circle at 8% 15%, rgba(46, 92, 232, .09), transparent 28%),
+        radial-gradient(circle at 88% 12%, rgba(46, 92, 232, .08), transparent 26%),
+        linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+}
+
+.sa-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: .42;
+    background-image: radial-gradient(#dbe4fb 1px, transparent 1px);
+    background-size: 22px 22px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, .75), transparent 80%);
+}
+
+.sa-hero-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, .94fr) minmax(390px, .86fr);
+    align-items: center;
+    gap: 62px;
+}
+
+.sa-hero-copy {
+    min-width: 0;
+}
+
+/* SALES ANALYTICS BADGE */
+.sa-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 15px;
+    border: 1px solid #cddcff;
+    border-radius: 999px;
+    color: var(--sa-blue);
+    background: rgba(238, 243, 255, .82);
+    font-size: 12px;
+    margin-bottom: 2px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.sa-eyebrow:hover {
+    background: #eaf0ff;
+    border-color: #bdd0fa;
+    transform: translateY(-1px);
+}
+
+.sa-eyebrow svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* HERO H1 */
+.sa-hero h1 {
+    max-width: 720px;
+    margin: 18px 0 0;
+    color: var(--sa-navy);
+    font-size: clamp(2.75rem, 3.7vw, 3.25rem);
+    line-height: 1.09;
+    letter-spacing: -.052em;
+    font-weight: 800;
+    text-wrap: balance;
+}
+
+.sa-hero h1 span {
+    color: var(--sa-blue);
+}
+
+.sa-hero-copy>p {
+    max-width: 650px;
+    margin: 20px 0 0;
+    color: #64748b;
+    font-size: 19px;
+    line-height: 1.65;
+}
+
+/* BUTTONS */
+.sa-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 27px;
+}
+
+.sa-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 52px;
+    padding: 0 22px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 750;
+    text-decoration: none;
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease, color .2s ease;
+}
+
+.sa-btn svg {
+    width: 17px;
+    height: 17px;
+}
+
+.sa-btn:hover {
+    transform: translateY(-2px);
+}
+
+.sa-btn-primary {
+    color: #ffffff !important;
+    background: var(--sa-blue);
+    border: 1px solid var(--sa-blue);
+    box-shadow: 0 11px 27px rgba(46, 92, 232, .20);
+}
+
+.sa-btn-primary:hover {
+    color: #ffffff !important;
+    background: var(--sa-blue-dark);
+    border-color: var(--sa-blue-dark);
+    box-shadow: 0 15px 32px rgba(46, 92, 232, .25);
+}
+
+.sa-btn-secondary {
+    color: #26344d !important;
+    background: #ffffff;
+    border: 1px solid var(--sa-border);
+}
+
+.sa-btn-secondary:hover {
+    color: var(--sa-blue) !important;
+    background: #f9fbff;
+    border-color: #cbd8f2;
+    box-shadow: 0 8px 20px rgba(30, 55, 100, .05);
+}
+
+/* HERO TRUST */
+.sa-trust-line {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.sa-trust-line span {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.sa-trust-line svg {
+    width: 15px;
+    height: 15px;
+    color: var(--sa-blue);
+}
+
+/* HERO DASHBOARD */
+.sa-hero-visual {
+    width: min(100%, 610px);
+    justify-self: end;
+}
+
+.sa-dashboard-card {
+    width: 100%;
+    padding: 22px;
+    margin-top: 24px;
+    background: rgba(255, 255, 255, .96);
+    border: 1px solid #e1e8f3;
+    border-radius: 18px;
+    box-shadow: 0 24px 65px rgba(29, 55, 105, .09), 0 4px 18px rgba(29, 55, 105, .035);
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.sa-dashboard-card:hover {
+    border-color: #d7e1f2;
+    box-shadow: 0 28px 72px rgba(29, 55, 105, .105), 0 5px 20px rgba(29, 55, 105, .04);
+}
+
+/* DASHBOARD TOP */
+.sa-dashboard-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #edf1f7;
+}
+
+.sa-dashboard-top div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sa-dashboard-top small {
+    color: #94a3b8;
+    font-size: 11px;
+    line-height: 1.2;
+}
+
+.sa-dashboard-top strong {
+    color: var(--sa-navy);
+    font-size: 17px;
+    line-height: 1.25;
+    font-weight: 750;
+}
+
+.sa-dashboard-top>span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 11px;
+    border-radius: 999px;
+    color: var(--sa-blue);
+    background: var(--sa-blue-soft);
+    font-size: 10px;
+    font-weight: 750;
+}
+
+/* KPI CARDS */
+.sa-mini-kpis {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 11px;
+    margin-top: 17px;
+}
+
+.sa-mini-kpis>div {
+    min-width: 0;
+    padding: 14px;
+    background: #f8fafc;
+    border: 1px solid #edf1f6;
+    border-radius: 11px;
+    transition: transform .2s ease, background .2s ease, border-color .2s ease;
+}
+
+.sa-mini-kpis>div:hover {
+    transform: translateY(-2px);
+    background: #f7f9ff;
+    border-color: #dbe4f5;
+}
+
+.sa-mini-kpis small {
+    display: block;
+    color: #94a3b8;
+    font-size: 10px;
+    line-height: 1.2;
+}
+
+.sa-mini-kpis strong {
+    display: block;
+    margin-top: 6px;
+    color: var(--sa-navy);
+    font-size: 19px;
+    line-height: 1.15;
+    letter-spacing: -.025em;
+}
+
+.sa-mini-kpis em {
+    display: block;
+    margin-top: 5px;
+    color: var(--sa-blue);
+    font-size: 10px;
+    line-height: 1.2;
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* CHART HEADING */
+.sa-chart-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 19px;
+    margin-bottom: 9px;
+}
+
+.sa-chart-heading span {
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.sa-chart-heading strong {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #64748b;
+    font-size: 10px;
+    font-weight: 650;
+}
+
+.sa-chart-heading em {
+    padding: 4px 7px;
+    border-radius: 999px;
+    color: var(--sa-blue);
+    background: #eaf0ff;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 800;
+}
+
+/* HOME-STYLE SALES CHART */
+.sa-simple-chart {
+    position: relative;
+    width: 100%;
+    height: 166px;
+    overflow: hidden;
+    padding: 10px 10px 0;
+    border: 1px solid #edf1f6;
+    border-radius: 12px;
+    background: linear-gradient(180deg, #fbfdff 0%, #f8faff 100%);
+}
+
+.sa-chart-lines {
+    position: absolute;
+    inset: 11px 10px 29px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.sa-chart-lines i {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #e5ebf4;
+}
+
+.sa-bars {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    align-items: end;
+    gap: 12px;
+    height: 100%;
+}
+
+.sa-bar-column {
+    position: relative;
+    min-width: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 7px;
+}
+
+.sa-bar {
+    width: min(42px, 70%);
+    min-height: 15px;
+    border-radius: 7px 7px 3px 3px;
+    background: linear-gradient(180deg, #94b4f5 0%, #6389e4 55%, #2e5ce8 100%);
+    opacity: .86;
+    box-shadow: 0 5px 13px rgba(46, 92, 232, .08);
+    transition: transform .2s ease, opacity .2s ease, box-shadow .2s ease;
+}
+
+.sa-bar:hover {
+    transform: translateY(-3px);
+    opacity: 1;
+    box-shadow: 0 8px 18px rgba(46, 92, 232, .14);
+}
+
+.sa-bar-column:nth-child(1) .sa-bar {
+    height: 34%;
+}
+
+.sa-bar-column:nth-child(2) .sa-bar {
+    height: 48%;
+}
+
+.sa-bar-column:nth-child(3) .sa-bar {
+    height: 42%;
+}
+
+.sa-bar-column:nth-child(4) .sa-bar {
+    height: 62%;
+}
+
+.sa-bar-column:nth-child(5) .sa-bar {
+    height: 55%;
+}
+
+.sa-bar-column:nth-child(6) .sa-bar {
+    height: 76%;
+    opacity: 1;
+    box-shadow: 0 0 18px rgba(46, 92, 232, .12);
+}
+
+.sa-bar-column span {
+    display: block;
+    color: #94a3b8;
+    font-size: 9px;
+    line-height: 1;
+    font-weight: 650;
+}
+
+/* DASHBOARD NOTE */
+.sa-dashboard-note {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #edf1f6;
+    color: #64748b;
+    font-size: 11px;
+}
+
+.sa-dashboard-note span {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.sa-dashboard-note span i {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--sa-blue);
+}
+
+.sa-dashboard-note b {
+    color: var(--sa-blue);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+/* ---------- OVERVIEW ---------- */
+.sa-overview {
+    padding: 20px 0;
+    border-top: 1px solid #edf1f6;
+    border-bottom: 1px solid #edf1f6;
+    background: #ffffff;
+}
+
+.sa-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.sa-overview-item {
+    position: relative;
+    min-width: 0;
+    padding: 8px 20px;
+    text-align: center;
+}
+
+.sa-overview-item+.sa-overview-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1px;
+    height: 28px;
+    transform: translateY(-50%);
+    background: #e7ebf2;
+}
+
+.sa-overview-item strong {
+    display: block;
+    color: var(--sa-navy);
+    font-size: 15px;
+    line-height: 1.25;
+}
+
+.sa-overview-item span {
+    display: block;
+    margin-top: 4px;
+    color: #94a3b8;
+    font-size: 11px;
+    line-height: 1.3;
+}
+
+/* ---------- CAPABILITIES ---------- */
+.sa-capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.sa-capability-card {
+    min-width: 0;
+    padding: 24px;
+    border: 1px solid var(--sa-border);
+    border-radius: 15px;
+    background: #ffffff;
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.sa-capability-card:hover {
+    transform: translateY(-3px);
+    border-color: #cfdaf4;
+    box-shadow: 0 14px 34px rgba(25, 53, 104, .07);
+}
+
+.sa-icon-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+    color: var(--sa-blue);
+    background: var(--sa-blue-soft);
+    transition: background .2s ease, color .2s ease;
+}
+
+.sa-capability-card:hover .sa-icon-box {
+    color: #ffffff;
+    background: var(--sa-blue);
+}
+
+.sa-icon-box svg {
+    width: 20px;
+    height: 20px;
+}
+
+.sa-capability-card h3 {
+    margin: 18px 0 0;
+    color: var(--sa-navy);
+    font-size: 17px;
+    line-height: 1.25;
+}
+
+.sa-capability-card p {
+    margin: 9px 0 0;
+    color: var(--sa-muted);
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+/* ---------- WORKFLOW ---------- */
+.sa-workflow {
+    background: #f8faff;
+}
+
+.sa-centered-heading {
+    max-width: 700px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.sa-workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.sa-workflow-card {
+    position: relative;
+    min-width: 0;
+    padding: 22px 16px;
+    border: 1px solid #e2e9f6;
+    border-radius: 14px;
+    background: #ffffff;
+    text-align: center;
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.sa-workflow-card:hover {
+    transform: translateY(-3px);
+    border-color: #d1dcf2;
+    box-shadow: 0 10px 25px rgba(30, 55, 100, .055);
+}
+
+.sa-workflow-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    color: var(--sa-blue);
+    background: var(--sa-blue-soft);
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.sa-workflow-card:hover .sa-workflow-number {
+    color: #ffffff;
+    background: var(--sa-blue);
+}
+
+.sa-workflow-card h3 {
+    margin: 14px 0 0;
+    color: var(--sa-navy);
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.sa-workflow-card p {
+    margin: 7px 0 0;
+    color: var(--sa-muted);
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+/* ---------- SHOWCASE ---------- */
+.sa-showcase-grid {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(380px, 1.1fr);
+    align-items: center;
+    gap: 60px;
+}
+
+.sa-showcase-copy h2 {
+    margin: 0;
+    color: var(--sa-navy);
+    font-size: clamp(2rem, 3.2vw, 2.85rem);
+    line-height: 1.08;
+    letter-spacing: -.045em;
+    text-wrap: balance;
+}
+
+.sa-showcase-copy h2 span {
+    color: var(--sa-blue);
+}
+
+.sa-showcase-copy>p {
+    max-width: 550px;
+    margin: 17px 0 0;
+    color: var(--sa-muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.sa-check-list {
+    display: grid;
+    gap: 10px;
+    margin: 23px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sa-check-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    color: #475569;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.sa-check-list svg {
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+    margin-top: 1px;
+    color: var(--sa-blue);
+}
+
+/* SHOWCASE PANEL */
+.sa-showcase-panel {
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid #e1e8f4;
+    border-radius: 16px;
+    background: linear-gradient(145deg, #ffffff 0%, #f8faff 100%);
+    box-shadow: 0 20px 50px rgba(28, 52, 100, .08);
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.sa-showcase-panel:hover {
+    border-color: #d6e0f2;
+    box-shadow: 0 24px 55px rgba(28, 52, 100, .095);
+}
+
+.sa-panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e9eef6;
+}
+
+.sa-panel-head span {
+    color: var(--sa-navy);
+    font-size: 15px;
+    font-weight: 750;
+}
+
+.sa-panel-head small {
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+.sa-panel-kpis {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.sa-panel-kpis>div {
+    min-width: 0;
+    padding: 16px;
+    background: #f8fafc;
+    border: 1px solid #edf1f6;
+    border-radius: 10px;
+    transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.sa-panel-kpis>div:hover {
+    transform: translateY(-2px);
+    background: #f7f9ff;
+    border-color: #dce5f6;
+}
+
+.sa-panel-kpis small {
+    display: block;
+    color: #94a3b8;
+    font-size: 10px;
+}
+
+.sa-panel-kpis strong {
+    display: block;
+    margin-top: 6px;
+    color: var(--sa-navy);
+    font-size: 21px;
+    letter-spacing: -.025em;
+}
+
+.sa-panel-kpis span {
+    display: block;
+    margin-top: 5px;
+    color: var(--sa-muted);
+    font-size: 9px;
+    line-height: 1.45;
+}
+
+.sa-summary-list {
+    display: grid;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.sa-summary-list>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 13px;
+    border: 1px solid #edf1f6;
+    border-radius: 9px;
+    background: #ffffff;
+    transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.sa-summary-list>div:hover {
+    transform: translateX(2px);
+    background: #f9fbff;
+    border-color: #dce5f6;
+}
+
+.sa-summary-list span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+    color: var(--sa-text);
+    font-size: 11px;
+}
+
+.sa-summary-list span i {
+    width: 7px;
+    height: 7px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: var(--sa-blue);
+}
+
+.sa-summary-list b {
+    flex: 0 0 auto;
+    color: var(--sa-blue);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* ---------- BENEFITS ---------- */
+.sa-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.sa-benefit-card {
+    min-width: 0;
+    padding: 20px;
+    border: 1px solid var(--sa-border);
+    border-radius: 14px;
+    background: #ffffff;
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.sa-benefit-card:hover {
+    transform: translateY(-3px);
+    border-color: #d4def2;
+    box-shadow: 0 10px 25px rgba(30, 55, 100, .055);
+}
+
+.sa-benefit-card h3 {
+    margin: 15px 0 0;
+    color: var(--sa-navy);
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+.sa-benefit-card p {
+    margin: 8px 0 0;
+    color: var(--sa-muted);
+    font-size: 11px;
+    line-height: 1.55;
+}
+
+/* ---------- AI SECTION ---------- */
+.sa-ai-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(260px, .75fr) minmax(180px, .55fr);
+    align-items: center;
+    gap: 26px;
+    padding: 32px;
+    border: 1px solid #dfe7f5;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #ffffff 0%, #f8faff 100%);
+    box-shadow: 0 18px 45px rgba(28, 52, 100, .06);
+}
+
+.sa-ai-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 14px;
+    border-radius: 12px;
+    color: var(--sa-blue);
+    background: var(--sa-blue-soft);
+}
+
+.sa-ai-mark svg {
+    width: 21px;
+    height: 21px;
+}
+
+.sa-tag {
+    display: inline-block;
+    color: var(--sa-blue);
+    font-size: 11px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.sa-ai-copy h2 {
+    max-width: 560px;
+    margin: 10px 0 0;
+    color: var(--sa-navy);
+    font-size: clamp(1.9rem, 3vw, 2.65rem);
+    line-height: 1.08;
+    letter-spacing: -.045em;
+}
+
+.sa-ai-copy p {
+    max-width: 560px;
+    margin: 13px 0 0;
+    color: var(--sa-muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.sa-text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 19px;
+    color: var(--sa-blue);
+    font-size: 13px;
+    font-weight: 750;
+    text-decoration: none;
+}
+
+.sa-text-link:hover {
+    color: var(--sa-blue-dark);
+}
+
+.sa-insight-stack {
+    display: grid;
+    gap: 9px;
+}
+
+.sa-insight-stack>div {
+    padding: 14px;
+    border: 1px solid #e4eaf4;
+    border-radius: 11px;
+    background: #ffffff;
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.sa-insight-stack>div:hover {
+    transform: translateY(-2px);
+    border-color: #d4dff3;
+    box-shadow: 0 8px 20px rgba(46, 92, 232, .055);
+}
+
+.sa-insight-stack small {
+    display: block;
+    color: var(--sa-blue);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .08em;
+}
+
+.sa-insight-stack strong {
+    display: block;
+    margin-top: 5px;
+    color: var(--sa-navy);
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.sa-insight-stack span {
+    display: block;
+    margin-top: 5px;
+    color: var(--sa-muted);
+    font-size: 10px;
+    line-height: 1.45;
+}
+
+/* ---------- AUDIENCE ---------- */
+.sa-audience-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.sa-audience-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border: 1px solid var(--sa-border);
+    border-radius: 11px;
+    background: #ffffff;
+    color: var(--sa-text);
+    font-size: 12px;
+    font-weight: 650;
+    transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.sa-audience-card:hover {
+    transform: translateY(-2px);
+    border-color: #d4def2;
+    box-shadow: 0 8px 20px rgba(30, 55, 100, .05);
+}
+
+.sa-audience-card svg {
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+    color: var(--sa-blue);
+}
+
+/* ---------- FAQ ---------- */
+.sa-faq-wrap {
+    max-width: 900px;
+}
+
+.sa-faq-list {
+    display: grid;
+    gap: 10px;
+}
+
+.sa-faq-item {
+    overflow: hidden;
+    border: 1px solid var(--sa-border);
+    border-radius: 12px;
+    background: #ffffff;
+    transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.sa-faq-item:hover {
+    border-color: #d5dff1;
+}
+
+.sa-faq-item[open] {
+    border-color: #d2ddf2;
+    box-shadow: 0 8px 22px rgba(30, 55, 100, .045);
+}
+
+.sa-faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 17px 19px;
+    cursor: pointer;
+    list-style: none;
+    color: var(--sa-navy);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.sa-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.sa-faq-item summary span {
+    color: var(--sa-blue);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.sa-faq-item p {
+    margin: 0;
+    padding: 0 19px 18px;
+    color: var(--sa-muted);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+/* ---------- FINAL CTA ---------- */
+.sa-final {
+    padding: 82px 0;
+    background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, .16), transparent 32%), var(--sa-blue);
+}
+
+.sa-final-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sa-final-inner h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3.1rem);
+    line-height: 1.08;
+    letter-spacing: -.045em;
+    text-wrap: balance;
+}
+
+.sa-final-inner p {
+    max-width: 600px;
+    margin: 15px auto 0;
+    color: rgba(255, 255, 255, .82);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.sa-final .sa-btn-primary {
+    margin-top: 25px;
+    color: var(--sa-blue) !important;
+    background: #ffffff !important;
+    border-color: #ffffff !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .12);
+}
+
+.sa-final .sa-btn-primary:hover {
+    color: var(--sa-blue-dark) !important;
+    background: #f7f9ff !important;
+}
+
+/* ---------- TABLET / SMALL LAPTOP ---------- */
+@media (max-width: 1050px) {
+    .sa-hero-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(360px, .86fr);
+        gap: 42px;
+    }
+
+    .sa-hero h1 {
+        font-size: clamp(2.25rem, 4.2vw, 2.9rem);
+    }
+
+    .sa-benefits-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .sa-ai-card {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sa-ai-mark {
+        display: none;
+    }
+}
+
+/* ---------- TABLET ---------- */
+@media (max-width: 850px) {
+    .sa-hero {
+        padding-top: 64px;
+        padding-bottom: 64px;
+    }
+
+    .sa-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+    }
+
+    .sa-hero-copy {
+        text-align: center;
+    }
+
+    .sa-hero-copy>p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sa-eyebrow {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sa-actions {
+        justify-content: center;
+    }
+
+    .sa-trust-line {
+        justify-content: center;
+    }
+
+    .sa-hero-visual {
+        width: min(620px, 100%);
+        margin: 0 auto;
+        justify-self: center;
+    }
+
+    .sa-overview-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .sa-overview-item:nth-child(1)::before,
+    .sa-overview-item:nth-child(4)::before {
+        display: none;
+    }
+
+    .sa-capabilities-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sa-workflow-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .sa-showcase-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+    }
+
+    .sa-showcase-copy {
+        max-width: 720px;
+    }
+
+    .sa-showcase-panel {
+        width: 100%;
+        max-width: 680px;
+    }
+
+    .sa-audience-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sa-ai-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 26px;
+    }
+
+    .sa-ai-mark {
+        display: inline-flex;
+    }
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 620px) {
+    .sa-container {
+        width: min(calc(100% - 32px), 560px);
+    }
+
+    .sa-section {
+        padding: 54px 0;
+    }
+
+    /* HERO */
+    .sa-hero {
+        padding-top: 58px;
+        padding-bottom: 54px;
+    }
+
+    .sa-eyebrow {
+        padding: 9px 13px;
+        font-size: 10px;
+    }
+
+    .sa-hero h1 {
+        max-width: 500px;
+        margin-top: 17px;
+        font-size: clamp(1.85rem, 7.8vw, 2.25rem);
+        line-height: 1.08;
+        letter-spacing: -.042em;
+    }
+
+    .sa-hero-copy>p {
+        max-width: 500px;
+        margin-top: 16px;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    /* BUTTONS */
+    .sa-actions {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 22px;
+        gap: 9px;
+    }
+
+    .sa-btn {
+        width: 100%;
+        min-height: 50px;
+    }
+
+    /* TRUST */
+    .sa-trust-line {
+        justify-content: center;
+        gap: 10px;
+        margin-top: 18px;
+    }
+
+    .sa-trust-line span {
+        font-size: 10px;
+    }
+
+    /* DASHBOARD */
+    .sa-hero-visual {
+        width: 100%;
+        padding: 0;
+    }
+
+    .sa-dashboard-card {
+        padding: 14px;
+        border-radius: 15px;
+        box-shadow: 0 15px 36px rgba(15, 23, 42, .08);
+    }
+
+    .sa-dashboard-top {
+        padding-bottom: 12px;
+    }
+
+    .sa-dashboard-top strong {
+        font-size: 14px;
+    }
+
+    .sa-dashboard-top small {
+        font-size: 9px;
+    }
+
+    .sa-dashboard-top>span {
+        padding: 7px 9px;
+        font-size: 9px;
+    }
+
+    /* KPI */
+    .sa-mini-kpis {
+        gap: 7px;
+        margin-top: 13px;
+    }
+
+    .sa-mini-kpis>div {
+        padding: 9px;
+    }
+
+    .sa-mini-kpis small {
+        font-size: 8px;
+    }
+
+    .sa-mini-kpis strong {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    .sa-mini-kpis em {
+        margin-top: 4px;
+        font-size: 8px;
+    }
+
+    /* CHART */
+    .sa-chart-heading {
+        margin-top: 14px;
+        margin-bottom: 7px;
+    }
+
+    .sa-chart-heading span {
+        font-size: 10px;
+    }
+
+    .sa-chart-heading strong {
+        font-size: 8px;
+    }
+
+    .sa-chart-heading em {
+        padding: 3px 5px;
+        font-size: 7px;
+    }
+
+    .sa-simple-chart {
+        height: 135px;
+        padding: 8px 8px 0;
+        border-radius: 11px;
+    }
+
+    .sa-chart-lines {
+        inset: 9px 8px 26px;
+    }
+
+    .sa-bars {
+        gap: 7px;
+    }
+
+    .sa-bar {
+        width: 68%;
+        min-height: 13px;
+        border-radius: 5px 5px 2px 2px;
+    }
+
+    .sa-bar-column span {
+        font-size: 7px;
+    }
+
+    /* DASHBOARD NOTE */
+    .sa-dashboard-note {
+        margin-top: 9px;
+        padding-top: 9px;
+        font-size: 9px;
+    }
+
+    .sa-dashboard-note b {
+        font-size: 9px;
+    }
+
+    /* OVERVIEW */
+    .sa-overview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sa-overview-item {
+        padding: 9px 10px;
+    }
+
+    .sa-overview-item:nth-child(odd)::before {
+        display: none;
+    }
+
+    .sa-overview-item:last-child {
+        grid-column: 1 / -1;
+    }
+
+    /* CAPABILITIES */
+    .sa-capabilities-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .sa-capability-card {
+        padding: 19px;
+    }
+
+    /* WORKFLOW */
+    .sa-workflow-grid {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .sa-workflow-card {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 13px;
+        align-items: center;
+        padding: 14px;
+        text-align: left;
+    }
+
+    .sa-workflow-card h3 {
+        margin: 0;
+    }
+
+    .sa-workflow-card p {
+        grid-column: 2;
+        margin-top: 4px;
+    }
+
+    /* SHOWCASE */
+    .sa-showcase-grid {
+        gap: 30px;
+    }
+
+    .sa-showcase-copy h2 {
+        font-size: 1.9rem;
+    }
+
+    .sa-showcase-copy>p {
+        font-size: 13px;
+    }
+
+    .sa-showcase-panel {
+        padding: 14px;
+        border-radius: 14px;
+    }
+
+    .sa-panel-kpis {
+        gap: 8px;
+        margin-top: 13px;
+    }
+
+    .sa-panel-kpis>div {
+        padding: 11px;
+    }
+
+    .sa-panel-kpis strong {
+        font-size: 16px;
+    }
+
+    /* BENEFITS */
+    .sa-benefits-grid {
+        grid-template-columns: 1fr;
+        gap: 9px;
+    }
+
+    .sa-benefit-card {
+        padding: 16px;
+    }
+
+    /* AI */
+    .sa-ai-card {
+        gap: 17px;
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .sa-ai-copy h2 {
+        font-size: 1.85rem;
+    }
+
+    .sa-ai-copy p {
+        font-size: 12px;
+    }
+
+    /* AUDIENCE */
+    .sa-audience-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .sa-audience-card {
+        padding: 13px;
+    }
+
+    /* FAQ */
+    .sa-faq-list {
+        gap: 8px;
+    }
+
+    .sa-faq-item summary {
+        padding: 15px;
+        font-size: 12px;
+    }
+
+    .sa-faq-item p {
+        padding: 0 15px 15px;
+        font-size: 11px;
+    }
+
+    /* FINAL CTA */
+    .sa-final {
+        padding: 58px 0;
+    }
+
+    .sa-final-inner h2 {
+        font-size: 2rem;
+    }
+
+    .sa-final-inner p {
+        font-size: 12px;
+    }
+}
+
+/* ---------- VERY SMALL PHONES ---------- */
+@media (max-width: 380px) {
+    .sa-container {
+        width: min(calc(100% - 28px), 560px);
+    }
+
+    .sa-hero {
+        padding-top: 52px;
+    }
+
+    .sa-eyebrow {
+        font-size: 9px;
+    }
+
+    .sa-hero h1 {
+        font-size: 1.72rem;
+        letter-spacing: -.04em;
+    }
+
+    .sa-hero-copy>p {
+        font-size: 13px;
+    }
+
+    .sa-mini-kpis strong {
+        font-size: 12px;
+    }
+
+    .sa-mini-kpis>div {
+        padding: 8px;
+    }
+
+    .sa-dashboard-card {
+        padding: 12px;
+    }
+
+    .sa-simple-chart {
+        height: 122px;
+    }
+
+    .sa-section-heading h2,
+    .sa-centered-heading h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* ---------- ACCESSIBILITY ---------- */
+.sa-page button:focus-visible,
+.sa-page a:focus-visible,
+.sa-page summary:focus-visible {
+    outline: 3px solid rgba(46, 92, 232, .25);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .sa-page *,
+    .sa-page *::before,
+    .sa-page *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* =========================================================
+   FINAL POLISH OVERRIDES
+   Showcase, AI insights, FAQ, CTA, mobile bottom spacing
+   ========================================================= */
+
+/* SALES DASHBOARD SHOWCASE */
+.sa-showcase-copy {
+    align-self: center;
+    padding: 8px 0 6px;
+}
+
+.sa-showcase-copy .sa-kicker {
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.sa-showcase-copy h2 {
+    max-width: 500px;
+    margin-top: 0;
+}
+
+.sa-showcase-copy>p {
+    max-width: 520px;
+    margin-top: 18px;
+}
+
+.sa-showcase-copy .sa-check-list {
+    margin-top: 22px;
+}
+
+.sa-showcase-copy>.sa-btn {
+    margin-top: 24px;
+}
+
+/* AI-ASSISTED ANALYSIS */
+.sa-ai-card {
+    grid-template-columns: minmax(0, 1.15fr) minmax(250px, .9fr) minmax(130px, .38fr);
+    gap: 32px;
+    padding: 34px;
+    overflow: hidden;
+}
+
+.sa-ai-copy {
+    min-width: 0;
+}
+
+.sa-ai-copy .sa-kicker {
+    display: inline-block;
+    margin-bottom: 4px;
+}
+
+.sa-ai-copy h2 {
+    max-width: 520px;
+    margin-top: 8px;
+}
+
+.sa-ai-copy p {
+    max-width: 520px;
+    margin-top: 15px;
+}
+
+.sa-ai-copy .sa-btn {
+    margin-top: 22px;
+}
+
+.sa-ai-points {
+    display: grid;
+    gap: 12px;
+    min-width: 0;
+}
+
+.sa-ai-point {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    min-width: 0;
+    padding: 13px 14px;
+    border: 1px solid #e5ebf5;
+    border-radius: 12px;
+    background: #ffffff;
+    color: var(--sa-text);
+    font-size: 13px;
+    line-height: 1.5;
+    box-shadow: 0 5px 18px rgba(28, 52, 100, .035);
+}
+
+.sa-ai-point svg {
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+    margin-top: 1px;
+    color: var(--sa-blue);
+}
+
+.sa-ai-score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.sa-ai-score-inner {
+    width: 132px;
+    height: 132px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dbe5f6;
+    border-radius: 50%;
+    background: radial-gradient(circle at 50% 35%, #ffffff 0%, #f5f8ff 72%, #edf3ff 100%);
+    box-shadow: 0 14px 30px rgba(46, 92, 232, .09);
+}
+
+.sa-ai-score-inner strong {
+    color: var(--sa-blue);
+    font-size: 27px;
+    line-height: 1;
+    letter-spacing: -.04em;
+}
+
+.sa-ai-score-inner span {
+    max-width: 82px;
+    margin-top: 8px;
+    color: var(--sa-muted);
+    font-size: 9px;
+    line-height: 1.35;
+    text-align: center;
+}
+
+/* FAQ */
+.sa-faq {
+    max-width: 900px;
+}
+
+.sa-faq .sa-centered-heading {
+    margin-bottom: 34px;
+}
+
+.sa-faq-list {
+    max-width: 900px;
+    gap: 10px;
+}
+
+.sa-faq-item {
+    border-radius: 14px;
+}
+
+.sa-faq-item summary {
+    min-height: 62px;
+    padding: 17px 20px;
+    color: var(--sa-navy);
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.sa-faq-item summary span {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.sa-faq-item summary svg {
+    flex: 0 0 auto;
+    width: 18px;
+    height: 18px;
+    color: var(--sa-blue);
+    transition: transform .2s ease;
+}
+
+.sa-faq-item[open] summary svg {
+    transform: rotate(90deg);
+}
+
+.sa-faq-answer {
+    margin: 0;
+    padding: 0 20px 19px;
+    color: var(--sa-muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* FINAL CTA */
+.sa-final {
+    position: relative;
+    overflow: hidden;
+    padding: 88px 0;
+    background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, .18), transparent 34%), linear-gradient(135deg, #2e5ce8 0%, #2f61ef 55%, #2855d7 100%);
+}
+
+.sa-final::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    left: 50%;
+    top: -300px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, .10);
+    pointer-events: none;
+}
+
+.sa-final-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.sa-final .sa-kicker {
+    display: inline-block;
+    color: rgba(255, 255, 255, .72);
+    letter-spacing: .13em;
+}
+
+.sa-final-inner h2 {
+    max-width: 760px;
+    margin: 10px auto 0;
+}
+
+.sa-final-inner p {
+    max-width: 620px;
+    margin-top: 17px;
+    color: rgba(255, 255, 255, .86);
+}
+
+.sa-final .sa-btn-primary {
+    margin-top: 27px;
+    min-height: 54px;
+    padding: 0 25px;
+    color: var(--sa-blue) !important;
+    background: #ffffff !important;
+    border-color: #ffffff !important;
+    box-shadow: 0 14px 32px rgba(8, 24, 75, .20);
+}
+
+.sa-final .sa-btn-primary:hover {
+    color: var(--sa-blue-dark) !important;
+    background: #f7f9ff !important;
+    border-color: #f7f9ff !important;
+    box-shadow: 0 17px 36px rgba(8, 24, 75, .24);
+}
+
+/* MOBILE POLISH */
+@media (max-width: 850px) {
+    .sa-ai-card {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 27px;
+    }
+
+    .sa-ai-score {
+        justify-content: flex-start;
+    }
+
+    .sa-ai-score-inner {
+        width: 96px;
+        height: 96px;
+    }
+
+    .sa-ai-score-inner strong {
+        font-size: 22px;
+    }
+
+    .sa-ai-score-inner span {
+        margin-top: 5px;
+        font-size: 8px;
+    }
+}
+
+@media (max-width: 620px) {
+    .sa-showcase-copy {
+        padding: 0;
+    }
+
+    .sa-showcase-copy .sa-kicker {
+        margin-bottom: 9px;
+    }
+
+    .sa-showcase-copy>.sa-btn {
+        margin-top: 22px;
+    }
+
+    .sa-ai-card {
+        gap: 16px;
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .sa-ai-copy h2 {
+        font-size: 1.85rem;
+    }
+
+    .sa-ai-copy p {
+        font-size: 13px;
+    }
+
+    .sa-ai-points {
+        gap: 8px;
+    }
+
+    .sa-ai-point {
+        padding: 11px 12px;
+        font-size: 12px;
+    }
+
+    .sa-ai-score {
+        justify-content: center;
+        padding-top: 2px;
+    }
+
+    .sa-faq .sa-centered-heading {
+        margin-bottom: 24px;
+    }
+
+    .sa-faq-item summary {
+        min-height: 56px;
+        padding: 15px 16px;
+        font-size: 13px;
+    }
+
+    .sa-faq-item summary svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    .sa-faq-answer {
+        padding: 0 16px 16px;
+        font-size: 12px;
+        line-height: 1.65;
+    }
+
+    .sa-final {
+        padding: 64px 0;
+    }
+
+    .sa-final-inner h2 {
+        font-size: 2rem;
+    }
+
+    .sa-final-inner p {
+        font-size: 13px;
+    }
+
+    .sa-final .sa-btn-primary {
+        width: min(100%, 320px);
+        margin-top: 23px;
+    }
+
+    .sa-root {
+        padding-bottom: 28px;
+    }
+
+    /* extra breathing room at the bottom on phones */
+}
+
+@media (max-width: 380px) {
+    .sa-ai-card {
+        padding: 17px;
+    }
+
+    .sa-ai-copy h2 {
+        font-size: 1.72rem;
+    }
+
+    .sa-final {
+        padding: 58px 0;
+    }
+
+    .sa-final-inner h2 {
+        font-size: 1.82rem;
+    }
+}
+
+/* =========================================================
+   FINAL POLISH — HERO + DASHBOARD + CTA
+   ========================================================= */
+
+/* HERO TRUST */
+.sa-trust-line {
+    margin-top: 29px;
+    align-items: center;
+    gap: 20px;
+}
+
+.sa-trust-line span {
+    white-space: nowrap;
+}
+
+/* HERO DASHBOARD — KEEP ALL KPI CONTENT ALIGNED */
+.sa-dashboard-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.sa-mini-kpis {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    align-items: stretch;
+}
+
+.sa-mini-kpis>div {
+    min-width: 0;
+    min-height: 92px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sa-chart-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.sa-dashboard-note {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+/* FINAL CTA */
+.sa-final {
+    padding: 86px 0 90px;
+    background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, .17), transparent 34%), linear-gradient(135deg, #2e5ce8 0%, #315fe9 55%, #2856dc 100%);
+}
+
+.sa-final-inner {
+    max-width: 1050px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sa-final-inner .sa-kicker {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 17px;
+    color: rgba(255, 255, 255, .78);
+}
+
+.sa-final-inner h2 {
+    max-width: none;
+    margin: 0 auto;
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 2rem);
+    line-height: 1.08;
+    letter-spacing: -.045em;
+    white-space: nowrap;
+}
+
+.sa-final-inner p {
+    max-width: 620px;
+    margin: 18px auto 0;
+    color: rgba(255, 255, 255, .84);
+    font-size: 18px;
+    line-height: 1.6;
+    text-wrap: balance;
+}
+
+.sa-final-inner p span {
+    font-weight: 650;
+}
+
+.sa-final .sa-btn-primary {
+    margin-top: 27px;
+    color: var(--sa-blue) !important;
+    background: #ffffff !important;
+    border-color: #ffffff !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .14);
+}
+
+.sa-final .sa-btn-primary:hover {
+    color: var(--sa-blue-dark) !important;
+    background: #f7f9ff !important;
+    border-color: #f7f9ff !important;
+}
+
+@media (max-width: 850px) {
+    .sa-trust-line {
+        margin-top: 28px;
+        gap: 15px;
+    }
+
+    .sa-final-inner {
+        max-width: 720px;
+    }
+
+    .sa-final-inner h2 {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 620px) {
+
+    /* Keep the badge clearly below the navbar. */
+    .sa-hero {
+        padding-top: 84px;
+    }
+
+    .sa-eyebrow {
+        margin-top: 2px;
+    }
+
+    /* Move Excel / dashboard / AI stats slightly lower. */
+    .sa-trust-line {
+        margin-top: 30px;
+        gap: 12px 15px;
+        justify-content: center;
+    }
+
+    .sa-trust-line span {
+        font-size: 10px;
+    }
+
+    /* Keep dashboard KPI cards equal and aligned. */
+    .sa-mini-kpis {
+        gap: 7px;
+    }
+
+    .sa-mini-kpis>div {
+        min-height: 84px;
+        padding: 9px;
+    }
+
+    /* FINAL CTA */
+    .sa-final {
+        padding: 66px 0 72px;
+    }
+
+    .sa-final-inner {
+        max-width: 100%;
+    }
+
+    .sa-final-inner .sa-kicker {
+        margin-bottom: 14px;
+        font-size: 10px;
+    }
+
+    .sa-final-inner h2 {
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: clamp(1.85rem, 8vw, 2.2rem);
+        line-height: 1.08;
+        white-space: normal;
+    }
+
+    .sa-final-inner p {
+        max-width: 350px;
+        margin-top: 15px;
+        font-size: 13px;
+        line-height: 1.6;
+        text-wrap: balance;
+    }
+
+    .sa-final-inner p span {
+        font-size: 15px;
+        font-weight: 650;
+    }
+
+    /* upload phrase 2px larger on mobile */
+    .sa-final .sa-btn-primary {
+        width: min(100%, 320px);
+        margin-top: 23px;
+    }
+}
+
+@media (max-width: 380px) {
+    .sa-final-inner h2 {
+        font-size: 1.82rem;
+    }
+
+    .sa-final-inner p {
+        max-width: 315px;
+        font-size: 12px;
+    }
+
+    .sa-final-inner p span {
+        font-size: 14px;
+    }
+}
+
+/* LAPTOP CHART ALIGNMENT — DESKTOP ONLY */
+@media (min-width: 851px) {
+    .sa-chart-lines {
+        inset: 18px 10px 22px;
+    }
+}
+
+
+/* =========================================================
+   ENHANCEMENTS  (new — added at the very bottom)
+   Brand colours only: #2E5CE8 and #DCE6F8.
+   To undo any part, just delete that part.
+   ========================================================= */
+
+.sa-page ::selection {
+    background: #dce6f8;
+    color: #0a0e1a;
+}
+
+/* ---------- 1. HEADINGS: kicker line + blue accent bar ---------- */
+.sa-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sa-kicker::before {
+    content: "";
+    width: 18px;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+    opacity: .9;
+}
+
+.sa-section-heading h2::after,
+.sa-showcase-copy h2::after,
+.sa-ai-copy h2::after {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 3px;
+    margin-top: 16px;
+    border-radius: 999px;
+    background: var(--sa-blue);
+}
+
+.sa-centered-heading h2::after {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 3px;
+    margin: 16px auto 0;
+    border-radius: 999px;
+    background: var(--sa-blue);
+}
+
+.sa-section-heading.center h2::after {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sa-centered-heading h2,
+.sa-section-heading h2 {
+    text-wrap: balance;
+}
+
+/* ---------- 2. SECTION BACKGROUNDS ---------- */
+.sa-section-soft {
+    border-top: 1px solid #edf2fb;
+    border-bottom: 1px solid #edf2fb;
+}
+
+/* ---------- 3. CARDS: soft shadow, tinted icon boxes, hover line ---------- */
+.sa-capability-card,
+.sa-benefit-card,
+.sa-audience-card,
+.sa-workflow-card,
+.sa-faq-item {
+    box-shadow: 0 1px 2px rgba(20, 40, 90, .04), 0 6px 18px rgba(20, 40, 90, .04);
+}
+
+.sa-icon-box {
+    border: 1px solid #dce6f8;
+}
+
+.sa-capability-card:hover .sa-icon-box,
+.sa-benefit-card:hover .sa-icon-box {
+    color: #ffffff;
+    background: var(--sa-blue);
+    border-color: var(--sa-blue);
+}
+
+.sa-capability-card,
+.sa-benefit-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.sa-capability-card::before,
+.sa-benefit-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--sa-blue);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s ease;
+}
+
+.sa-capability-card:hover::before,
+.sa-benefit-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* ---------- 4. WORKFLOW: connector lines + number ring ---------- */
+.sa-workflow-number {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #dce6f8;
+    font-size: 13px;
+}
+
+.sa-workflow-card:hover .sa-workflow-number {
+    border-color: var(--sa-blue);
+}
+
+@media (min-width: 851px) {
+    .sa-workflow-card:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -13px;
+        width: 14px;
+        height: 2px;
+        border-radius: 2px;
+        background: #cddcff;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+}
+
+/* ---------- 5. TEXT SIZES (small text was a bit tiny) ---------- */
+.sa-overview-item strong {
+    font-size: 16px;
+}
+
+.sa-overview-item span {
+    font-size: 12px;
+}
+
+.sa-capability-card p {
+    font-size: 14px;
+}
+
+.sa-workflow-card h3 {
+    font-size: 15px;
+}
+
+.sa-workflow-card p {
+    font-size: 12.5px;
+}
+
+.sa-showcase-copy>p {
+    font-size: 16px;
+}
+
+.sa-check-list li {
+    font-size: 14px;
+}
+
+.sa-panel-head small {
+    font-size: 11px;
+}
+
+.sa-panel-kpis span {
+    font-size: 11px;
+}
+
+.sa-summary-list span {
+    font-size: 12.5px;
+}
+
+.sa-summary-list b {
+    font-size: 11px;
+}
+
+.sa-benefit-card h3 {
+    font-size: 15px;
+}
+
+.sa-benefit-card p {
+    font-size: 12.5px;
+}
+
+.sa-ai-copy p {
+    font-size: 15px;
+}
+
+.sa-ai-score-inner span {
+    font-size: 10px;
+}
+
+/* audience card: remove default h3/p margins so text lines up with the icon */
+.sa-audience-card .sa-icon-box {
+    width: 38px;
+    height: 38px;
+}
+
+.sa-audience-card h3 {
+    margin: 0;
+    color: var(--sa-navy);
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.sa-audience-card p {
+    margin: 3px 0 0;
+    color: var(--sa-muted);
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+/* ---------- 6. FAQ: clearer open state ---------- */
+.sa-faq-item summary {
+    transition: color .2s ease;
+}
+
+.sa-faq-item summary:hover {
+    color: var(--sa-blue);
+}
+
+.sa-faq-item[open] {
+    border-color: var(--sa-blue);
+    box-shadow: 0 10px 26px rgba(46, 92, 232, .10);
+}
+
+.sa-faq-item[open] summary {
+    color: var(--sa-blue);
+}
+
+.sa-faq-answer {
+    font-size: 13.5px;
+}
+
+/* ---------- 7. BUTTONS: arrow nudges on hover ---------- */
+.sa-btn svg {
+    transition: transform .2s ease;
+}
+
+.sa-btn:hover svg {
+    transform: translateX(3px);
+}
+
+/* =========================================================
+   SALES ANALYTICS — RESPONSIVE + BADGE FIXES
+   Paste this block at the VERY BOTTOM of SalesAnalytics.css.
+   Nothing above it needs to change. To undo, delete this block.
+   ========================================================= */
+
+/* ---------- 0. Page wrapper ----------
+   "overflow: hidden" breaks sticky elements; "clip" only stops
+   sideways scrolling and keeps a sticky navbar working. */
+.sa-page {
+    overflow: visible;
+    overflow-x: clip;
+}
+
+/* ---------- 1. Badge — same look as the Business Analytics badge ---------- */
+.sa-eyebrow {
+    gap: 9px;
+    padding: 7px 15px 7px 12px;
+    border: 1px solid #d5e0fb;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(46, 92, 232, .10);
+    font-size: 11.5px;
+    line-height: 1;
+    letter-spacing: .08em;
+}
+
+.sa-eyebrow::before {
+    content: "";
+    flex: 0 0 auto;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--sa-blue);
+    box-shadow: 0 0 0 3px rgba(46, 92, 232, .18);
+}
+
+/* the dot replaces the icon, like the Business Analytics badge */
+.sa-eyebrow svg {
+    display: none;
+}
+
+.sa-eyebrow:hover {
+    background: #ffffff;
+    border-color: #bdd0fa;
+}
+
+/* ---------- 2. Laptop / small tablet (851px – 1050px) ---------- */
+@media (min-width: 851px) and (max-width: 1050px) {
+
+    /* AI card: 3 squeezed columns -> 2 columns, score below */
+    .sa-ai-card {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 24px;
+        padding: 28px;
+    }
+
+    .sa-ai-score {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+    }
+
+    /* long CTA heading may wrap here instead of overflowing */
+    .sa-final-inner h2 {
+        white-space: normal;
+    }
+}
+
+/* ---------- 3. Tablet + laptop: no orphan cards in the last row ----------
+   5 cards in a 3-column grid leave a gap. A 6-column grid lets the first
+   row hold 3 cards and the second row 2 wider cards. */
+@media (min-width: 621px) and (max-width: 1050px) {
+
+    .sa-benefits-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .sa-benefit-card {
+        grid-column: span 2;
+    }
+
+    .sa-benefit-card:nth-child(n+4) {
+        grid-column: span 3;
+    }
+}
+
+@media (min-width: 621px) and (max-width: 850px) {
+
+    .sa-overview-grid,
+    .sa-workflow-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+    }
+
+    .sa-overview-item,
+    .sa-workflow-card {
+        grid-column: span 2;
+    }
+
+    .sa-overview-item:nth-child(n+4),
+    .sa-workflow-card:nth-child(n+4) {
+        grid-column: span 3;
+    }
+}
+
+/* ---------- 4. Phone (up to 620px) ---------- */
+@media (max-width: 620px) {
+
+    /* --- headings scale with the screen; hero is always the biggest --- */
+    .sa-hero h1 {
+        font-size: clamp(1.7rem, 7.2vw, 2.25rem);
+        line-height: 1.1;
+    }
+
+    .sa-section-heading h2,
+    .sa-centered-heading h2,
+    .sa-showcase-copy h2,
+    .sa-ai-copy h2,
+    .sa-final-inner h2 {
+        font-size: clamp(1.4rem, 5.6vw, 2rem);
+        line-height: 1.14;
+    }
+
+    .sa-section-heading p,
+    .sa-centered-heading p {
+        margin-top: 12px;
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    /* --- spacing --- */
+    .sa-section {
+        padding: 48px 0;
+    }
+
+    .sa-section-heading,
+    .sa-centered-heading {
+        margin-bottom: 26px;
+    }
+
+    .sa-badge-fix,
+    .sa-eyebrow {
+        padding: 6px 12px 6px 10px;
+        font-size: 10px;
+    }
+
+    .sa-trust-line span {
+        white-space: normal;
+    }
+
+    /* --- dashboard micro text: nothing smaller than 9–10px --- */
+    .sa-mini-kpis small,
+    .sa-mini-kpis em {
+        font-size: 9px;
+    }
+
+    .sa-chart-heading span {
+        font-size: 11px;
+    }
+
+    .sa-chart-heading strong {
+        font-size: 10px;
+    }
+
+    .sa-chart-heading em {
+        padding: 3px 6px;
+        font-size: 9px;
+    }
+
+    .sa-bar-column span {
+        font-size: 9px;
+    }
+
+    .sa-dashboard-note,
+    .sa-dashboard-note b {
+        font-size: 10px;
+    }
+
+    .sa-dashboard-top small {
+        font-size: 10px;
+    }
+
+    .sa-dashboard-top>span {
+        font-size: 10px;
+    }
+
+    .sa-insight-stack small {
+        font-size: 9px;
+    }
+
+    .sa-insight-stack span {
+        font-size: 11px;
+    }
+
+    .sa-panel-head small,
+    .sa-panel-kpis small {
+        font-size: 10px;
+    }
+
+    .sa-panel-kpis span {
+        font-size: 10px;
+    }
+
+    .sa-ai-score-inner span {
+        font-size: 9px;
+    }
+
+    /* --- cards: shorter, tidier --- */
+    .sa-capability-card {
+        padding: 17px;
+    }
+
+    .sa-capability-card h3 {
+        margin-top: 14px;
+        font-size: 16px;
+    }
+
+    .sa-benefit-card {
+        padding: 15px;
+    }
+
+    .sa-benefit-card h3 {
+        margin-top: 12px;
+    }
+
+    .sa-audience-card {
+        padding: 12px;
+    }
+
+    /* --- reset the tablet 6-column spans (single column on phones) --- */
+    .sa-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sa-benefit-card,
+    .sa-benefit-card:nth-child(n+4) {
+        grid-column: auto;
+    }
+
+    .sa-workflow-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sa-workflow-card,
+    .sa-workflow-card:nth-child(n+4) {
+        grid-column: auto;
+    }
+
+    .sa-overview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sa-overview-item,
+    .sa-overview-item:nth-child(n+4) {
+        grid-column: auto;
+    }
+
+    .sa-overview-item:last-child {
+        grid-column: 1 / -1;
+    }
+
+    /* --- final CTA --- */
+    .sa-final {
+        padding: 58px 0 64px;
+    }
+
+    .sa-final-inner p {
+        font-size: 14px;
+    }
+}
+
+/* ---------- 5. Very small phones (up to 380px) ---------- */
+@media (max-width: 380px) {
+
+    .sa-hero h1 {
+        font-size: 1.62rem;
+        letter-spacing: -.04em;
+    }
+
+    .sa-section-heading h2,
+    .sa-centered-heading h2,
+    .sa-showcase-copy h2,
+    .sa-ai-copy h2,
+    .sa-final-inner h2 {
+        font-size: 1.38rem;
+    }
+
+    .sa-mini-kpis strong {
+        font-size: 13px;
+    }
+
+    .sa-simple-chart {
+        height: 120px;
+    }
+
+    .sa-faq-item summary {
+        font-size: 12.5px;
+    }
+}

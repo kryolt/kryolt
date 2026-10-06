@@ -1,30 +1,45 @@
+/* =========================================================
+   TRUSTED — responsive infinite slider
+   Brand blue matches the Kryolt logo
+========================================================= */
+
 .trusted {
-    padding: 48px 28px 56px;
+    --brand: #0443EE;
+    --brand-soft: #EAF0FF;
+    --pill-gap: 16px;
+
+    position: relative;
+    /* anchors the screen-reader-only list */
+    padding: clamp(32px, 6vw, 48px) clamp(16px, 4vw, 28px) clamp(38px, 6vw, 56px);
     text-align: center;
     overflow: hidden;
     font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
 .trusted-eyebrow {
-    font-size: 11.5px;
+    margin: 0 0 8px;
+    color: var(--brand);
+    font-size: clamp(10.5px, 1.4vw, 11.5px);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: #2554eb;
-    margin: 0 0 8px;
 }
 
 .trusted-title {
+    margin: 0 auto clamp(22px, 4vw, 32px);
+    max-width: 640px;
+
     font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-    font-weight: 700;
-    font-size: 19px;
-    letter-spacing: -0.01em;
     color: #1c2433;
-    margin: 0 0 32px;
+    font-size: clamp(16px, 2.6vw, 19px);
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
 }
 
 /* Visually hidden but still accessible to screen readers */
-.sr-only {
+.trusted .sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -36,65 +51,71 @@
     border: 0;
 }
 
+/* =========================================================
+   SLIDER
+========================================================= */
+
 .trusted-slider {
     width: 100%;
     overflow: hidden;
+
     -webkit-mask-image: linear-gradient(to right,
-            transparent 0%,
-            #000 8%,
-            #000 92%,
-            transparent 100%);
+            transparent 0%, #000 8%, #000 92%, transparent 100%);
     mask-image: linear-gradient(to right,
-            transparent 0%,
-            #000 8%,
-            #000 92%,
-            transparent 100%);
+            transparent 0%, #000 8%, #000 92%, transparent 100%);
 }
 
 .trusted-track {
     display: flex;
     width: max-content;
-    gap: 16px;
-    animation: scroll linear infinite;
-    /* duration JSX se aayega inline style ke through */
+    animation: trusted-scroll linear infinite;
+    /* duration comes from JSX via inline style */
 }
 
 .trusted-slider:hover .trusted-track {
     animation-play-state: paused;
 }
 
+/*
+  Spacing uses margin-right on every pill (not flex "gap").
+  With "gap" the loop is off by half a gap and visibly jumps;
+  with margins both halves are exactly equal, so -50% is seamless.
+*/
 .trusted-pill {
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    flex-shrink: 0;
+
+    margin-right: var(--pill-gap);
     padding: 12px 22px 12px 12px;
+
     background: #ffffff;
     border: 1px solid #e9ebf1;
     border-radius: 999px;
-    font-weight: 600;
-    font-size: 14.5px;
-    color: #374357;
-    white-space: nowrap;
     box-shadow: 0 1px 2px rgba(10, 14, 26, 0.03);
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-}
 
-.trusted-pill:hover {
-    border-color: #dce6ff;
-    box-shadow: 0 8px 20px rgba(20, 56, 184, 0.08);
-    transform: translateY(-1px);
+    color: #374357;
+    font-size: 14.5px;
+    font-weight: 600;
+    white-space: nowrap;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease,
+        transform 0.2s ease;
 }
 
 .trusted-pill-icon {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
+
     width: 30px;
     height: 30px;
+
     border-radius: 50%;
-    background: #eef3ff;
-    color: #1a46e0;
-    flex-shrink: 0;
+    background: var(--brand-soft);
+    color: var(--brand);
 }
 
 .trusted-pill-icon svg {
@@ -102,7 +123,7 @@
     height: 16px;
 }
 
-@keyframes scroll {
+@keyframes trusted-scroll {
     from {
         transform: translateX(0);
     }
@@ -112,8 +133,85 @@
     }
 }
 
+/* hover only on real-pointer devices (no sticky hover on phones) */
+@media (hover: hover) {
+    .trusted-pill:hover {
+        transform: translateY(-1px);
+        border-color: #d3deff;
+        box-shadow: 0 8px 20px rgba(4, 67, 238, 0.09);
+    }
+}
+
+/* =========================================================
+   MOBILE — smaller pills, slightly stronger edge fade
+========================================================= */
+
+@media (max-width: 640px) {
+    .trusted {
+        --pill-gap: 10px;
+    }
+
+    .trusted-slider {
+        -webkit-mask-image: linear-gradient(to right,
+                transparent 0%, #000 12%, #000 88%, transparent 100%);
+        mask-image: linear-gradient(to right,
+                transparent 0%, #000 12%, #000 88%, transparent 100%);
+    }
+
+    .trusted-pill {
+        gap: 8px;
+        padding: 8px 16px 8px 8px;
+        font-size: 13px;
+    }
+
+    .trusted-pill-icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    .trusted-pill-icon svg {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media (max-width: 380px) {
+    .trusted-pill {
+        padding: 7px 14px 7px 7px;
+        font-size: 12.5px;
+    }
+
+    .trusted-pill-icon {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* =========================================================
+   REDUCED MOTION
+   No animation: show each business once, wrapped and centered
+   (instead of a half-cut, frozen strip).
+========================================================= */
+
 @media (prefers-reduced-motion: reduce) {
     .trusted-track {
         animation: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .trusted-pill {
+        margin-right: 0;
+    }
+
+    .trusted-pill.is-copy {
+        display: none;
+    }
+
+    .trusted-slider {
+        -webkit-mask-image: none;
+        mask-image: none;
     }
 }

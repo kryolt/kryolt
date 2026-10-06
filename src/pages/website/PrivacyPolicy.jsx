@@ -1,5 +1,7 @@
 import "./PrivacyPolicy.css";
 
+import SEO from "../../components/seo/SEO";
+
 import HomeNavbar from "../../components/home/HomeNavbar";
 import PrivacyContent from "../../components/home/legal/PrivacyContent";
 import HomeFooter from "../../components/home/HomeFooter";
@@ -7,6 +9,13 @@ import HomeFooter from "../../components/home/HomeFooter";
 function PrivacyPolicy() {
     return (
         <div className="legal-page privacy-page">
+
+            <SEO
+                title="Privacy Policy | Kryolt"
+                description="Read Kryolt's Privacy Policy to understand how we collect, use, protect and manage information when you use our platform."
+                canonicalPath="/privacy"
+            />
+
             <HomeNavbar />
 
             <main className="legal-main">

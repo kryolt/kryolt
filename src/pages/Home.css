@@ -1,0 +1,38 @@
+/* =========================================================
+   SECTION SPACING (Home page only)
+   Paste this block at the END of Home.css.
+
+   Gap between two sections = bottom padding of the upper one
+   + top padding of the lower one. Change --section-y to make
+   all gaps smaller / bigger in one place.
+========================================================= */
+
+.home-main {
+    --section-y: clamp(40px, 6vw, 64px);
+}
+
+.home-main .features,
+.home-main .dashboard-preview-section,
+.home-main .how,
+.home-main .pricing,
+.home-main .testimonials,
+.home-main .faq,
+.home-main .cta-section {
+    padding-top: var(--section-y);
+    padding-bottom: var(--section-y);
+}
+
+/* the logo strip is already a light, small band */
+.home-main .trusted {
+    padding-top: clamp(22px, 4vw, 34px);
+    padding-bottom: clamp(26px, 4vw, 38px);
+}
+
+/* space between each section heading and its content */
+.home-main .features-heading,
+.home-main .how-heading,
+.home-main .pricing-heading,
+.home-main .testimonials-heading,
+.home-main .faq-heading {
+    margin-bottom: clamp(22px, 4vw, 34px);
+}

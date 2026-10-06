@@ -1,5 +1,7 @@
 import "./HelpCenter.css";
 
+import SEO from "../../components/seo/SEO";
+
 import HomeNavbar from "../../components/home/HomeNavbar";
 import HomeFooter from "../../components/home/HomeFooter";
 
@@ -11,6 +13,12 @@ import SupportCTA from "../../components/home/help/SupportCTA";
 function HelpCenter() {
     return (
         <div className="help-center-page">
+
+            <SEO
+                title="Kryolt Help Center | Business Analytics Support"
+                description="Get help with Kryolt, including business analytics, dashboards, CSV and Excel data, AI insights, reports and using the platform."
+                canonicalPath="/help"
+            />
 
             <HomeNavbar />
 

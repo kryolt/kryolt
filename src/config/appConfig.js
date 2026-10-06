@@ -5,7 +5,7 @@ export const APP = {
     name: "Kryolt",
     logo: logoIcon,
     wordmark: wordmark,
-    tagline: "AI Business Dashboard",
+    tagline: "AI Business Intelligence",
     version: "1.0.0",
     company: "kryolt",
     contactEmail: "hello@kryolt.com",

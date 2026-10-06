@@ -1,52 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://kryolt.com/</loc>
-  </url>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+>
 
-  <url>
-    <loc>https://kryolt.com/features</loc>
-  </url>
+    <!-- Homepage -->
+    <url>
+        <loc>https://kryolt.com/</loc>
+    </url>
 
-  <url>
-    <loc>https://kryolt.com/about</loc>
-  </url>
+    <!-- Main website pages -->
+    <url>
+        <loc>https://kryolt.com/features</loc>
+    </url>
 
-  <url>
-    <loc>https://kryolt.com/contact</loc>
-  </url>
+    <url>
+        <loc>https://kryolt.com/about</loc>
+    </url>
 
-  <url>
-    <loc>https://kryolt.com/pricing</loc>
-  </url>
+    <url>
+        <loc>https://kryolt.com/contact</loc>
+    </url>
 
-  <url>
-    <loc>https://kryolt.com/faq</loc>
-  </url>
+    <url>
+        <loc>https://kryolt.com/pricing</loc>
+    </url>
 
-  <url>
-    <loc>https://kryolt.com/help</loc>
-  </url>
+    <url>
+        <loc>https://kryolt.com/faq</loc>
+    </url>
 
-  <url>
-    <loc>https://kryolt.com/docs</loc>
-  </url>
+    <url>
+        <loc>https://kryolt.com/help</loc>
+    </url>
 
-  <url>
-    <loc>https://kryolt.com/privacy</loc>
-  </url>
+    <url>
+        <loc>https://kryolt.com/docs</loc>
+    </url>
 
-  <url>
-    <loc>https://kryolt.com/terms</loc>
-  </url>
+    <!-- Analytics landing pages -->
+    <url>
+        <loc>https://kryolt.com/sales-analytics</loc>
+        <lastmod>2026-09-30</lastmod>
+    </url>
 
-  <url>
-    <loc>https://kryolt.com/cookies</loc>
-  </url>
+    <url>
+        <loc>https://kryolt.com/business-analytics</loc>
+        <lastmod>2026-10-06</lastmod>
+    </url>
 
-  <url>
-    <loc>https://kryolt.com/refund-policy</loc>
-  </url>
+    <!-- Legal pages -->
+    <url>
+        <loc>https://kryolt.com/privacy</loc>
+    </url>
+
+    <url>
+        <loc>https://kryolt.com/terms</loc>
+    </url>
+
+    <url>
+        <loc>https://kryolt.com/cookies</loc>
+    </url>
+
+    <url>
+        <loc>https://kryolt.com/refund-policy</loc>
+    </url>
 
 </urlset>

@@ -16,15 +16,14 @@ function DashboardPreview() {
         <section className="dashboard-preview-section" aria-label="Dashboard preview">
             <div className="preview-left">
                 <span className="preview-badge">
-                    <Rocket size={14} strokeWidth={2.5} />
+                    <Rocket size={14} strokeWidth={2.5} aria-hidden="true" />
                     LIVE DASHBOARD
                 </span>
 
                 <h2>
                     Beautiful Dashboard
                     <br />
-                    <span> AI Powered Analytics</span>
-
+                    <span>AI Powered Analytics</span>
                 </h2>
 
                 <p>
@@ -40,12 +39,17 @@ function DashboardPreview() {
                     onClick={() => navigate("/features")}
                 >
                     Explore {APP.name}
-                    <ArrowUpRight size={18} strokeWidth={2.5} />
+                    <ArrowUpRight size={18} strokeWidth={2.5} aria-hidden="true" />
                 </button>
             </div>
 
             <div className="preview-right">
-                <div className="dashboard-window" role="img" aria-label="Sample dashboard with sales, profit, and customer metrics">
+                {/* Decorative preview: children are presentational because of role="img" */}
+                <div
+                    className="dashboard-window"
+                    role="img"
+                    aria-label="Sample dashboard with sales, profit, and customer metrics"
+                >
                     <div className="window-top">
                         <div className="window-dots">
                             <span className="red"></span>
@@ -65,13 +69,13 @@ function DashboardPreview() {
                                     <span className="mini-trend">{trend}</span>
                                 </div>
                                 <span className="mini-label">{label}</span>
-                                <h3>{value}</h3>
+                                <strong className="mini-value">{value}</strong>
                             </div>
                         ))}
 
                         <div className="graph-box">
                             <div className="graph-header">
-                                <span>Revenue Trend</span>
+                                <span className="graph-title">Revenue Trend</span>
                                 <span className="graph-badge">This Month</span>
                             </div>
                             <div className="graph-bars">
@@ -86,7 +90,7 @@ function DashboardPreview() {
                     </div>
                 </div>
 
-                <div className="glow-blob"></div>
+                <div className="glow-blob" aria-hidden="true"></div>
             </div>
         </section>
     );

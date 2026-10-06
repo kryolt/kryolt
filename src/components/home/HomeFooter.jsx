@@ -3,12 +3,20 @@ import { APP } from "../../config/appConfig";
 
 import "./HomeFooter.css";
 
-// ===============================
-// SOCIAL ICONS
-// ===============================
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
 
 const IconInstagram = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+    >
         <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
         <circle cx="12" cy="12" r="4.2" />
         <circle
@@ -22,26 +30,59 @@ const IconInstagram = () => (
 );
 
 const IconX = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
-        <path d="M4.5 4.5 19.5 19.5M19.5 4.5 4.5 19.5" />
+    <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+    >
+        <path d="M4.5 4.5 19.5 19.5" />
+        <path d="M19.5 4.5 4.5 19.5" />
     </svg>
 );
 
 const IconFacebook = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+    >
         <path d="M14.5 21v-7.6h2.4l.4-3h-2.8V8.4c0-.87.24-1.46 1.5-1.46h1.4V4.34A19 19 0 0 0 15 4.2c-2.27 0-3.82 1.39-3.82 3.93v2.27H8.7v3h2.48V21h3.32Z" />
     </svg>
 );
 
 const IconLinkedIn = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+    >
         <rect x="3.5" y="3.5" width="17" height="17" rx="3" />
         <path d="M7.5 10.2v6.3M7.5 7.6v.02M11.7 16.5v-3.7c0-1.6.9-2.6 2.3-2.6 1.3 0 2 .9 2 2.6v3.7" />
     </svg>
 );
 
 const IconYouTube = () => (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+    <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+    >
         <rect x="2.5" y="6" width="19" height="12" rx="3.5" />
         <path
             d="M10.3 9.6v4.8l4.3-2.4-4.3-2.4Z"
@@ -51,9 +92,9 @@ const IconYouTube = () => (
     </svg>
 );
 
-// ===============================
-// SOCIAL LINKS
-// ===============================
+/* =========================================================
+   SOCIAL LINKS
+========================================================= */
 
 const socialLinks = [
     {
@@ -79,54 +120,65 @@ const socialLinks = [
     {
         Icon: IconYouTube,
         label: "YouTube",
-        url: APP.socials?.youtube.channel || "",
+        url: APP.socials?.youtube?.channel || "",
     },
 ];
 
-// ===============================
-// FOOTER
-// ===============================
+/* =========================================================
+   FOOTER
+========================================================= */
 
 function HomeFooter() {
+    const appName = APP?.name || "Kryolt";
+
+    const description =
+        APP?.tagline ||
+        "AI-powered business intelligence that helps you understand your data, discover insights and make smarter decisions.";
+
     return (
         <footer className="footer">
 
-            {/* Decorative Background Mark */}
-            <div className="footer-bg-mark" aria-hidden="true">
+            {/* Decorative background mark */}
+            <div
+                className="footer-bg-mark"
+                aria-hidden="true"
+            >
                 K
             </div>
 
             <div className="footer-container">
 
-                {/* =========================
+                {/* =====================================================
                     BRAND
-                ========================= */}
+                ===================================================== */}
 
                 <div className="footer-brand">
 
-                    <Link to="/" className="footer-logo">
-
+                    <Link
+                        to="/"
+                        className="footer-logo"
+                        aria-label={`${appName} home`}
+                    >
                         <img
                             src={APP.logo}
-                            alt={APP.name}
+                            alt={`${appName} AI Business Intelligence`}
                         />
 
-                        <span>{APP.name}</span>
-
+                        <span>{appName}</span>
                     </Link>
 
                     <p className="footer-description">
-                        {APP.tagline ||
-                            "AI-powered business intelligence that helps you understand your data, discover insights and make smarter decisions."}
+                        {description}
                     </p>
 
-                    {/* Social Links */}
+                    {/* Social links */}
 
-                    <div className="footer-social">
-
+                    <nav
+                        className="footer-social"
+                        aria-label="Social media"
+                    >
                         {socialLinks.map(
                             ({ Icon, label, url }) => {
-
                                 if (!url) return null;
 
                                 return (
@@ -142,15 +194,13 @@ function HomeFooter() {
                                 );
                             }
                         )}
-
-                    </div>
+                    </nav>
 
                 </div>
 
-
-                {/* =========================
+                {/* =====================================================
                     PRODUCT
-                ========================= */}
+                ===================================================== */}
 
                 <div className="footer-column">
                     <h3>Product</h3>
@@ -159,6 +209,18 @@ function HomeFooter() {
                         <li>
                             <Link to="/features">
                                 Features
+                            </Link>
+                        </li>
+
+                        <li>
+                            <Link to="/sales-analytics">
+                                Sales Analytics
+                            </Link>
+                        </li>
+
+                        <li>
+                            <Link to="/business-analytics">
+                                Business Analytics
                             </Link>
                         </li>
 
@@ -182,16 +244,14 @@ function HomeFooter() {
                     </ul>
                 </div>
 
-                {/* =========================
+                {/* =====================================================
                     COMPANY
-                ========================= */}
+                ===================================================== */}
 
                 <div className="footer-column">
-
                     <h3>Company</h3>
 
                     <ul>
-
                         <li>
                             <Link to="/about">
                                 About Us
@@ -221,22 +281,17 @@ function HomeFooter() {
                                 Documentation
                             </Link>
                         </li>
-
                     </ul>
-
                 </div>
 
-
-                {/* =========================
+                {/* =====================================================
                     LEGAL
-                ========================= */}
+                ===================================================== */}
 
                 <div className="footer-column">
-
                     <h3>Legal</h3>
 
                     <ul>
-
                         <li>
                             <Link to="/privacy">
                                 Privacy Policy
@@ -260,22 +315,19 @@ function HomeFooter() {
                                 Refund Policy
                             </Link>
                         </li>
-
                     </ul>
-
                 </div>
 
             </div>
 
-
-            {/* =========================
+            {/* =====================================================
                 BOTTOM
-            ========================= */}
+            ===================================================== */}
 
             <div className="footer-bottom">
 
                 <p>
-                    © {new Date().getFullYear()} {APP.name}.
+                    © {new Date().getFullYear()} {appName}.
                     All rights reserved.
                 </p>
 

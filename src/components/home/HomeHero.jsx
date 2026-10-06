@@ -109,15 +109,13 @@ function HomeHero({ onGetStartedClick }) {
                     </div>
 
                     <h1 className="hero-title">
-                        Manage your business
+                        Business Analytics Software
                         <br />
-                        <span className="hero-title-accent">smarter, with AI</span>
+                        <span className="hero-title-accent">for Smarter Decisions.</span>
                     </h1>
 
                     <p className="hero-subtext">
-                        Turn raw CSV files into clear dashboards, AI-driven insights and
-                        ready-to-share reports in seconds — no spreadsheets, no manual
-                        formulas, no guesswork.
+                        Turn your business data into clear dashboards, actionable insights, and AI-powered reports — all in one place.
                     </p>
 
                     <div className="hero-buttons">
@@ -150,7 +148,7 @@ function HomeHero({ onGetStartedClick }) {
                             ))}
                         </div>
                         <span className="trust-text">
-                            Trusted by <strong>growing businesses</strong> across India
+                            Built for <strong>growing businesses</strong> across India
                         </span>
                     </div>
 

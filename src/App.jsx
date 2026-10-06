@@ -10,6 +10,7 @@ import { DashboardFilterProvider } from "./context/DashboardFilterContext.jsx";
 import PremiumRoute from "./components/auth/PremiumRoute";
 import PrivateRoute from "./components/auth/PrivateRoute";
 import ScrollToTop from "./components/common/ScrollToTop";
+import CookieConsent from "./components/common/CookieConsent";
 
 import DashboardLayout from "./layouts/DashboardLayout";
 
@@ -28,6 +29,10 @@ import PrivacyPolicy from "./pages/website/PrivacyPolicy";
 import Terms from "./pages/website/Terms";
 import CookiePolicy from "./pages/website/CookiePolicy";
 import RefundPolicy from "./pages/website/RefundPolicy";
+
+// Landing pages
+import SalesAnalytics from "./pages/website/SalesAnalytics";
+import BusinessAnalytics from "./pages/website/BusinessAnalytics";
 
 // Checkout
 import CheckoutPage from "./pages/pricing/CheckoutPage";
@@ -49,6 +54,7 @@ function App() {
           <DashboardDataProvider>
             <DashboardFilterProvider>
               <ScrollToTop />
+              <CookieConsent />
 
               <Routes>
                 {/* ================= PUBLIC ================= */}
@@ -63,54 +69,23 @@ function App() {
                 <Route path="/docs" element={<Documentation />} />
 
                 {/* ================= LEGAL ================= */}
-                <Route
-                  path="/privacy"
-                  element={<PrivacyPolicy />}
-                />
-                <Route
-                  path="/terms"
-                  element={<Terms />}
-                />
-                <Route
-                  path="/cookies"
-                  element={<CookiePolicy />}
-                />
-                <Route
-                  path="/refund-policy"
-                  element={<RefundPolicy />}
-                />
+                <Route path="/privacy" element={<PrivacyPolicy />} />
+                <Route path="/terms" element={<Terms />} />
+                <Route path="/cookies" element={<CookiePolicy />} />
+                <Route path="/refund-policy" element={<RefundPolicy />} />
+
+                {/* ================= LANDING ================= */}
+                <Route path="/sales-analytics" element={<SalesAnalytics />} />
+                <Route path="/business-analytics" element={<BusinessAnalytics />} />
 
                 {/* ================= DASHBOARD ================= */}
                 <Route element={<PrivateRoute />}>
-                  <Route
-                    path="/dashboard"
-                    element={<DashboardLayout />}
-                  >
-                    <Route
-                      index
-                      element={<DashboardHome />}
-                    />
-
-                    <Route
-                      path="upload"
-                      element={<Upload />}
-                    />
-
-                    <Route
-                      path="customers"
-                      element={<Customers />}
-                    />
-
-                    <Route
-                      path="settings"
-                      element={<Settings />}
-                    />
-
-                    <Route
-                      path="profile"
-                      element={<Profile />}
-                    />
-
+                  <Route path="/dashboard" element={<DashboardLayout />}>
+                    <Route index element={<DashboardHome />} />
+                    <Route path="upload" element={<Upload />} />
+                    <Route path="customers" element={<Customers />} />
+                    <Route path="settings" element={<Settings />} />
+                    <Route path="profile" element={<Profile />} />
                     <Route
                       path="insights"
                       element={
@@ -119,7 +94,6 @@ function App() {
                         </PremiumRoute>
                       }
                     />
-
                     <Route
                       path="reports"
                       element={

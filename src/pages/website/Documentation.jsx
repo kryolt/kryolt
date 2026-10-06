@@ -2,9 +2,17 @@ import HomeNavbar from "../../components/home/HomeNavbar";
 import HomeFooter from "../../components/home/HomeFooter";
 import "./Documentation.css";
 
+import SEO from "../../components/seo/SEO";
+
 function Documentation() {
     return (
         <div className="documentation-page">
+
+            <SEO
+                title="Kryolt Documentation | Business Analytics Guide"
+                description="Learn how to use Kryolt, upload CSV and Excel business data, understand dashboards and KPIs, explore AI-powered insights and generate reports."
+                canonicalPath="/docs"
+            />
 
             <HomeNavbar />
 
